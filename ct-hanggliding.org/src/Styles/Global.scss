@@ -1,3 +1,5 @@
+@import "https://unpkg.com/open-props";
+
 /* ------------------- */
 /* Custom properties   */
 /* ------------------- */
@@ -35,6 +37,7 @@
   --font-family: var(--ff-sans);
 
   --fw-sans-light: 300;
+  --fw-headings-semibold: 600;
 }
 
 /* ------------------- */
@@ -108,6 +111,9 @@ select {
 /* Utilities           */
 /* ------------------- */
 
+.banner {
+  box-shadow: var(--shadow-4);
+}
 .surface-light {
   color: hsl(var(--clr-dark-forest));
   background-color: hsl(var(--clr-beach));
@@ -138,6 +144,11 @@ select {
 .text-normal {
   font-family: var(--ff-sans);
   font-weight: var(--fw-sans-light);
+}
+
+.heading-1 {
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-headings-semibold);
 }
 /* ------------------- */
 /* Colors              */

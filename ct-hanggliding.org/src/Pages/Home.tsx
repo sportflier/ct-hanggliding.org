@@ -6,6 +6,10 @@ const Home: React.FC = () => {
     return (
         <>
             <div className="home surface-light-gradient text-normal">
+                <div className="banner">
+                    <h2 className="heading-1">My Banner</h2>
+                </div>
+
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quos pariatur nobis quo, aperiam similique alias beatae aut itaque quaerat architecto dolorem doloribus ullam expedita nemo sed, obcaecati veritatis rerum?
                 Enim deleniti alias nihil autem est assumenda dicta doloremque nesciunt officiis error, incidunt at vel perferendis? Hic consequatur sed beatae animi, quasi cumque aliquam optio deleniti corporis dolorum, ratione fuga?
                 Magni illum quas praesentium odio maiores eveniet similique sit dolorum nemo provident libero neque, optio quod, deserunt mollitia nihil exercitationem soluta ipsum odit quo asperiores. Incidunt, alias? Adipisci, beatae placeat!
