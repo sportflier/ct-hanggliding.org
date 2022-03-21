@@ -11,6 +11,7 @@
   --clr-deep-sky: 213, 61%, 50%; // Deep Sky
   --clr-beach: 31, 35%, 84%; // Beach
   --clr-sky: 205, 50%, 72%; // Sky
+  --clr-sky-light: 205, 50%, 85%; // Use for gradients with Sky
   --clr-forest: 199, 34%, 29%; // Forest
   --clr-earth: 43, 10%, 52%; // Earth
 
@@ -37,7 +38,12 @@
   --font-family: var(--ff-sans);
 
   --fw-sans-light: 300;
+  --fw-sans-regular: 400;
+  --fw-sans-semibold: 600;
+
+  --fw-headings-regular: 400;
   --fw-headings-semibold: 600;
+  --fw-headings-extrabold: 800;
 }
 
 /* ------------------- */
@@ -113,6 +119,13 @@ select {
 
 .banner {
   box-shadow: var(--shadow-4);
+
+  padding-inline: 0.25em;
+  margin-inline: -0.25em;
+  // animation: var(--animation-scale-down) reverse,
+  //   var(--animation-fade-out) reverse;
+  // animation-timing-function: var(--ease-squish-5);
+  // animation-duration: 1s;
 }
 .surface-light {
   color: hsl(var(--clr-dark-forest));
@@ -136,6 +149,17 @@ select {
   );
 }
 
+.surface-light,
+.surface-light-gradient {
+  .banner {
+    background: linear-gradient(
+      to right,
+      hsl(var(--clr-sky-light)),
+      hsl(var(--clr-sky))
+    );
+  }
+}
+
 .social-icon {
   color: hsl(var(--clr-white));
   opacity: 75%;
@@ -146,10 +170,84 @@ select {
   font-weight: var(--fw-sans-light);
 }
 
-.heading-1 {
+p.text-normal {
+  margin-block: 1em;
+}
+
+.heading-2 {
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings-semibold);
+  // font-size: var(--font-size-fluid-1);
 }
+
+.hero {
+  height: 70vh;
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  &.hero_chga-4th {
+    background-image: url("./../Assets/Images/chga-U2-4th.jpg");
+  }
+
+  .hero-text-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-text {
+    opacity: 60%;
+    color: hsl(var(--clr-white));
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: center;
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-headings-extrabold);
+    letter-spacing: var(--font-letterspacing-1);
+    font-size: 4rem;
+    font-size: clamp(4rem, 3.2rem + 4vw, 8rem);
+  }
+}
+
+.footer {
+  background-color: hsl(var(--clr-dark-forest));
+  color: hsl(var(--clr-white), 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  padding-block: 0.5rem;
+  a {
+    img {
+      // width: 52px;
+      width: clamp(35px, calc(2.1875rem + ((1vw - 3.2px) * 1.0625)), 52px);
+      min-height: 0vw;
+      opacity: 75%;
+    }
+  }
+}
+
+.content-container {
+  padding-inline: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 22.1875)), 375px);
+  min-height: 0vw;
+  padding-block: 2rem;
+}
+
+/* animations */
+
+.anim_scale-fade {
+  animation: var(--animation-scale-down) reverse,
+    var(--animation-fade-out) reverse;
+  animation-timing-function: var(--ease-squish-5);
+  animation-duration: 1s;
+}
+.anim_slide-in-fade {
+  animation: var(--animation-fade-in) forwards, var(--animation-slide-in-right);
+  animation-timing-function: var(--ease-squish-3);
+  animation-duration: 1s;
+}
+
 /* ------------------- */
 /* Colors              */
 /* ------------------- */
