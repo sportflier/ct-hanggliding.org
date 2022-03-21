@@ -1,4 +1,19 @@
 @use "./../Styles/Global.scss";
 
 .home {
+  .chga-logo {
+    width: 304px;
+  }
+  .chga-mission {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+
+    @media (min-width: var(--mobile-breakpoint)) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
 }

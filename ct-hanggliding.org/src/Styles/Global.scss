@@ -44,6 +44,11 @@
   --fw-headings-regular: 400;
   --fw-headings-semibold: 600;
   --fw-headings-extrabold: 800;
+
+  /* breakpoints */
+  --breakpoint-tablet: 768px;
+
+  --mobile-breakpoint: var(--breakpoint-tablet);
 }
 
 /* ------------------- */
@@ -117,15 +122,14 @@ select {
 /* Utilities           */
 /* ------------------- */
 
-.banner {
-  box-shadow: var(--shadow-4);
+.d-flex {
+  display: flex;
+}
 
-  padding-inline: 0.25em;
-  margin-inline: -0.25em;
-  // animation: var(--animation-scale-down) reverse,
-  //   var(--animation-fade-out) reverse;
-  // animation-timing-function: var(--ease-squish-5);
-  // animation-duration: 1s;
+.banner {
+  box-shadow: var(--shadow-3);
+  padding-inline: 0.5em;
+  margin-inline: -0.5em;
 }
 .surface-light {
   color: hsl(var(--clr-dark-forest));
