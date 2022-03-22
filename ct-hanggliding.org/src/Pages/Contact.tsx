@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
     return (
         <>
             <Header />
-            <div className="hero hero_heublein-ideal-clouds">
+            <div className="hero hero_birds-flock-india">
                 <div className="hero-text-wrap anim_slide-in-fade">
                     <h1 className="hero-text">Contact</h1>
                 </div>

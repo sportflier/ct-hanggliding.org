@@ -6,7 +6,7 @@ const Calendar: React.FC = () => {
     return (
         <>
             <Header />
-            <div className="hero hero_heublein-ideal-clouds">
+            <div className="hero hero_talcott-lz">
                 <div className="hero-text-wrap anim_slide-in-fade">
                     <h1 className="hero-text">Calendar</h1>
                 </div>
