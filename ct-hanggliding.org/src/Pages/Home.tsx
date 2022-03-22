@@ -11,7 +11,7 @@ const Home: React.FC = () => {
             <Header />
             <div className="hero hero_chga-4th">
                 <div className="hero-text-wrap anim_slide-in-fade">
-                    <h1 className="hero-text">CHGA</h1>
+                    <span className="hero-text">CHGA</span>
                 </div>
             </div>
             <div id="home" className="content-container home surface-light-gradient">
@@ -22,7 +22,7 @@ const Home: React.FC = () => {
                     </div>
                     <div>
                         <div className="banner">
-                            <h2 className="heading-2 anim_scale-fade">Our Mission</h2>
+                            <h1 className="heading-2 anim_scale-fade">Our Mission</h1>
                         </div>
                         <p className="text-normal">
                             Established in 1974, the <strong>Connecticut Hang Gliding Association</strong> is an organization of men and women committed to the pursuit, promotion, and protection of hang gliding in New England.

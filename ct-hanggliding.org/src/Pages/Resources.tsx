@@ -8,7 +8,7 @@ const Resources: React.FC = () => {
             <Header />
             <div className="hero hero_tanner-hiller-dragonfly">
                 <div className="hero-text-wrap anim_slide-in-fade">
-                    <h1 className="hero-text">Resources</h1>
+                    <span className="hero-text">Resources</span>
                 </div>
             </div>
             <div id="resources" className="content-container home surface-light-gradient">
@@ -16,7 +16,7 @@ const Resources: React.FC = () => {
 
                 <div>
                     <div className="banner">
-                        <h2 className="heading-2 anim_scale-fade">Resources</h2>
+                        <h1 className="heading-2 anim_scale-fade">Resources</h1>
                     </div>
                     <p className="text-normal"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, earum quasi eligendi officia dolorem voluptates esse odio nam officiis tempore voluptatum doloribus id dolor harum eius doloremque adipisci laboriosam consectetur!</span><span>Nostrum ut labore error illo aut incidunt deserunt dolores voluptates. Rem molestiae quaerat, cum omnis vitae eos cumque hic possimus? Asperiores aliquid iure commodi impedit. Quia quo illum numquam soluta!</span></p>
                     <p className="text-normal"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias distinctio atque error? Laboriosam iusto a eaque harum veniam. Laborum nam magnam placeat possimus non ipsa suscipit quos assumenda amet.</span><span>Illo cumque molestias non, quos tempore provident laudantium quod totam velit atque exercitationem quas quia pariatur magnam ut odit, voluptas ullam, saepe error ratione ad corrupti suscipit! Voluptatibus, commodi aspernatur?</span></p>

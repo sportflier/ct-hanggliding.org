@@ -26,7 +26,7 @@
   --fs-700: 3.5rem;
   --fs-600: 2rem;
   --fs-500: 1.5rem;
-  --fs-400: 1.125rem;
+  --fs-400: 1.25rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
 
@@ -171,16 +171,26 @@ select {
 .text-normal {
   font-family: var(--ff-sans);
   font-weight: var(--fw-sans-light);
+  p {
+    margin-block: 1em;
+    font-weight: var(--fw-sans-light);
+  }
+  h3 {
+    font-size: var(--fs-400);
+  }
+  a {
+    color: hsl(var(--clr-deep-sky));
+  }
 }
 
 p.text-normal {
   margin-block: 1em;
+  font-weight: var(--fw-sans-light);
 }
 
-.heading-2 {
+.heading {
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings-semibold);
-  // font-size: var(--font-size-fluid-1);
 }
 
 .hero {
@@ -236,6 +246,13 @@ p.text-normal {
   padding-inline: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 22.1875)), 375px);
   min-height: 0vw;
   padding-block: 2rem;
+}
+
+.mb-1 {
+  margin-block-end: 1em;
+}
+.mb-2 {
+  margin-block-end: 2em;
 }
 
 /* animations */

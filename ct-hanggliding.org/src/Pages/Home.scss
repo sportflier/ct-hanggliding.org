@@ -1,7 +1,8 @@
 @use "./../Styles/_global.scss";
 
 #home {
-  $logo-width: 304px;
+  // $logo-width: 304px;
+  $logo-width: 250px;
   .chga-logo {
     width: $logo-width;
   }
