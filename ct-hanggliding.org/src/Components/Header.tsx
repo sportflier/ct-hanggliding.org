@@ -12,10 +12,21 @@ export default function Header() {
             <Link to="/talcott">
                 Talcott
             </Link>
-            <span>Membership</span>
-            <span>Calendar</span>
-            <span>Resources</span>
-            <span>Contact</span>
+
+            <Link to="/membership">
+                Membership
+            </Link>
+            <Link to="/calendar">
+                Calendar
+            </Link>
+            <Link to="/resources">
+                Resources
+            </Link>
+            <Link to="/contact">
+                Contact
+            </Link>
+
+
 
         </div>
     )
