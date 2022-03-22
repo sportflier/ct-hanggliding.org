@@ -191,7 +191,10 @@ p.text-normal {
   background-size: cover;
   background-position: center;
   &.hero_chga-4th {
-    background-image: url("./../Assets/Images/chga-U2-4th.jpg");
+    background-image: url("./../Assets/Images/Heroes/chga-U2-4th.jpg");
+  }
+  &.hero_heublein-ideal-clouds {
+    background-image: url("./../Assets/Images/Heroes/heublein-ideal-clouds.jpg");
   }
 
   .hero-text-wrap {

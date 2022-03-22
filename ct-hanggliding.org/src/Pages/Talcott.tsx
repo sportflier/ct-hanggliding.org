@@ -7,7 +7,7 @@ const Talcott: React.FC = () => {
     return (
         <>
             <Header />
-            <div className="hero hero_chga-4th">
+            <div className="hero hero_heublein-ideal-clouds">
                 <div className="hero-text-wrap anim_slide-in-fade">
                     <h1 className="hero-text">Talcott</h1>
                 </div>
