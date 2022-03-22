@@ -14,7 +14,7 @@ const Home: React.FC = () => {
                     <h1 className="hero-text">CHGA</h1>
                 </div>
             </div>
-            <div className="content-container home surface-light-gradient">
+            <div id="home" className="content-container home surface-light-gradient">
 
                 <div className="chga-mission">
                     <div>
