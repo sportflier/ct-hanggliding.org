@@ -2,12 +2,12 @@ import React from "react";
 import IconFB from './../Assets/Images/social-facebook.svg';
 import IconDiscord from './../Assets/Images/social-discord.svg';
 import IconEmail from './../Assets/Images/social-email.svg';
-
+import './Footer.scss';
 
 
 export default function Footer() {
     return (
-        <footer className="footer">
+        <footer className="site-footer">
 
             <a href="https://www.facebook.com/groups/364265017973">
                 <img src={IconFB} alt="FaceBook" />

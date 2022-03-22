@@ -21,14 +21,14 @@
   // --clr-accent: 210, 50%, 73%;
 
   /* font-sizes */
-  //   --fs-900: 9.375rem;
-  //   --fs-800: 6.25rem;
-  //   --fs-700: 3.5rem;
-  //   --fs-600: 2rem;
-  //   --fs-500: 1.5rem;
-  //   --fs-400: 1.125rem;
-  //   --fs-300: 1rem;
-  //   --fs-200: 0.875rem;
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.5rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
 
   /* font-families */
   //   font-family: 'Catamaran', sans-serif; // for headings, heros and menus
@@ -44,12 +44,11 @@
   --fw-headings-regular: 400;
   --fw-headings-semibold: 600;
   --fw-headings-extrabold: 800;
-
-  /* breakpoints */
-  --breakpoint-tablet: 768px;
-
-  --mobile-breakpoint: var(--breakpoint-tablet);
 }
+
+/* breakpoints */
+$breakpoint-tablet: 768px;
+$mobile-breakpoint: $breakpoint-tablet;
 
 /* ------------------- */
 /* Reset               */
@@ -211,24 +210,6 @@ p.text-normal {
     letter-spacing: var(--font-letterspacing-1);
     font-size: 4rem;
     font-size: clamp(4rem, 3.2rem + 4vw, 8rem);
-  }
-}
-
-.footer {
-  background-color: hsl(var(--clr-dark-forest));
-  color: hsl(var(--clr-white), 0.95);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5vw;
-  padding-block: 0.5rem;
-  a {
-    img {
-      // width: 52px;
-      width: clamp(35px, calc(2.1875rem + ((1vw - 3.2px) * 1.0625)), 52px);
-      min-height: 0vw;
-      opacity: 75%;
-    }
   }
 }
 

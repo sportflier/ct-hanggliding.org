@@ -1,8 +1,9 @@
-@use "./../Styles/Global.scss";
+@use "./../Styles/_global.scss";
 
 .home {
+  $logo-width: 304px;
   .chga-logo {
-    width: 304px;
+    width: $logo-width;
   }
   .chga-mission {
     display: flex;
@@ -10,7 +11,14 @@
     gap: 2em;
     align-items: center;
 
-    @media (min-width: var(--mobile-breakpoint)) {
+    // @media (min-width: global.$mobile-breakpoint) {
+    // }
+  }
+  @media (min-width: global.$mobile-breakpoint) {
+    .chga-logo {
+      min-width: $logo-width;
+    }
+    .chga-mission {
       flex-direction: row;
       justify-content: center;
       align-items: flex-start;

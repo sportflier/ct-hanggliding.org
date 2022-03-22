@@ -1,5 +1,6 @@
 import React from "react";
 import './Home.scss';
+import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Logo from './../Assets/Images/CHGA-logo.svg';
 
@@ -7,6 +8,7 @@ import Logo from './../Assets/Images/CHGA-logo.svg';
 const Home: React.FC = () => {
     return (
         <>
+            <Header />
             <div className="hero hero_chga-4th">
                 <div className="hero-text-wrap anim_slide-in-fade">
                     <h1 className="hero-text">CHGA</h1>

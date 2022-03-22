@@ -1,0 +1,21 @@
+@use "./../Styles/_global.scss";
+
+.site-header {
+  display: none;
+  @media (min-width: global.$mobile-breakpoint) {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    background-color: hsla(var(--clr-sky), 70%);
+
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-headings-extrabold);
+    color: hsl(var(--clr-dark-forest));
+    font-variant: small-caps;
+    font-size: var(--fs-500);
+  }
+}

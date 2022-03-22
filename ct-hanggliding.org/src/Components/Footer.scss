@@ -1,0 +1,19 @@
+@use "./../Styles/Global.scss";
+
+.site-footer {
+  background-color: hsl(var(--clr-dark-forest));
+  color: hsl(var(--clr-white), 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  padding-block: 0.5rem;
+  a {
+    img {
+      // width: 52px;
+      width: clamp(35px, calc(2.1875rem + ((1vw - 3.2px) * 1.0625)), 52px);
+      min-height: 0vw;
+      opacity: 75%;
+    }
+  }
+}
