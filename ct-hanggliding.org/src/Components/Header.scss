@@ -2,6 +2,25 @@
 
 .site-header {
   display: none;
+
+  .szh-menu-button {
+    // outline: 3px solid orange;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+  .szh-menu {
+    background-color: hsla(var(--clr-sky), 70%);
+    color: inherit;
+    margin-block-start: 6px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .szh-menu__item:hover {
+    // outline: 3px solid orange;
+    background-color: hsla(var(--clr-sky), 80%);
+  }
   @media (min-width: global.$mobile-breakpoint) {
     display: flex;
     position: absolute;
