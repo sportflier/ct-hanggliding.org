@@ -14,39 +14,40 @@ import '@szhsin/react-menu/dist/transitions/slide.css';
 
 interface INavItemProps {
     homeIcon: ReactNode,
+    onNavClick: any
 }
 
 const NavItems = (props: INavItemProps) => {
     return (
         <>
-            <Link to="/">
+            <Link to="/" onClick={props.onNavClick}>
                 {props.homeIcon}
             </Link>
-            <Link to="/talcott">
+            <Link to="/talcott" onClick={props.onNavClick}>
                 Talcott
             </Link>
 
             <div>
                 <Menu menuButton={<MenuButton>Membership</MenuButton>} transition>
-                    <MenuItem><Link to="/join">
+                    <MenuItem><Link to="/join" onClick={props.onNavClick}>
                         Join
                     </Link></MenuItem>
-                    <MenuItem><Link to="/officers">
+                    <MenuItem><Link to="/officers" onClick={props.onNavClick}>
                         Officers
                     </Link></MenuItem>
-                    <MenuItem><Link to="/bylaws">
+                    <MenuItem><Link to="/bylaws" onClick={props.onNavClick}>
                         Bylaws
                     </Link></MenuItem>
                 </Menu>
             </div>
 
-            <Link to="/calendar">
+            <Link to="/calendar" onClick={props.onNavClick}>
                 Calendar
             </Link>
-            <Link to="/resources">
+            <Link to="/resources" onClick={props.onNavClick}>
                 Resources
             </Link>
-            <Link to="/contact">
+            <Link to="/contact" onClick={props.onNavClick}>
                 Contact
             </Link>
 
@@ -59,7 +60,7 @@ export default function Header() {
 
     const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
 
-    const hamburgerClickHandler = () => {
+    const mobileNavClickHandler = () => {
         setMobileNavIsOpen(!mobileNavIsOpen);
     }
 
@@ -73,16 +74,16 @@ export default function Header() {
     return (
 
         <>
-            <button className={`mobile-site-menu ${mobileNavIsOpen ? 'mobile-nav_visible' : ''}`} onClick={hamburgerClickHandler}>
+            <button className={`mobile-site-menu ${mobileNavIsOpen ? 'mobile-nav_visible' : ''}`} onClick={mobileNavClickHandler}>
                 <img src={Hamburger} alt="" />
             </button>
 
             <header className='site-header'>
-                <NavItems homeIcon={desktopHomeIcon} />
+                <NavItems homeIcon={desktopHomeIcon} onNavClick={null} />
             </header>
 
             <div className={`mobile-nav ${mobileNavIsOpen ? 'mobile-nav_visible' : ''}`}>
-                <NavItems homeIcon={mobileHomeIcon} />
+                <NavItems homeIcon={mobileHomeIcon} onNavClick={mobileNavClickHandler} />
 
             </div>
 
