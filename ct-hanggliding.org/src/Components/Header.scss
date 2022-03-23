@@ -7,6 +7,7 @@
     position: absolute;
     width: 100vw;
     background-color: hsla(var(--clr-sky), 70%);
+    color: hsl(var(--clr-dark-forest));
 
     align-items: center;
     justify-content: center;
@@ -14,7 +15,6 @@
 
     font-family: var(--ff-headings);
     font-weight: var(--fw-headings-extrabold);
-    color: hsl(var(--clr-dark-forest));
     font-variant: small-caps;
     font-size: var(--fs-500);
 
@@ -28,6 +28,11 @@
     .header-decoration {
       height: 1.5em;
       margin-inline-end: 1.5em;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: hsla(var(--clr-dark-forest), 70%);
+      color: hsl(var(--clr-white));
     }
   }
 }

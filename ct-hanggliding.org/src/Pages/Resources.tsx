@@ -1,16 +1,14 @@
 import React from 'react'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import Hero from '../Components/Hero';
 
 const Resources: React.FC = () => {
     return (
         <>
             <Header />
-            <div className="hero hero_tanner-hiller-dragonfly">
-                <div className="hero-text-wrap anim_slide-in-fade">
-                    <span className="hero-text">Resources</span>
-                </div>
-            </div>
+            <Hero className="hero_tanner-hiller-dragonfly" heroText="Resources" />
+
             <div id="resources" className="content-container home surface-light-gradient">
 
 

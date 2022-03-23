@@ -1,0 +1,66 @@
+@use "./../Styles/global";
+
+.hero {
+  height: 70vh;
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  &.hero_chga-4th {
+    background-image: url("./../Assets/Images/Heroes/chga-U2-4th.jpg");
+  }
+  &.hero_heublein-ideal-clouds {
+    background-image: url("./../Assets/Images/Heroes/heublein-ideal-clouds-hd.jpg");
+  }
+
+  &.hero_tanner-hiller-dragonfly {
+    background-image: url("./../Assets/Images/Heroes/tanner-hiller-dragonfly-aloft.jpg");
+  }
+
+  &.hero_talcott-setup-area {
+    background-image: url("./../Assets/Images/Heroes/talcott-setup-area.jpg");
+  }
+
+  &.hero_talcott-lz {
+    background-image: url("./../Assets//Images/Heroes/talcott-lz.jpg");
+  }
+
+  &.hero_birds-flock-india {
+    background-image: url("./../Assets/Images/Heroes/pexels-kunal-baroth-2007660.jpg");
+  }
+
+  // @media (prefers-color-scheme: dark) {
+  //   filter: brightness(65%);
+  // }
+
+  .hero-text-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-text {
+    opacity: 70%;
+    color: hsl(var(--clr-white));
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: center;
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-headings-extrabold);
+    letter-spacing: var(--font-letterspacing-1);
+    font-size: 4rem;
+    font-size: clamp(4rem, 3.2rem + 4vw, 8rem);
+    &.hero-text_small {
+      font-size: 3rem;
+      font-size: clamp(3rem, 2.2rem + 4vw, 7rem);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      //   opacity: 100%;
+      background-color: hsl(var(--clr-deep-sky));
+      padding-inline: 0.5em;
+      margin-block-start: 0.15em;
+      border-radius: var(--radius-3);
+    }
+  }
+}

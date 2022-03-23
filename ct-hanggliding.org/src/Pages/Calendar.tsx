@@ -1,16 +1,14 @@
 import React from 'react'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import Hero from '../Components/Hero';
 
 const Calendar: React.FC = () => {
     return (
         <>
             <Header />
-            <div className="hero hero_talcott-lz">
-                <div className="hero-text-wrap anim_slide-in-fade">
-                    <span className="hero-text">Calendar</span>
-                </div>
-            </div>
+            <Hero className="hero_talcott-lz" heroText="Calendar" />
+
             <div id="calendar" className="content-container home surface-light-gradient">
 
 

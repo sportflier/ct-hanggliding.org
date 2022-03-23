@@ -91,6 +91,10 @@ body {
   font-family: var(--ff-sans);
   line-height: 1.5;
   min-height: 100vh;
+  background-color: hsl(var(--clr-beach));
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl(var(--clr-dark-forest));
+  }
 }
 /* make images easier to work with */
 img,
@@ -133,6 +137,11 @@ select {
 .surface-light {
   color: hsl(var(--clr-dark-forest));
   background-color: hsl(var(--clr-beach));
+
+  @media (prefers-color-scheme: dark) {
+    color: hsl(var(--clr-white));
+    background-color: hsl(var(--clr-dark-forest));
+  }
 }
 
 .surface-light-gradient {
@@ -142,6 +151,14 @@ select {
     hsl(var(--clr-white), 0.95),
     hsl(var(--clr-beach))
   );
+  @media (prefers-color-scheme: dark) {
+    color: hsl(var(--clr-white));
+    background: linear-gradient(
+      to right,
+      hsl(var(--clr-forest), 0.95),
+      hsl(var(--clr-dark-forest))
+    );
+  }
 }
 
 .bg-light-gradient {
@@ -160,6 +177,13 @@ select {
       hsl(var(--clr-sky-light)),
       hsl(var(--clr-sky))
     );
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(
+        to right,
+        hsl(var(--clr-forest)),
+        hsl(var(--clr-dark-forest))
+      );
+    }
   }
 }
 
@@ -180,6 +204,9 @@ select {
   }
   a {
     color: hsl(var(--clr-deep-sky));
+    @media (prefers-color-scheme: dark) {
+      color: hsl(var(--clr-sky-light));
+    }
   }
 }
 
@@ -191,55 +218,6 @@ p.text-normal {
 .heading {
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings-semibold);
-}
-
-.hero {
-  height: 70vh;
-  min-height: 400px;
-  overflow: hidden;
-  display: flex;
-  background-size: cover;
-  background-position: center;
-  &.hero_chga-4th {
-    background-image: url("./../Assets/Images/Heroes/chga-U2-4th.jpg");
-  }
-  &.hero_heublein-ideal-clouds {
-    background-image: url("./../Assets/Images/Heroes/heublein-ideal-clouds-hd.jpg");
-  }
-
-  &.hero_tanner-hiller-dragonfly {
-    background-image: url("./../Assets/Images/Heroes/tanner-hiller-dragonfly-aloft.jpg");
-  }
-
-  &.hero_talcott-setup-area {
-    background-image: url("./../Assets/Images/Heroes/talcott-setup-area.jpg");
-  }
-
-  &.hero_talcott-lz {
-    background-image: url("./../Assets//Images/Heroes/talcott-lz.jpg");
-  }
-
-  &.hero_birds-flock-india {
-    background-image: url("./../Assets/Images/Heroes/pexels-kunal-baroth-2007660.jpg");
-  }
-
-  .hero-text-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero-text {
-    opacity: 60%;
-    color: hsl(var(--clr-white));
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    text-align: center;
-    font-family: var(--ff-headings);
-    font-weight: var(--fw-headings-extrabold);
-    letter-spacing: var(--font-letterspacing-1);
-    font-size: 4rem;
-    font-size: clamp(4rem, 3.2rem + 4vw, 8rem);
-  }
 }
 
 .content-container {
@@ -267,6 +245,10 @@ p.text-normal {
   animation: var(--animation-fade-in) forwards, var(--animation-slide-in-right);
   animation-timing-function: var(--ease-squish-3);
   animation-duration: 1s;
+}
+
+.anim_attention {
+  animation: var(--animation-blink);
 }
 
 /* ------------------- */

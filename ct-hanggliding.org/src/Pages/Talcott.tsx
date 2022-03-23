@@ -2,16 +2,14 @@ import React from 'react'
 import './Talcott.scss';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import Hero from '../Components/Hero';
 
 const Talcott: React.FC = () => {
     return (
         <>
             <Header />
-            <div className="hero hero_heublein-ideal-clouds">
-                <div className="hero-text-wrap anim_slide-in-fade">
-                    <span className="hero-text">Talcott</span>
-                </div>
-            </div>
+            <Hero className="hero_heublein-ideal-clouds" heroText="Talcott" />
+
             <div id="talcott" className="content-container home surface-light-gradient">
 
 
@@ -53,8 +51,8 @@ const Talcott: React.FC = () => {
                             <li>Coordinates: <a href="https://goo.gl/maps/VSg4LzqEr9SGETRz9" target="_blank" rel="noreferrer">41.83500618941068, -72.79806566380861</a></li>
                             <li>Elevation: 800’ MSL / 650’ AGL</li>
                             <li>Direction: 290°</li>
-                            <li>Wind: Ideal wind is 270-310@10-12, soarable in 260-320..</li>
-                            <li>Launching in winds more than 15mph or a gust factor of more than 8mph is not recommended</li>
+                            <li>Wind: Ideal wind is 270-310@10-12, soarable in 260-320.</li>
+                            <li>Launching in winds more than 15mph or a gust factor of more than 8mph is not recommended.</li>
                         </ul>
 
                         <p>Launch is a sheer cliff and is unforgiving of poor technique and less-than-perfect launch windows. Proficient cliff launching skills are essential and a wire crew is required for all but light conditions. The launch area protrudes out from the rest of the cliff so if there is any crosswind component at all, there will be rotor coming at you from the upwind side of your glider. Cross wind launches at Talcott are not recommended. Be patient and wait for a good launch window.
@@ -68,9 +66,9 @@ const Talcott: React.FC = () => {
                         <ul>
                             <li>Located adjacent to the state police shooting range at 100 Nod Rd in Simsbury.</li>
                             <li>Coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.83762123782369, -72.8075181422494</a>.</li>
+                            <li>Glide ratio from launch: 4.0</li>
                         </ul>
 
-                        <p>Glide ratio from launch: 4.0</p>
                         <p>The LZ is obstructed by tall trees on the west, south, and east sides, as well as by power lines on the south side. Higher performance gliders are difficult to maneuver into this somewhat restricted LZ. If the wind is calm or from the south, it’s an easy approach from the north. If the wind is from any other direction, then the Holcomb Field LZ is probably the better option.</p>
                         <p>We share this LZ with an RC airplane club. They are good about staying out of our way when they see gliders approaching but be vigilant and try not to land on their runway. Also be careful of their pavilion and other structures along the west side of the field.</p>
 
@@ -82,9 +80,9 @@ const Talcott: React.FC = () => {
                         <ul>
                             <li>Located on Nod Rd ½ mile north of the original LZ</li>
                             <li>Coordinates: <a href="https://goo.gl/maps/fczFDqFkwSyMFNfn9" target="_blank" rel="noreferrer">41.84187704857621, -72.80318127267603</a></li>
+                            <li>Glide ratio from launch: 4.3</li>
                         </ul>
 
-                        <p>Glide ratio from launch: 4.3</p>
                         <p>Holcomb Field is aligned well with the prevailing winds of W and NW. The field is mostly soft and uneven dirt so be prepared to stick your landing. It can be difficult to run out a landing on this terrain and smaller wheels are ineffective.</p>
                         <p>
                             <strong>Over half this field is used by a farmer to plant crops. Do not land, walk, or break down gliders anywhere near crops, or near areas that appear to be freshly plowed in preparation for planting. Our permission to use this field is very delicate and we need to be respectful.</strong>

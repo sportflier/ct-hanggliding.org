@@ -3,22 +3,24 @@ import './Home.scss';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Logo from './../Assets/Images/CHGA-logo.svg';
-
+import LogoLight from './../Assets/Images/CHGA-logo-sky-light.svg';
+import Hero from "../Components/Hero";
 
 const Home: React.FC = () => {
     return (
         <>
             <Header />
-            <div className="hero hero_chga-4th">
-                <div className="hero-text-wrap anim_slide-in-fade">
-                    <span className="hero-text">CHGA</span>
-                </div>
-            </div>
+            <Hero className="hero_chga-4th" heroText="CHGA" />
             <div id="home" className="content-container home surface-light-gradient">
 
                 <div className="chga-mission">
                     <div>
-                        <img src={Logo} alt='Connecticut Hang Gliding Association' className="chga-logo" />
+                        <picture>
+                            <source srcSet={LogoLight} media="(prefers-color-scheme: dark)" />
+                            <img src={Logo} alt='Connecticut Hang Gliding Association' className="chga-logo" />
+                        </picture>
+
+
                     </div>
                     <div>
                         <div className="banner">
