@@ -26,15 +26,18 @@ export default function Header() {
 
             <div>
                 <Menu menuButton={<MenuButton>Membership</MenuButton>} transition>
-                    <MenuItem>Join</MenuItem>
-                    <MenuItem>Officers</MenuItem>
-                    <MenuItem>Bylaws</MenuItem>
+                    <MenuItem><Link to="/join">
+                        Join
+                    </Link></MenuItem>
+                    <MenuItem><Link to="/officers">
+                        Officers
+                    </Link></MenuItem>
+                    <MenuItem><Link to="/bylaws">
+                        Bylaws
+                    </Link></MenuItem>
                 </Menu>
             </div>
 
-            {/* <Link to="/membership">
-                Membership
-            </Link> */}
             <Link to="/calendar">
                 Calendar
             </Link>
