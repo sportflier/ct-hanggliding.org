@@ -55,3 +55,60 @@
     }
   }
 }
+
+.mobile-site-menu {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  border: hidden;
+  background-color: transparent;
+
+  img {
+    width: 74px;
+  }
+
+  &.mobile-nav_visible {
+    position: fixed;
+  }
+
+  @media (min-width: global.$mobile-breakpoint) {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  display: none;
+
+  &.mobile-nav_visible {
+    display: flex;
+    z-index: 999;
+    position: fixed;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: hsl(var(--clr-white));
+    background-color: hsl(var(--clr-dark-forest));
+    min-height: 100vh;
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-headings-extrabold);
+    font-variant: small-caps;
+    font-size: var(--fs-600);
+    gap: 0.5em;
+
+    .home-icon {
+      width: 30vw;
+      min-width: 200px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    @media (min-width: global.$mobile-breakpoint) {
+      display: none;
+    }
+  }
+}

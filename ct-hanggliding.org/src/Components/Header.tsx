@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, ReactNode } from 'react'
 import './Header.scss';
 import Glider from './../Assets/Images/glider.svg';
 import GliderWhite from './../Assets/Images/glider-white.svg';
+import Hamburger from './../Assets/Images/hamburger.svg';
 import { Link } from "react-router-dom";
 import {
     Menu,
@@ -11,14 +12,15 @@ import {
 import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 
-export default function Header() {
+interface INavItemProps {
+    homeIcon: ReactNode,
+}
+
+const NavItems = (props: INavItemProps) => {
     return (
-        <div className='site-header'>
+        <>
             <Link to="/">
-                <picture>
-                    <source srcSet={GliderWhite} media="(prefers-color-scheme: dark)" />
-                    <img src={Glider} alt="" className='header-decoration' />
-                </picture>
+                {props.homeIcon}
             </Link>
             <Link to="/talcott">
                 Talcott
@@ -48,8 +50,42 @@ export default function Header() {
                 Contact
             </Link>
 
+        </>
+    )
 
+}
 
-        </div>
+export default function Header() {
+
+    const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
+
+    const hamburgerClickHandler = () => {
+        setMobileNavIsOpen(!mobileNavIsOpen);
+    }
+
+    const desktopHomeIcon = <picture>
+        <source srcSet={GliderWhite} media="(prefers-color-scheme: dark)" />
+        <img src={Glider} alt="" className='header-decoration' />
+    </picture>;
+
+    const mobileHomeIcon = <img src={GliderWhite} alt="" className='home-icon' />;
+
+    return (
+
+        <>
+            <button className={`mobile-site-menu ${mobileNavIsOpen ? 'mobile-nav_visible' : ''}`} onClick={hamburgerClickHandler}>
+                <img src={Hamburger} alt="" />
+            </button>
+
+            <header className='site-header'>
+                <NavItems homeIcon={desktopHomeIcon} />
+            </header>
+
+            <div className={`mobile-nav ${mobileNavIsOpen ? 'mobile-nav_visible' : ''}`}>
+                <NavItems homeIcon={mobileHomeIcon} />
+
+            </div>
+
+        </>
     )
 }
