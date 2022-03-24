@@ -54,6 +54,7 @@
       font-size: 3rem;
       font-size: clamp(3rem, 2.2rem + 4vw, 7rem);
     }
+    white-space: nowrap;
     padding-inline: 0.5em;
     margin-block-start: 0.15em;
     border-radius: var(--radius-3);
