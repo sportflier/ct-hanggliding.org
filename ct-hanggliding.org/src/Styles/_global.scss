@@ -16,6 +16,21 @@
   --clr-earth: 43, 10%, 52%; // Earth
 
   /* gradients */
+  --gradient-beach: linear-gradient(
+    to right,
+    hsl(var(--clr-white), 0.95),
+    hsl(var(--clr-beach))
+  );
+  --gradient-forest: linear-gradient(
+    to right,
+    hsl(var(--clr-forest), 0.95),
+    hsl(var(--clr-dark-forest))
+  );
+  --gradient-sky-light: linear-gradient(
+    to right,
+    hsl(var(--clr-sky-light)),
+    hsl(var(--clr-sky))
+  );
 
   // --clr-white: 0, 0%, 99%;
   // --clr-accent: 210, 50%, 73%;
@@ -146,37 +161,21 @@ select {
 
 .surface-light-gradient {
   color: hsl(var(--clr-dark-forest));
-  background: linear-gradient(
-    to right,
-    hsl(var(--clr-white), 0.95),
-    hsl(var(--clr-beach))
-  );
+  background: var(--gradient-beach);
   @media (prefers-color-scheme: dark) {
     color: hsl(var(--clr-white));
-    background: linear-gradient(
-      to right,
-      hsl(var(--clr-forest), 0.95),
-      hsl(var(--clr-dark-forest))
-    );
+    background: var(--gradient-forest);
   }
 }
 
 .bg-light-gradient {
-  background: linear-gradient(
-    to right,
-    hsl(var(--clr-white), 0.95),
-    hsl(var(--clr-beach))
-  );
+  background: var(--gradient-beach);
 }
 
 .surface-light,
 .surface-light-gradient {
   .banner {
-    background: linear-gradient(
-      to right,
-      hsl(var(--clr-sky-light)),
-      hsl(var(--clr-sky))
-    );
+    background: var(--gradient-sky-light);
     @media (prefers-color-scheme: dark) {
       background: linear-gradient(
         to right,
