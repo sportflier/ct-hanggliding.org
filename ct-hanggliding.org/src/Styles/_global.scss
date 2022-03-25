@@ -31,6 +31,11 @@
     hsl(var(--clr-sky-light)),
     hsl(var(--clr-sky))
   );
+  --gradient-sky-light-reverse: linear-gradient(
+    to left,
+    hsl(var(--clr-sky-light)),
+    hsl(var(--clr-sky))
+  );
 
   // --clr-white: 0, 0%, 99%;
   // --clr-accent: 210, 50%, 73%;
@@ -142,6 +147,13 @@ select {
 
 .d-flex {
   display: flex;
+}
+.fl-col {
+  flex-direction: column;
+}
+.fl-center {
+  justify-content: center;
+  align-items: center;
 }
 
 .banner {

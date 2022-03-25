@@ -6,6 +6,7 @@ import OfficerCard from '../Components/OfficerCard';
 import Greg from '../Assets/Images/Officers/Greg_Saracino.jpg';
 import Carol from '../Assets/Images/Officers/Carol.jpeg';
 import Lisa from '../Assets/Images/Officers/Lisa_Kozar.jpg';
+import Woz from '../Assets/Images/Officers/Woz.jpg';
 
 const Officers: React.FC = () => {
     return (
@@ -20,15 +21,21 @@ const Officers: React.FC = () => {
                     <div className="banner">
                         <h1 className="heading-2 anim_scale-fade">Officers of the CHGA</h1>
                     </div>
-                    <OfficerCard portrait={Greg} >
-                        Greg Saracino
-                    </OfficerCard>
-                    <OfficerCard portrait={Carol} className="officer-card_reverse">
-                        Carol Allard
-                    </OfficerCard>
-                    <OfficerCard portrait={Lisa} >
-                        Lisa Kozar
-                    </OfficerCard>
+                    <div className="d-flex fl-col fl-center">
+                        <OfficerCard portrait={Greg} >
+                            <strong>President &amp; Safety Coordinator</strong><br />Greg Saracino
+                        </OfficerCard>
+                        <OfficerCard portrait={Woz} className="officer-card_reverse" >
+                            <strong>Vice President</strong><br />Steve Wozniki
+                        </OfficerCard>
+                        <OfficerCard portrait={Carol}>
+                            <strong>Treasurer</strong><br />Carol Allard
+                        </OfficerCard>
+                        <OfficerCard portrait={Lisa} className="officer-card_reverse" >
+                            <strong>Secretary</strong><br />Lisa Silvestri Kozar
+                        </OfficerCard>
+
+                    </div>
 
                 </div>
 

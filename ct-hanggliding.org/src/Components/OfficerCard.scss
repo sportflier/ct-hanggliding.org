@@ -20,9 +20,13 @@
   gap: 3ch;
 
   background-image: var(--gradient-sky-light);
+  padding-inline-end: 10%;
 
   &.officer-card_reverse {
     flex-direction: row-reverse;
+    background-image: var(--gradient-sky-light-reverse);
+    padding-inline-end: 0;
+    padding-inline-start: 10%;
     // justify-content: flex-end;
   }
 
