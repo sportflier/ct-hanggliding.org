@@ -18,7 +18,7 @@ const Membership: React.FC = () => {
                         <h1 className="heading-2 anim_scale-fade">Join the CHGA</h1>
                     </div>
                     <div className="text-normal">
-                        <p>The CHGA was created in 1974 when the sport of hang gliding was new and wild. Since then we have grown and matured, along with the sport. Today we are Chapter 11 of the United States Hang Gliding Association. We currently have about 15 members.</p>
+                        <p>The <abbr title="Connecticut Hang Gliding Association">CHGA</abbr> was created in 1974 when the sport of hang gliding was new and wild. Since then we have grown and matured, along with the sport. Today we are Chapter 11 of the United States Hang Gliding Association. We currently have about 15 members.</p>
 
                         <p>We welcome paraglider pilots to join us too. Currently we do not have any paraglider pilots who are members. Our most suitable site for PG is Brace Mountain on the CT/NY border. Brace was opened in 1975 by the CHGA and has been used extensively by HG and then PG pilots via a NY state park permit and is an active flight park. The XC record from Brace is 79 miles set by Deane Williams on July 11, 1985 (HG). For more info on Brace Mountain see <a href='https://mtbraceclub.com/'>mtbraceclub.com</a></p>
 
