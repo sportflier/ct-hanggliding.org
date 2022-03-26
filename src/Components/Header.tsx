@@ -2,7 +2,6 @@ import React, { useState, ReactNode } from 'react'
 import './Header.scss';
 import Glider from './../Assets/Images/glider.svg';
 import GliderWhite from './../Assets/Images/glider-white.svg';
-import HamburgerIcon from './../Assets/Images/hamburger.svg';
 import Hamburger from './Hamburger';
 import { Link } from "react-router-dom";
 import {
@@ -76,7 +75,6 @@ export default function Header() {
 
         <>
             <button className={`mobile-site-menu ${mobileNavIsOpen ? 'mobile-nav_visible' : ''}`} onClick={mobileNavClickHandler}>
-                {/* <img src={HamburgerIcon} alt="" /> */}
                 <Hamburger />
             </button>
 
