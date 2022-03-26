@@ -8,6 +8,26 @@ import Carol from '../Assets/Images/Officers/Carol.jpeg';
 import Lisa from '../Assets/Images/Officers/Lisa_Kozar.jpg';
 import Woz from '../Assets/Images/Officers/Woz.jpg';
 
+interface IOfficerCard {
+    portrait: string,
+    title: string,
+    name: string,
+    phone?: string,
+    email?: string,
+    className?: string,
+}
+
+const FormattedOfficerCard: React.FC<IOfficerCard> = ({ portrait, title, name, phone = '', email = '', className = '' }: IOfficerCard) => {
+    return (
+        <OfficerCard portrait={portrait} className={className} >
+            <strong>{title}</strong><br />{name}
+            {phone.length > 0 ? <><br />{phone}</> : <></>}
+            {email.length > 0 ? <><br /><a href={`mailto:${email}`}>{email}</a></> : <></>}
+        </OfficerCard>
+
+    )
+}
+
 const Officers: React.FC = () => {
     return (
         <>
@@ -22,18 +42,10 @@ const Officers: React.FC = () => {
                         <h1 className="heading-2 anim_scale-fade">CHGA Club Officers</h1>
                     </div>
                     <div className="d-flex fl-col fl-center">
-                        <OfficerCard portrait={Greg} >
-                            <strong>President &amp; Safety Coordinator</strong><br />Greg Saracino<br />gregs61160(at)yahoo.com
-                        </OfficerCard>
-                        <OfficerCard portrait={Woz} className="officer-card_reverse" >
-                            <strong>Vice President</strong><br />Steve Wozniki<br />mrwoz(at)sbcglobal.net
-                        </OfficerCard>
-                        <OfficerCard portrait={Carol}>
-                            <strong>Treasurer</strong><br />Carol Allard<br />carol.allard(at)yahoo.com
-                        </OfficerCard>
-                        <OfficerCard portrait={Lisa} className="officer-card_reverse" >
-                            <strong>Secretary</strong><br />Lisa Silvestri Kozar<br />SecondRodeo21(at)yahoo.com
-                        </OfficerCard>
+                        <FormattedOfficerCard portrait={Greg} title='President &amp; Safety Officer ' name='Greg Saracino' email='gregs61160@yahoo.com' phone='203-615-2075' />
+                        <FormattedOfficerCard portrait={Woz} className="officer-card_reverse" name='Steve Woznicki' title='Vice President' />
+                        <FormattedOfficerCard portrait={Carol} name='Carol Allard' title='Treasurer' />
+                        <FormattedOfficerCard portrait={Lisa} className="officer-card_reverse" name='Lisa Silvestri Kozar' title='Secretary' />
 
                     </div>
 
