@@ -8,7 +8,7 @@ type Props = {
     key?: string
 }
 
-export default function OfficerCard({ portrait, children, className = '', key = '' }: Props) {
+export function OfficerCard({ portrait, children, className = '', key = '' }: Props) {
     return (
         <div className={`officer-card ${className}`} key={key}>
             <div className="portrait">
@@ -19,5 +19,25 @@ export default function OfficerCard({ portrait, children, className = '', key = 
             </div>
 
         </div>
+    )
+}
+
+export interface IOfficerCard {
+    portrait: string,
+    title: string,
+    name: string,
+    phone?: string,
+    email?: string,
+    className?: string,
+}
+
+export default function FormattedOfficerCard({ portrait, title, name, phone = '', email = '', className = '' }: IOfficerCard) {
+    return (
+        <OfficerCard portrait={portrait} className={className} >
+            <strong>{title}</strong><br />{name}
+            {phone.length > 0 ? <><br />{phone}</> : <></>}
+            {email.length > 0 ? <><br /><a href={`mailto:${email}`}>{email}</a></> : <></>}
+        </OfficerCard>
+
     )
 }

@@ -2,31 +2,12 @@ import React from 'react'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
-import OfficerCard from '../Components/OfficerCard';
+import FormattedOfficerCard from '../Components/OfficerCard';
 import Greg from '../Assets/Images/Officers/Greg_Saracino.jpg';
 import Carol from '../Assets/Images/Officers/Carol.jpeg';
 import Lisa from '../Assets/Images/Officers/Lisa_Kozar.jpg';
 import Woz from '../Assets/Images/Officers/Woz.jpg';
 
-interface IOfficerCard {
-    portrait: string,
-    title: string,
-    name: string,
-    phone?: string,
-    email?: string,
-    className?: string,
-}
-
-const FormattedOfficerCard: React.FC<IOfficerCard> = ({ portrait, title, name, phone = '', email = '', className = '' }: IOfficerCard) => {
-    return (
-        <OfficerCard portrait={portrait} className={className} >
-            <strong>{title}</strong><br />{name}
-            {phone.length > 0 ? <><br />{phone}</> : <></>}
-            {email.length > 0 ? <><br /><a href={`mailto:${email}`}>{email}</a></> : <></>}
-        </OfficerCard>
-
-    )
-}
 
 const Officers: React.FC = () => {
     return (
