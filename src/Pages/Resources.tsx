@@ -2,37 +2,53 @@ import React from 'react'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
+import Links, { ResourceLinkGroups } from './../Data/resource-data';
+import './Resources.scss';
 
 
 interface IResourceCardProp {
     heroImage?: string,
     name: string,
     description: string,
-    url?: string
+    url?: string,
+
 }
-const Card: React.FC<IResourceCardProp> = ({ heroImage = '', name, description, url = '' }: IResourceCardProp) => {
+const Card: React.FC<IResourceCardProp> = ({ heroImage = '', name, description, url = '' }: IResourceCardProp, key: string) => {
+
     return (
-        <div><strong>{name}</strong>
-            <br />{description}
-            {url.length > 0 ? <><br /><a href={url}>{url}</a></> : <></>}
-        </div>
+        <a href={url} target="_blank" rel="noreferrer" key={key}>
+            <div className='resource-card'>
+                <div className="resource-card_container">
+                    <strong>{name}</strong>
+                    {description.length > 0 ? <><br />{description}</> : <></>}
+
+                </div>
+            </div>
+
+        </a>
     )
 }
 
-const Links = [
-    {
-        category: "school",
-        name: "US Hang Gliding",
-        description: "Middletown, NY",
-        url: "https://www.ushanggliding.com"
-    },
-    {
-        category: "x",
-        name: "Hang Glide New England",
-        description: "New Braintree, MA",
-        url: "http://www.hangglidenewengland.com"
-    }
-]
+interface IResourceGroupProp {
+    category: string,
+    title: string
+}
+
+
+const CardGroup: React.FC<IResourceGroupProp> = ({ category, title }: IResourceGroupProp, key: string) => {
+    return (
+        <>
+            <div key={key}>
+                <h2>{title}</h2>
+                <div className='resource-group'>
+                    {Links.filter((c) => c.category === category).map((c) => <Card name={c.name} description={c.description} url={c.url} key={c.name} />)}
+
+                </div>
+
+            </div>
+        </>
+    );
+};
 
 const Resources: React.FC = () => {
     return (
@@ -47,11 +63,12 @@ const Resources: React.FC = () => {
                     <div className="banner">
                         <h1 className="heading-2 anim_scale-fade">Resources</h1>
                     </div>
+
                     <div className="text-normal">
-                        <h2>Schools</h2>
                         {
-                            Links.filter((c) => c.category === "school").map((c) => <Card name={c.name} description={c.description} url={c.url} />)
+                            ResourceLinkGroups.map((g) => <CardGroup key={g.category} category={g.category} title={g.name} />)
                         }
+
 
                     </div>
 
