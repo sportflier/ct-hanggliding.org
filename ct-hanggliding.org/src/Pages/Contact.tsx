@@ -24,8 +24,8 @@ const Contact: React.FC = () => {
 
                     </div>
                     <div>
-                        <ContactForm />
-
+                        {/* <ContactForm /> */}
+                        Coming soon!
                     </div>
 
                 </div>

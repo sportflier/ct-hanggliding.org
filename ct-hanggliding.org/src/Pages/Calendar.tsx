@@ -17,7 +17,7 @@ const Calendar: React.FC = () => {
                         <h1 className="heading-2 anim_scale-fade">Calendar</h1>
                     </div>
                     <div className="text-normal">
-                        <p>Meetings are held on the first Tuesday of the month at George's Pizza restaurant at 9 School Street, Unionville, Connecticut at 8 PM. Come at 7 PM to eat dinner.</p>
+                        <p>Meetings are held on the first Tuesday of the month at <a href="https://goo.gl/maps/J9D51oK152iWCF837"><strong>George's Pizza &amp; Restaurant</strong> at 9 School Street, Unionville, Connecticut</a> at 8 PM. Come at 7 PM to eat dinner.</p>
 
                         <p>Find more information about how to <a href='/join'>join us</a>.</p>
                     </div>

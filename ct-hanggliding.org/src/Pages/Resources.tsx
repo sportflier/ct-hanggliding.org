@@ -19,6 +19,21 @@ const Card: React.FC<IResourceCardProp> = ({ heroImage = '', name, description, 
     )
 }
 
+const Links = [
+    {
+        category: "school",
+        name: "US Hang Gliding",
+        description: "Middletown, NY",
+        url: "https://www.ushanggliding.com"
+    },
+    {
+        category: "x",
+        name: "Hang Glide New England",
+        description: "New Braintree, MA",
+        url: "http://www.hangglidenewengland.com"
+    }
+]
+
 const Resources: React.FC = () => {
     return (
         <>
@@ -34,7 +49,9 @@ const Resources: React.FC = () => {
                     </div>
                     <div className="text-normal">
                         <h2>Schools</h2>
-                        <Card name='US Hang Gliding' description='Middletown, NY' url='https://www.ushanggliding.com' />
+                        {
+                            Links.filter((c) => c.category === "school").map((c) => <Card name={c.name} description={c.description} url={c.url} />)
+                        }
 
                     </div>
 
