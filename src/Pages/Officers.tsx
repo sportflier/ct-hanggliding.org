@@ -25,7 +25,7 @@ const Officers: React.FC = () => {
                     <div className="d-flex fl-col fl-center">
                         <FormattedOfficerCard portrait={Greg} title='President &amp; Safety Officer ' name='Greg Saracino' email='gregs61160@yahoo.com' phone='203-615-2075' />
                         <FormattedOfficerCard portrait={Woz} className="officer-card_reverse" name='Steve Woznicki' title='Vice President' email='mrwoz@sbcglobal.net' />
-                        <FormattedOfficerCard portrait={Carol} name='Carol Allard' title='Treasurer' />
+                        <FormattedOfficerCard portrait={Carol} name='Carol Allard' title='Treasurer' email='carol.allard@yahoo.com' />
                         <FormattedOfficerCard portrait={Lisa} className="officer-card_reverse" name='Lisa Silvestri Kozar' title='Secretary' email='SecondRodeo21@yahoo.com' />
 
                     </div>
