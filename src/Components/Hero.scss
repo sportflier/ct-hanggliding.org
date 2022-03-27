@@ -85,6 +85,26 @@
     background-image: url("./../Assets//Images/Heroes/talcott-lz.jpg");
   }
 
+  @keyframes change-bg-home-droid-portrait {
+    0%,
+    20%,
+    100% {
+      background-image: url("./../Assets/Images/New-Heroes/u2-4th-droid-portrait.jpg");
+    }
+    25%,
+    45% {
+      background-image: url("./../Assets/Images/New-Heroes/heublein-fantasy-droid-portrait.jpg");
+    }
+    50%,
+    75% {
+      background-image: url("./../Assets/Images/New-Heroes/falcon-launch-droid-portrait.jpg");
+    }
+    80%,
+    95% {
+      background-image: url("./../Assets/Images/New-Heroes/talcott-flyby-droid-portrait.jpg");
+    }
+  }
+
   @keyframes change-bg-home {
     0%,
     20%,
@@ -106,7 +126,10 @@
   }
 
   &.hero_home_anim {
-    animation: change-bg-home 25s infinite;
+    animation: change-bg-home-droid-portrait 25s infinite;
+    @media (min-width: 768px) {
+      animation: change-bg-home 25s infinite;
+    }
   }
 
   // @media (prefers-color-scheme: dark) {
