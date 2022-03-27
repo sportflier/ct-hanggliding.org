@@ -8,7 +8,7 @@ const Membership: React.FC = () => {
     return (
         <>
             <Header />
-            <Hero className="hero_talcott-setup-area" heroText="Join" />
+            <Hero className="hero_falcon-launch" heroText="Join" />
 
             <div id="membership" className="content-container home surface-light-gradient">
 
