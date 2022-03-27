@@ -26,6 +26,11 @@
     hsl(var(--clr-forest), 0.95),
     hsl(var(--clr-dark-forest))
   );
+  --gradient-forest-reverse: linear-gradient(
+    to left,
+    hsl(var(--clr-forest), 0.95),
+    hsl(var(--clr-dark-forest))
+  );
   --gradient-sky-light: linear-gradient(
     to right,
     hsl(var(--clr-sky-light)),
@@ -149,6 +154,13 @@ select {
   }
 }
 
+a {
+  color: hsl(var(--clr-deep-sky));
+  @media (prefers-color-scheme: dark) {
+    color: hsl(var(--clr-sky-light));
+  }
+}
+
 /* ------------------- */
 /* Utilities           */
 /* ------------------- */
@@ -188,6 +200,22 @@ select {
   }
 }
 
+.surface-light-sky-gradient {
+  background: var(--gradient-sky-light);
+  @media (prefers-color-scheme: dark) {
+    color: hsl(var(--clr-white));
+    background: var(--gradient-forest);
+  }
+}
+
+.surface-light-sky-gradient-reverse {
+  background: var(--gradient-sky-light-reverse);
+  @media (prefers-color-scheme: dark) {
+    color: hsl(var(--clr-white));
+    background: var(--gradient-forest-reverse);
+  }
+}
+
 .bg-light-gradient {
   background: var(--gradient-beach);
 }
@@ -197,11 +225,7 @@ select {
   .banner {
     background: var(--gradient-sky-light);
     @media (prefers-color-scheme: dark) {
-      background: linear-gradient(
-        to right,
-        hsl(var(--clr-forest)),
-        hsl(var(--clr-dark-forest))
-      );
+      background: var(--gradient-forest);
     }
   }
 }
@@ -220,12 +244,6 @@ select {
   }
   h3 {
     font-size: var(--fs-400);
-  }
-  a {
-    color: hsl(var(--clr-deep-sky));
-    @media (prefers-color-scheme: dark) {
-      color: hsl(var(--clr-sky-light));
-    }
   }
 }
 
