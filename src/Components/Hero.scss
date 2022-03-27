@@ -8,10 +8,50 @@
   background-size: cover;
   background-position: center;
   &.hero_chga-4th {
-    background-image: url("./../Assets/Images/Heroes/chga-U2-4th.jpg");
+    background-image: url("./../Assets/Images/New-Heroes/u2-4th-droid-portrait.jpg");
+
+    @media (orientation: landscape) {
+      background-image: url("./../Assets/Images/New-Heroes/u2-4th-droid.jpg");
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("./../Assets/Images/New-Heroes/u2-4th-XL.jpg");
+    }
   }
   &.hero_heublein-ideal-clouds {
-    background-image: url("./../Assets/Images/Heroes/heublein-ideal-clouds-hd.jpg");
+    background-image: url("./../Assets/Images/New-Heroes/heublein-fantasy-droid-portrait.jpg");
+
+    @media (orientation: landscape) {
+      background-image: url("./../Assets/Images/New-Heroes/heublein-fantasy-droid.jpg");
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("./../Assets/Images/New-Heroes/heublein-fantasy-XL.jpg");
+    }
+  }
+
+  &.hero_falcon-launch {
+    background-image: url("./../Assets/Images/New-Heroes/falcon-launch-droid-portrait.jpg");
+
+    @media (orientation: landscape) {
+      background-image: url("./../Assets/Images/New-Heroes/falcon-launch-droid.jpg");
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("./../Assets/Images/New-Heroes/falcon-launch-XL.jpg");
+    }
+  }
+
+  &.hero_talcott-flyby {
+    background-image: url("./../Assets/Images/New-Heroes/talcott-flyby-droid-portrait.jpg");
+
+    @media (orientation: landscape) {
+      background-image: url("./../Assets/Images/New-Heroes/talcott-flyby-droid.jpg");
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("./../Assets/Images/New-Heroes/talcott-flyby-XL.jpg");
+    }
   }
 
   &.hero_tanner-hiller-dragonfly {
@@ -28,6 +68,30 @@
 
   &.hero_birds-flock-india {
     background-image: url("./../Assets/Images/Heroes/pexels-kunal-baroth-2007660.jpg");
+  }
+
+  @keyframes change-bg-home {
+    0%,
+    20%,
+    100% {
+      background-image: url("./../Assets/Images/New-Heroes/u2-4th-XL.jpg");
+    }
+    25%,
+    45% {
+      background-image: url("./../Assets/Images/New-Heroes/heublein-fantasy-XL.jpg");
+    }
+    50%,
+    70% {
+      background-image: url("./../Assets/Images/New-Heroes/falcon-launch-XL.jpg");
+    }
+    75%,
+    90% {
+      background-image: url("./../Assets/Images/New-Heroes/talcott-flyby-XL.jpg");
+    }
+  }
+
+  &.hero_home_anim {
+    animation: change-bg-home 40s infinite;
   }
 
   // @media (prefers-color-scheme: dark) {

@@ -64,11 +64,19 @@
   --fw-headings-regular: 400;
   --fw-headings-semibold: 600;
   --fw-headings-extrabold: 800;
+
+  --bp-sm: 576px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
 }
 
 /* breakpoints */
-$breakpoint-tablet: 768px;
-$mobile-breakpoint: $breakpoint-tablet;
+$breakpoint-small: 576px;
+$breakpoint_tablet: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xl: 1200px;
+$mobile-breakpoint: $breakpoint_tablet;
 
 /* ------------------- */
 /* Reset               */
