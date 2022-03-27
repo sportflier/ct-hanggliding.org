@@ -55,7 +55,26 @@
   }
 
   &.hero_tanner-hiller-dragonfly {
-    background-image: url("./../Assets/Images/Heroes/tanner-hiller-dragonfly-aloft.jpg");
+    background-image: url("./../Assets/Images/New-Heroes/tanner-hiller-droid-portrait.jpg");
+
+    @media (orientation: landscape) {
+      background-image: url("./../Assets/Images/New-Heroes/tanner-hiller-droid.jpg");
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("./../Assets/Images/New-Heroes/tanner-hiller-XL.jpg");
+    }
+  }
+  &.hero_birds-flock-india {
+    background-image: url("./../Assets/Images/New-Heroes/pexels-kunal-baroth-droid-portrait.jpg");
+
+    @media (orientation: landscape) {
+      background-image: url("./../Assets/Images/New-Heroes/pexels-kunal-baroth-droid.jpg");
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("./../Assets/Images/New-Heroes/pexels-kunal-baroth-XL.jpg");
+    }
   }
 
   &.hero_talcott-setup-area {
@@ -64,10 +83,6 @@
 
   &.hero_talcott-lz {
     background-image: url("./../Assets//Images/Heroes/talcott-lz.jpg");
-  }
-
-  &.hero_birds-flock-india {
-    background-image: url("./../Assets/Images/Heroes/pexels-kunal-baroth-2007660.jpg");
   }
 
   @keyframes change-bg-home {
