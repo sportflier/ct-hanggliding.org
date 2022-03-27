@@ -81,17 +81,17 @@
       background-image: url("./../Assets/Images/New-Heroes/heublein-fantasy-XL.jpg");
     }
     50%,
-    70% {
+    75% {
       background-image: url("./../Assets/Images/New-Heroes/falcon-launch-XL.jpg");
     }
-    75%,
-    90% {
+    80%,
+    95% {
       background-image: url("./../Assets/Images/New-Heroes/talcott-flyby-XL.jpg");
     }
   }
 
   &.hero_home_anim {
-    animation: change-bg-home 40s infinite;
+    animation: change-bg-home 25s infinite;
   }
 
   // @media (prefers-color-scheme: dark) {

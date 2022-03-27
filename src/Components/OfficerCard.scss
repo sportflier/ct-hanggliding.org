@@ -9,29 +9,23 @@
 
   // block-size: var(--card-size);
   // aspect-ratio: var(--ratio-ultrawide);
-  border-radius: var(--radius-round);
-  width: 80%;
+  width: 100%;
   //   max-inline-size: var(--size-content-3);
   //   &:hover {
   //     box-shadow: var(--shadow-3);
   //   }
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  // text-align: center;
+  flex-direction: column;
   gap: 1ch;
 
   background-image: var(--gradient-sky-light);
-  padding-inline-end: 10%;
   font-size: var(--fs-400);
 
-  &.officer-card_reverse {
-    flex-direction: row-reverse;
-    background-image: var(--gradient-sky-light-reverse);
-    padding-inline-end: 0;
-    padding-inline-start: 10%;
-    text-align: end;
-    // justify-content: flex-end;
-  }
+  padding-inline: 0.5ch;
+  padding-block: 0.5em;
 
   @media (--motionOK) {
     animation: var(--animation-fade-in);
@@ -40,12 +34,33 @@
   .portrait {
     aspect-ratio: var(--ratio-square);
     width: var(--card-size);
-    border-radius: var(--radius-round);
     overflow: hidden;
     border: 3px solid hsl(var(--clr-earth));
-    min-width: 100px;
+    min-width: 200px;
     img {
       width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 80%;
+    align-items: center;
+    flex-direction: row;
+    // padding-inline-end: 10%;
+
+    &.officer-card_reverse {
+      flex-direction: row-reverse;
+      background-image: var(--gradient-sky-light-reverse);
+      // padding-inline-end: 0;
+      // padding-inline-start: 10%;
+      text-align: end;
+      // justify-content: flex-end;
+    }
+
+    border-radius: var(--radius-round);
+    .portrait {
+      border-radius: var(--radius-round);
+      min-width: 100px;
     }
   }
 }
