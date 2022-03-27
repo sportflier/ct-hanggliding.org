@@ -46,7 +46,7 @@ const Talcott: React.FC = () => {
                         <h2 className="heading">
                             Launch
                         </h2>
-
+                        <div className='TalcottLaunchVR'></div>
                         <ul>
                             <li>Coordinates: <a href="https://goo.gl/maps/VSg4LzqEr9SGETRz9" target="_blank" rel="noreferrer">41.83500618941068, -72.79806566380861</a></li>
                             <li>Elevation: 800’ MSL / 650’ AGL</li>
