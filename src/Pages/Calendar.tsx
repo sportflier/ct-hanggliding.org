@@ -2,6 +2,10 @@ import React from 'react'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
+import './Calendar.scss';
+import ChgaGCal from '../Components/ChgaGCal';
+
+
 
 const Calendar: React.FC = () => {
     return (
@@ -22,8 +26,10 @@ const Calendar: React.FC = () => {
                         <p>Find more information about how to <a href='/join'>join us</a>.</p>
                     </div>
 
+
                 </div>
 
+                <ChgaGCal />
 
             </div>
             <Footer />
