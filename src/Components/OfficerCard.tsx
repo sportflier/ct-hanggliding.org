@@ -14,7 +14,7 @@ export function OfficerCard({ portrait, children, className = '', key = '' }: Pr
             <div className="portrait">
                 <img src={portrait} alt="" />
             </div>
-            <div className="copy">
+            <div className="copy text-normal">
                 {children}
             </div>
 

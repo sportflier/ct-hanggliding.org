@@ -25,14 +25,17 @@ const Contact: React.FC = () => {
 
 
                     </div>
-                    <div className='mt-1'>
+                    <div className='mt-1 text-normal'>
                         {/* 
                         
                         For questions and information about our club or about hang gliding in general, use the form below. You are also welcome to text our club president, Greg Saracino at 203-615-2075.
                         <ContactForm /> 
                         
                         */}
-                        For questions and information about our club or about hang gliding in general, you are welcome to text our club president, below.
+                        <p>
+                            For questions and information about our club or about hang gliding in general, you are welcome to text our club president, below.
+                        </p>
+
                     </div>
                     <FormattedOfficerCard portrait={Greg} title='President &amp; Safety Officer ' name='Greg Saracino' email='gregs61160@yahoo.com' phone='203-615-2075' />
 
