@@ -1,7 +1,7 @@
 const ResourceLinks = [
     { category: "school", name: "US Hang Gliding", description: "Middletown, NY ", url: "https://www.facebook.com/ushginc", image: "" },
     { category: "school", name: "Hang Glide New England", description: "New Braintree, MA", url: "http://www.hangglidenewengland.com", image: "" },
-    { category: "school", name: "Eco-Flight Hang Gliding", description: "Central Massachusetts - Robert Stewart, (413) 253-5852", url: "mailto:ecoflighthg@gmail.com", image: "" },
+    { category: "school", name: "Eco-Flight Hang Gliding", description: "Central Massachusetts - Robert Stewart, (413) 253-5852", url: "mailto:ecoflighthg@gmail.com", image: "" },
     { category: "school", name: "Morningside Flight Park", description: "Claremont, NH", url: "https://flymorningside.kittyhawk.com", image: "" },
     { category: "school", name: "Susquehanna Flight Park", description: "Cooperstown, NY", url: "https://cooperstownhanggliding.com", image: "" },
     { category: "school", name: "Blue Sky", description: "Manquin, VA", url: "https://www.blueskyhg.com", image: "" },
@@ -26,11 +26,11 @@ const ResourceLinks = [
     { category: "video", name: "Live The Dream", description: "Documentary of a young woman learning how to fly, very inspirational", url: "https://vimeo.com/46406544", image: "" },
     { category: "video", name: "Free Flyers", description: "Documentary profiles hang gliding in Utah", url: "https://www.youtube.com/watch?v=dtFpURLUO0I", image: "" },
     { category: "video", name: "Big Blue Sky", description: "Documentary of the history of hang gliding", url: "https://www.youtube.com/watch?v=-hRSUjJFmCc&t=686s", image: "" },
-
+    { category: "school", name: "Thermal Valley Hang Gliding", description: "Lenoir, NC", url: "https://www.thermalvalley.net/", image: "" }
 ]
 
 export const ResourceLinkGroups = [
-    { category: "school", name: "Schools" },
+    { category: "school", name: "Schools & Flight Parks" },
     { category: "club", name: "Local Clubs" },
     { category: "other", name: "Other Resources" },
     { category: "video", name: "Profession Films & Documentaries" },
