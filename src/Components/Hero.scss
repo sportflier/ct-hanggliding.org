@@ -78,11 +78,27 @@
   }
 
   &.hero_talcott-setup-area {
-    background-image: url("./../Assets/Images/Heroes/talcott-setup-area.jpg");
+    background-image: url("./../Assets/Images/New-Heroes/talcott-setup-droid-portrait.jpg");
+
+    @media (orientation: landscape) {
+      background-image: url("./../Assets/Images/New-Heroes/talcott-setup-droid.jpg");
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("./../Assets/Images/New-Heroes/talcott-setup-XL.jpg");
+    }
   }
 
   &.hero_talcott-lz {
-    background-image: url("./../Assets//Images/Heroes/talcott-lz.jpg");
+    background-image: url("./../Assets/Images/New-Heroes/talcott-lz-droid-portrait.jpg");
+
+    @media (orientation: landscape) {
+      background-image: url("./../Assets/Images/New-Heroes/talcott-lz-droid.jpg");
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("./../Assets/Images/New-Heroes/talcott-lz-XL.jpg");
+    }
   }
 
   @keyframes change-bg-home-droid-portrait {
