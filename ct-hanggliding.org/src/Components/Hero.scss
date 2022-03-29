@@ -101,6 +101,18 @@
     }
   }
 
+  &.hero_raptor {
+    background-image: url("./../Assets/Images/New-Heroes/raptor-droid-portrait.jpg");
+
+    @media (orientation: landscape) {
+      background-image: url("./../Assets/Images/New-Heroes/raptor-droid.jpg");
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("./../Assets/Images/New-Heroes/raptor-XL.jpg");
+    }
+  }
+
   @keyframes change-bg-home-droid-portrait {
     0%,
     20%,

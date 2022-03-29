@@ -8,7 +8,7 @@ export default function NotFound() {
     return (
         <>
             <Header />
-            <Hero className="hero_heublein-ideal-clouds" heroText="Not Found!" />
+            <Hero className="hero_raptor" heroText="Not Found!" />
 
             <div id="notfound" className="content-container home surface-light-gradient">
 
