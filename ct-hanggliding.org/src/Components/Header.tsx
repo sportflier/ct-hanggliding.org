@@ -3,7 +3,7 @@ import './Header.scss';
 import Glider from './../Assets/Images/glider.svg';
 import GliderWhite from './../Assets/Images/glider-white.svg';
 import Hamburger from './Hamburger';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
     Menu,
     MenuItem,
@@ -12,44 +12,51 @@ import {
 import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 
+
+
 interface INavItemProps {
     homeIcon: ReactNode,
     onNavClick: any
 }
 
 const NavItems = (props: INavItemProps) => {
+    const activeClass = 'active-link';
+
+
+
+
     return (
         <>
-            <Link to="/" onClick={props.onNavClick}>
+            <NavLink to="/" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                 {props.homeIcon}
-            </Link>
-            <Link to="/talcott" onClick={props.onNavClick}>
+            </NavLink>
+            <NavLink to="/talcott" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                 Talcott
-            </Link>
+            </NavLink>
 
             <div>
                 <Menu menuButton={<MenuButton>Membership</MenuButton>} transition>
-                    <MenuItem><Link to="/join" onClick={props.onNavClick}>
+                    <MenuItem><NavLink to="/join" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                         Join
-                    </Link></MenuItem>
-                    <MenuItem><Link to="/officers" onClick={props.onNavClick}>
+                    </NavLink></MenuItem>
+                    <MenuItem><NavLink to="/officers" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                         Officers
-                    </Link></MenuItem>
-                    <MenuItem><Link to="/bylaws" onClick={props.onNavClick}>
+                    </NavLink></MenuItem>
+                    <MenuItem><NavLink to="/bylaws" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                         Bylaws
-                    </Link></MenuItem>
+                    </NavLink></MenuItem>
                 </Menu>
             </div>
 
-            <Link to="/calendar" onClick={props.onNavClick}>
+            <NavLink to="/calendar" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                 Calendar
-            </Link>
-            <Link to="/resources" onClick={props.onNavClick}>
+            </NavLink>
+            <NavLink to="/resources" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                 Resources
-            </Link>
-            <Link to="/contact" onClick={props.onNavClick}>
+            </NavLink>
+            <NavLink to="/contact" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                 Contact
-            </Link>
+            </NavLink>
 
         </>
     )

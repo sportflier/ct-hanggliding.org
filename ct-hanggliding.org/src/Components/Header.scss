@@ -46,6 +46,12 @@
     a {
       text-decoration: none;
       color: inherit;
+      &.active-link {
+        color: hsl(var(--clr-dark-earth));
+        @media (prefers-color-scheme: dark) {
+          color: hsl(var(--clr-beach));
+        }
+      }
     }
 
     .header-decoration {
