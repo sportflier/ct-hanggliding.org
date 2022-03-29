@@ -3,6 +3,7 @@ import './Talcott.scss';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
+import Accordion from '../Components/Accordion';
 
 const Talcott: React.FC = () => {
     return (
@@ -18,92 +19,98 @@ const Talcott: React.FC = () => {
                         <h1 className="heading anim_scale-fade mb-1">Talcott Mountain Site Guide</h1>
                     </div>
                     <div className="text-normal">
-                        <h2 className='heading'>
-                            General Description
-                        </h2>
-                        <p>Talcott Mountain is a three-mile-long ridge running north to south in central Connecticut’s Metacomet Range. Elevation is 950’ MSL / 700’ AGL at its highest point and offers beautiful views of rural Simsbury and Avon. Most of the mountain is a state park and has several hiking trails as well as the famous Heublein Tower on the south end of the ridge. The park attracts many hikers and site seers who are often curious about hang gliding and like to ask questions and watch us fly.</p>
-                        <p>Talcott offers good ridge and thermal soaring. XC is difficult due to the proximity of Bradley Airport and the Windsor Locks Class C airspace.</p>
 
 
-                        <h2 className='heading'>
-                            Required Credentials
-                        </h2>
-                        <ul>
-                            <li>Current USHPA membership.</li>
-                            <li>H3 rating. H2 pilots may fly with the approval and direct supervision of an observer.</li>
-                            <li>CL &amp; AWCL endorsements, or the supervision of an observer.</li>
-                            <li>A site orientation from a senior club member the first time you fly Talcott.</li>
-                        </ul>
-                        <p><strong>Paragliding is strictly prohibited at Talcott due to the sheer cliff launch, and tree canopy directly over launch. Unauthorized attempts in the past have not ended well.</strong></p>
+                        <Accordion title='General Description'>
+                            <p>Talcott Mountain is a three-mile-long ridge running north to south in central Connecticut’s Metacomet Range. Elevation is 950’ MSL / 700’ AGL at its highest point and offers beautiful views of rural Simsbury and Avon. Most of the mountain is a state park and has several hiking trails as well as the famous Heublein Tower on the south end of the ridge. The park attracts many hikers and site seers who are often curious about hang gliding and like to ask questions and watch us fly.</p>
+                            <p>Talcott offers good ridge and thermal soaring. XC is difficult due to the proximity of Bradley Airport and the Windsor Locks Class C airspace.</p>
+                        </Accordion>
 
-                        <h2 className='heading'>
-                            Location &amp; Access
-                        </h2>
-                        <p>Talcott Mountain State Park is located along Rt 185 in Simsbury, CT. Meeting place is the original LZ located adjacent to the state police shooting range at 100 Nod Rd in Simsbury (coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.83762123782369, -72.8075181422494</a>). Leave a few vehicles then carpool to the state park entrance on Summit Ridge Drive 2.3 miles away. Park in the grass on the side of the road. (Coordinates <a href="https://goo.gl/maps/o1btrVUMx2mxV1wj7" target="_blank" rel="noreferrer">41.83933400305884, -72.7922315654148</a>).</p>
-                        <p>Hike to launch is a ¼ mile / 20-minute hike up the main hiking trail. The trail is often busy with hikers. Try not to clobber hikers with the ends of your glider. Be nice to the hikers – sometimes they offer to help carry your equipment.</p>
-                        <p>Winter access is possible but the gate at the park entrance will be closed. You must park outside the gate which adds an additional ¼ mile to the hike… in the snow.</p>
+                        <Accordion title='Required Credentials'>
+                            <ul>
+                                <li>Current USHPA membership.</li>
+                                <li>H3 rating. H2 pilots may fly with the approval and direct supervision of an observer.</li>
+                                <li>CL &amp; AWCL endorsements, or the supervision of an observer.</li>
+                                <li>A site orientation from a senior club member the first time you fly Talcott.</li>
+                            </ul>
+                            <p><strong>Paragliding is strictly prohibited at Talcott due to the sheer cliff launch, and tree canopy directly over launch. Unauthorized attempts in the past have not ended well.</strong></p>
 
-                        <h2 className="heading">
-                            Launch
-                        </h2>
-                        <div className='TalcottLaunchVR'></div>
-                        <ul>
-                            <li>Coordinates: <a href="https://goo.gl/maps/VSg4LzqEr9SGETRz9" target="_blank" rel="noreferrer">41.83500618941068, -72.79806566380861</a></li>
-                            <li>Elevation: 800’ MSL / 650’ AGL</li>
-                            <li>Direction: 290°</li>
-                            <li>Wind: Ideal wind is 270-310@10-12, soarable in 260-320.</li>
-                            <li>Launching in winds more than 15mph or a gust factor of more than 8mph is not recommended.</li>
-                        </ul>
-
-                        <p>Launch is a sheer cliff and is unforgiving of poor technique and less-than-perfect launch windows. Proficient cliff launching skills are essential and a wire crew is required for all but light conditions. The launch area protrudes out from the rest of the cliff so if there is any crosswind component at all, there will be rotor coming at you from the upwind side of your glider. Cross wind launches at Talcott are not recommended. Be patient and wait for a good launch window.
-                        </p>
-                        <p>
-                            Crowds often form to watch and ask questions. We encourage interaction with the public but do not allow yourself to become distracted from conducting safe preflight procedures. Spectators are required to stay back at the tree line during launches.
-                        </p>
-
-                        <h2 className="heading">LZ – Original</h2>
-
-                        <ul>
-                            <li>Located adjacent to the state police shooting range at 100 Nod Rd in Simsbury.</li>
-                            <li>Coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.83762123782369, -72.8075181422494</a>.</li>
-                            <li>Glide ratio from launch: 4.0</li>
-                        </ul>
-
-                        <p>The LZ is obstructed by tall trees on the west, south, and east sides, as well as by power lines on the south side. Higher performance gliders are difficult to maneuver into this somewhat restricted LZ. If the wind is calm or from the south, it’s an easy approach from the north. If the wind is from any other direction, then the Holcomb Field LZ is probably the better option.</p>
-                        <p>We share this LZ with an RC airplane club. They are good about staying out of our way when they see gliders approaching but be vigilant and try not to land on their runway. Also be careful of their pavilion and other structures along the west side of the field.</p>
+                        </Accordion>
 
 
+                        <Accordion title='Location &amp; Access'>
+                            <p>Talcott Mountain State Park is located along Rt 185 in Simsbury, CT. Meeting place is the original LZ located adjacent to the state police shooting range at 100 Nod Rd in Simsbury (coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.83762123782369, -72.8075181422494</a>). Leave a few vehicles then carpool to the state park entrance on Summit Ridge Drive 2.3 miles away. Park in the grass on the side of the road. (Coordinates <a href="https://goo.gl/maps/o1btrVUMx2mxV1wj7" target="_blank" rel="noreferrer">41.83933400305884, -72.7922315654148</a>).</p>
+                            <p>Hike to launch is a ¼ mile / 20-minute hike up the main hiking trail. The trail is often busy with hikers. Try not to clobber hikers with the ends of your glider. Be nice to the hikers – sometimes they offer to help carry your equipment.</p>
+                            <p>Winter access is possible but the gate at the park entrance will be closed. You must park outside the gate which adds an additional ¼ mile to the hike… in the snow.</p>
+
+                        </Accordion>
 
 
-                        <h2 className="heading">LZ – Holcomb Field</h2>
+                        <Accordion title='Launch'>
+                            <div className="mt-1">
+                                <div className='TalcottLaunchVR mt-2'></div>
 
-                        <ul>
-                            <li>Located on Nod Rd ½ mile north of the original LZ</li>
-                            <li>Coordinates: <a href="https://goo.gl/maps/fczFDqFkwSyMFNfn9" target="_blank" rel="noreferrer">41.84187704857621, -72.80318127267603</a></li>
-                            <li>Glide ratio from launch: 4.3</li>
-                        </ul>
+                            </div>
+                            <ul>
+                                <li>Coordinates: <a href="https://goo.gl/maps/VSg4LzqEr9SGETRz9" target="_blank" rel="noreferrer">41.83500618941068, -72.79806566380861</a></li>
+                                <li>Elevation: 800’ MSL / 650’ AGL</li>
+                                <li>Direction: 290°</li>
+                                <li>Wind: Ideal wind is 270-310@10-12, soarable in 260-320.</li>
+                                <li>Launching in winds more than 15mph or a gust factor of more than 8mph is not recommended.</li>
+                            </ul>
 
-                        <p>Holcomb Field is aligned well with the prevailing winds of W and NW. The field is mostly soft and uneven dirt so be prepared to stick your landing. It can be difficult to run out a landing on this terrain and smaller wheels are ineffective.</p>
-                        <p>
-                            <strong>Over half this field is used by a farmer to plant crops. Do not land, walk, or break down gliders anywhere near crops, or near areas that appear to be freshly plowed in preparation for planting. Our permission to use this field is very delicate and we need to be respectful.</strong>
-                        </p>
+                            <p>Launch is a sheer cliff and is unforgiving of poor technique and less-than-perfect launch windows. Proficient cliff launching skills are essential and a wire crew is required for all but light conditions. The launch area protrudes out from the rest of the cliff so if there is any crosswind component at all, there will be rotor coming at you from the upwind side of your glider. Cross wind launches at Talcott are not recommended. Be patient and wait for a good launch window.
+                            </p>
+                            <p>
+                                Crowds often form to watch and ask questions. We encourage interaction with the public but do not allow yourself to become distracted from conducting safe preflight procedures. Spectators are required to stay back at the tree line during launches.
+                            </p>
+
+                        </Accordion>
 
 
+                        <Accordion title='LZ – Original'>
 
-                        <h2 className="heading">Hazards and Flight Restrictions</h2>
+                            <ul>
+                                <li>Located adjacent to the state police shooting range at 100 Nod Rd in Simsbury.</li>
+                                <li>Coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.83762123782369, -72.8075181422494</a>.</li>
+                                <li>Glide ratio from launch: 4.0</li>
+                            </ul>
 
-                        <p>Talcott is located 9 miles SW of Bradley International Airport and falls under the outer shelf of the Windsor Locks Class C airspace. The floor of the airspace is 2100’ MSL (1200’ above launch altitude). Hang glider flight into the Class C airspace is strictly prohibited. Be familiar with the parameters of the Class C airspace and do not exceed 2100’ MSL unless you have flown out from underneath the Class C shelf. Be vigilant for low flying commercial aircraft.</p>
-                        <p>Simsbury Airport is a small Class G airport 6 miles north of Talcott. Be vigilant for low flying small aircraft.</p>
-                        <p>
-                            <strong>Landing on the polo field to the north of the original LZ is strictly prohibited. Do not land there under any circumstances unless there is a true emergency.</strong>
-                        </p>
+                            <p>The LZ is obstructed by tall trees on the west, south, and east sides, as well as by power lines on the south side. Higher performance gliders are difficult to maneuver into this somewhat restricted LZ. If the wind is calm or from the south, it’s an easy approach from the north. If the wind is from any other direction, then the Holcomb Field LZ is probably the better option.</p>
+                            <p>We share this LZ with an RC airplane club. They are good about staying out of our way when they see gliders approaching but be vigilant and try not to land on their runway. Also be careful of their pavilion and other structures along the west side of the field.</p>
+
+                        </Accordion>
 
 
 
 
 
+                        <Accordion title='LZ – Holcomb Field'>
+
+                            <ul>
+                                <li>Located on Nod Rd ½ mile north of the original LZ</li>
+                                <li>Coordinates: <a href="https://goo.gl/maps/fczFDqFkwSyMFNfn9" target="_blank" rel="noreferrer">41.84187704857621, -72.80318127267603</a></li>
+                                <li>Glide ratio from launch: 4.3</li>
+                            </ul>
+
+                            <p>Holcomb Field is aligned well with the prevailing winds of W and NW. The field is mostly soft and uneven dirt so be prepared to stick your landing. It can be difficult to run out a landing on this terrain and smaller wheels are ineffective.</p>
+                            <p>
+                                <strong>Over half this field is used by a farmer to plant crops. Do not land, walk, or break down gliders anywhere near crops, or near areas that appear to be freshly plowed in preparation for planting. Our permission to use this field is very delicate and we need to be respectful.</strong>
+                            </p>
+
+                        </Accordion>
 
 
+
+                        <Accordion title='Hazards and Flight Restrictions'>
+
+                            <p>Talcott is located 9 miles SW of Bradley International Airport and falls under the outer shelf of the Windsor Locks Class C airspace. The floor of the airspace is 2100’ MSL (1200’ above launch altitude). Hang glider flight into the Class C airspace is strictly prohibited. Be familiar with the parameters of the Class C airspace and do not exceed 2100’ MSL unless you have flown out from underneath the Class C shelf. Be vigilant for low flying commercial aircraft.</p>
+                            <p>Simsbury Airport is a small Class G airport 6 miles north of Talcott. Be vigilant for low flying small aircraft.</p>
+                            <p>
+                                <strong>Landing on the polo field to the north of the original LZ is strictly prohibited. Do not land there under any circumstances unless there is a true emergency.</strong>
+                            </p>
+
+                        </Accordion>
 
 
 

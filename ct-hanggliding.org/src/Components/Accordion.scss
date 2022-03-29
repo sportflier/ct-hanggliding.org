@@ -1,0 +1,17 @@
+@use "./../Styles/global";
+
+.accordion {
+  .accordion-item {
+    .accordion-title {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      border: 2px solid hsla(var(--clr-dark-earth), 25%);
+      padding-inline: 0.5em;
+      margin-inline: -0.5em;
+    }
+    // .accordion-content {
+    // }
+  }
+  margin-block-end: 1em;
+}
