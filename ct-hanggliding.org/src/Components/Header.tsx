@@ -3,7 +3,7 @@ import './Header.scss';
 import Glider from './../Assets/Images/glider.svg';
 import GliderWhite from './../Assets/Images/glider-white.svg';
 import Hamburger from './Hamburger';
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
     Menu,
     MenuItem,
