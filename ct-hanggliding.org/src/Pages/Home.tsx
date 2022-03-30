@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     return (
         <>
             <Header />
-            <Hero heroText="CHGA" />
+            <Hero heroText="CHGA" videoId="Uj7dBEKF-rg" />
             <div id="home" className="content-container home surface-light-gradient">
 
                 <div className="chga-mission">
