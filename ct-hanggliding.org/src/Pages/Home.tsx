@@ -23,6 +23,8 @@ const Home: React.FC = () => {
 
                     </div>
                     <div>
+                        {/* <p>Player:</p>
+                        <YoutubePlayer videoId="FsyoOucwprI" className="my-video-player" /> */}
                         <p className="text-normal">
                             Humanity's oldest dream is to fly like a bird, and hang gliding is the closest human beings can ever get to experiencing it. There is no motor, no noise, and no complicated machinery. Just you, the simplest of equipment, and some skills will have you soaring with hawks and eagles. Contrary to common belief, hang gliders do not jump off cliffs and glide down to the bottom. We use rising air to climb thousands of feet into the sky and stay aloft, often for hours at a time. It's beautiful. It's peaceful. It's exhilarating. There really is nothing like it! And it’s safer than you think!
                         </p>
