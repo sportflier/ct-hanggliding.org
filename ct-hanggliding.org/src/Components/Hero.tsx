@@ -51,10 +51,10 @@ function randomHero() {
 
 export default function Hero({ heroText = '', className = '', videoId = '' }: Props) {
 
-    // const heroTextElement = <div className="hero-text-wrap anim_slide-in-fade">
+    // const heroTextElement = <div className="hero-text-wrap">
     //     <span className={`hero-text ${heroText.length > 8 ? 'hero-text_small' : ''}`}>{heroText}</span>
     // </div>;
-    const heroTextElement = <div className="hero-svg-wrap anim_slide-in-fade">
+    const heroTextElement = <div className="hero-svg-wrap">
         <HeroText text={heroText} />
     </div>;
 
