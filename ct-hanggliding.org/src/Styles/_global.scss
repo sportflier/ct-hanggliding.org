@@ -259,7 +259,7 @@ p.text-normal {
 }
 
 .content-container {
-  padding-inline: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 22.1875)), 375px);
+  padding-inline: clamp(20px, -217px + 31vw, 375px);
   min-height: 0vw;
   padding-block: 2rem;
 }
