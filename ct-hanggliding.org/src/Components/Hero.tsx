@@ -1,7 +1,7 @@
 import React from 'react'
 import './Hero.scss'
 import YoutubePlayer from './YoutubePlayer'
-import HeroText from './HeroText'
+// import HeroText from './HeroText'
 
 const heroes = [
     {
