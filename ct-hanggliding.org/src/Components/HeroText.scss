@@ -1,0 +1,20 @@
+@use "./../Styles/global";
+
+svg.svg-hero-text {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke-linejoin: round;
+  stroke-miterlimit: 2;
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-headings-extrabold);
+  fill: hsla(var(--clr-white), 50%);
+  letter-spacing: var(--font-letterspacing-1);
+  font-size: 2rem;
+  //   font-size: clamp(4rem, 3.2rem + 4vw, 8rem);
+
+  g {
+    rect {
+      fill: none;
+    }
+  }
+}
