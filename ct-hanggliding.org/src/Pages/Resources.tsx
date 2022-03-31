@@ -54,7 +54,7 @@ const Resources: React.FC = () => {
     return (
         <>
             <Header />
-            <Hero className="hero_tanner-hiller-dragonfly" heroText="Resources" />
+            <Hero heroText="Resources" />
 
             <div id="resources" className="content-container home surface-light-gradient">
 
