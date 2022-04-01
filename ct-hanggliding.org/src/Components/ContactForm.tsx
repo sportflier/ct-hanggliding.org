@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react'
+import React, { useState, ChangeEvent, useEffect } from 'react'
 import emailjs, { init } from '@emailjs/browser'
 import './ContactForm.scss'
 
@@ -15,6 +15,25 @@ export default function ContactForm() {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [sendResult, setSendResult] = useState('')
+
+    const [formIsValid, setFormIsValid] = useState(false);
+
+
+    useEffect(() => {
+        const identifier = setTimeout(() => {
+            // console.log("Checking form validity!");
+            setFormIsValid(
+                email.includes("@") && firstName.trim().length > 0 && lastName.trim().length > 0 && message.trim().length > 0
+            );
+        }, 500);
+
+        // Our cleanup function:
+        return () => {
+            // console.log("CLEANUP");
+            clearTimeout(identifier);
+        };
+    }, [email, firstName, lastName, message]);
+
 
     const submitMessageHandler = () => {
 
@@ -39,11 +58,11 @@ export default function ContactForm() {
 
 
 
-        setFirstName('');
-        setLastName('');
-        setEmail('');
-        setMessage('');
-        console.log('submitted!');
+        // setFirstName('');
+        // setLastName('');
+        // setEmail('');
+        // setMessage('');
+        // console.log('submitted!');
     }
 
     const firstNameChangedHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -89,7 +108,7 @@ export default function ContactForm() {
 
                     </div>
                     <div className="submit-group">
-                        <button type='submit' onClick={submitMessageHandler}>Submit</button>
+                        <button type='submit' onClick={submitMessageHandler} disabled={!formIsValid}>Submit</button>
 
                     </div>
                 </form>
