@@ -1,0 +1,46 @@
+@use './../Styles/global';
+
+.contact-form {
+    padding-block:1rem;
+    padding-inline:1rem;
+    border: 2px solid hsl(var(--clr-earth));
+    background-color: hsl(var(--clr-sky-light));
+    font-size: var(--font-size-2);
+    // width:60ch;
+    .input-group {
+        label {
+            width: 12ch;
+        }
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        // gap:2ch;
+        margin-block-end:1em;
+        @media (min-width:520px) {
+            flex-direction: row;
+        }
+    }
+    .submit-group {
+        display:flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        button {
+            font-weight: var(--fw-sans-semibold);
+            font-size: var(--font-size-3);
+            cursor: pointer;
+        }
+    }
+
+        @media (prefers-color-scheme: dark) {
+            background-color: hsl(var(--clr-dark-forest));
+            input, textarea {
+                color:white;
+                background-color:hsl(var(--clr-dark-earth));
+            }
+            button {
+                background-color: var(--gray-8);
+                color:white;
+            }
+        }
+}

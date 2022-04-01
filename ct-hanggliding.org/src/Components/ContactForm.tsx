@@ -1,6 +1,8 @@
 import React, { useState, ChangeEvent } from 'react'
-import emailjs, { init } from '@emailjs/browser';
-init("OiSIcGBF7wKl6TGur");
+import emailjs, { init } from '@emailjs/browser'
+import './ContactForm.scss'
+
+init("OiSIcGBF7wKl6TGur")
 
 // type Props = {}
 
@@ -8,10 +10,11 @@ init("OiSIcGBF7wKl6TGur");
 
 export default function ContactForm() {
 
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [sendResult, setSendResult] = useState('')
 
     const submitMessageHandler = () => {
 
@@ -27,9 +30,11 @@ export default function ContactForm() {
 
         emailjs.send(serviceId, templateId, templateParams)
             .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
+                // console.log('SUCCESS!', response.status, response.text);
+                setSendResult('Your message has been sent. Thank you!');
             }, (error) => {
                 console.log('FAILED...', error);
+                setSendResult('Unfortunately, an error occurred and your message has not been sent. Please try again later, or contact one of the board members directly from the Officers page.')
             });
 
 
@@ -55,19 +60,46 @@ export default function ContactForm() {
         setMessage(e.target.value);
     }
 
-    return (
-        <form onSubmit={(e) => {
-            e.preventDefault();
-        }}>
-            <label>First Name</label>
-            <input value={firstName} onChange={firstNameChangedHandler} />
-            <label>Last Name</label>
-            <input value={lastName} onChange={lastNameChangedHandler} />
-            <label>Email Address</label>
-            <input value={email} onChange={emailChangedHandler} />
-            <label>Message</label>
-            <textarea value={message} onChange={messageChangedHandler} />
-            <button type='submit' onClick={submitMessageHandler}>Submit</button>
-        </form>
-    )
+
+    if (sendResult.length === 0) {
+        return (
+
+            <div className="contact-form">
+                <form onSubmit={(e) => {
+                    e.preventDefault();
+                }}>
+                    <div className="input-group">
+                        <label htmlFor='firstname'>First Name</label>
+                        <input id='firstname' value={firstName} onChange={firstNameChangedHandler} type="text" required />
+
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor='lastname'>Last Name</label>
+                        <input id='lastname' value={lastName} onChange={lastNameChangedHandler} type="text" required />
+
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor='email'>Email Address</label>
+                        <input id='email' value={email} onChange={emailChangedHandler} type="email" />
+
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor='message'>Message</label>
+                        <textarea id='message' value={message} onChange={messageChangedHandler} required cols={25} rows={5} />
+
+                    </div>
+                    <div className="submit-group">
+                        <button type='submit' onClick={submitMessageHandler}>Submit</button>
+
+                    </div>
+                </form>
+            </div>
+        )
+    }
+    else {
+        return (
+            <p><strong>{sendResult}</strong></p>
+        )
+    }
+
 }
