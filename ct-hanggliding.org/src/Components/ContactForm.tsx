@@ -23,7 +23,7 @@ export default function ContactForm() {
         const identifier = setTimeout(() => {
             // console.log("Checking form validity!");
             setFormIsValid(
-                email.includes("@") && firstName.trim().length > 0 && lastName.trim().length > 0 && message.trim().length > 0
+                email.includes("@") && firstName.trim().length > 0 && message.trim().length > 0
             );
         }, 500);
 
@@ -94,7 +94,7 @@ export default function ContactForm() {
                     </div>
                     <div className="input-group">
                         <label htmlFor='lastname'>Last Name</label>
-                        <input id='lastname' value={lastName} onChange={lastNameChangedHandler} type="text" required />
+                        <input id='lastname' value={lastName} onChange={lastNameChangedHandler} type="text" />
 
                     </div>
                     <div className="input-group">
