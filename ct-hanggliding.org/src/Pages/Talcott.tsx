@@ -28,10 +28,10 @@ const Talcott: React.FC = () => {
 
                         <Accordion title='Required Credentials'>
                             <ul>
+                                <li>A site orientation from a senior club member is required the first time you fly Talcott.</li>
                                 <li>Current USHPA membership.</li>
                                 <li>H3 rating. H2 pilots may fly with the approval and direct supervision of an observer.</li>
                                 <li>CL &amp; AWCL endorsements, or the supervision of an observer.</li>
-                                <li>A site orientation from a senior club member the first time you fly Talcott.</li>
                             </ul>
                             <p><strong>Paragliding is strictly prohibited at Talcott due to the sheer cliff launch, and tree canopy directly over launch. Unauthorized attempts in the past have not ended well.</strong></p>
 
@@ -102,7 +102,7 @@ const Talcott: React.FC = () => {
 
 
 
-                        <Accordion title='Hazards and Flight Restrictions'>
+                        <Accordion title='Airspace and Flight Restrictions'>
 
                             <p>Talcott is located 9 miles SW of Bradley International Airport and falls under the outer shelf of the Windsor Locks Class C airspace. The floor of the airspace is 2100’ MSL (1200’ above launch altitude). Hang glider flight into the Class C airspace is strictly prohibited. Be familiar with the parameters of the Class C airspace and do not exceed 2100’ MSL unless you have flown out from underneath the Class C shelf. Be vigilant for low flying commercial aircraft.</p>
                             <p>Simsbury Airport is a small Class G airport 6 miles north of Talcott. Be vigilant for low flying small aircraft.</p>
