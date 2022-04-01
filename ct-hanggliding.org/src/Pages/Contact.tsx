@@ -4,8 +4,8 @@ import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
 import './Contact.scss';
 import ContactForm from '../Components/ContactForm';
-// import FormattedOfficerCard from '../Components/OfficerCard';
-// import Greg from '../Assets/Images/Officers/Greg_Saracino.jpg';
+import FormattedOfficerCard from '../Components/OfficerCard';
+import Greg from '../Assets/Images/Officers/Greg_Saracino.jpg';
 
 const Contact: React.FC = () => {
 
@@ -29,17 +29,11 @@ const Contact: React.FC = () => {
 
                         <p>
                             For questions and information about our club or about hang gliding in general, please use the form below.
-                            {/* You are also welcome to text our club president, Greg Saracino at 203-615-2075. */}
-
+                            You are also welcome to contact our club president directly.
                         </p>
 
-
-                        {/* <p>
-                            For questions and information about our club or about hang gliding in general, you are welcome to text our club president, below.
-                        </p> */}
-
                     </div>
-                    {/* <FormattedOfficerCard portrait={Greg} title='President &amp; Safety Officer ' name='Greg Saracino' email='gregs61160@yahoo.com' phone='203-615-2075' /> */}
+                    <FormattedOfficerCard portrait={Greg} title='President &amp; Safety Officer ' name='Greg Saracino' email='gregs61160@yahoo.com' phone='203-615-2075' />
 
                     <ContactForm />
 
