@@ -42,9 +42,9 @@ const NavItems = (props: INavItemProps) => {
                     <MenuItem><NavLink to="/officers" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                         Officers
                     </NavLink></MenuItem>
-                    <MenuItem><NavLink to="/bylaws" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
+                    {/* <MenuItem><NavLink to="/bylaws" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                         Bylaws
-                    </NavLink></MenuItem>
+                    </NavLink></MenuItem> */}
                 </Menu>
             </div>
 
