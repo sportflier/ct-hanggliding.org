@@ -1,4 +1,6 @@
 import React, { useState, ChangeEvent } from 'react'
+import emailjs, { init } from '@emailjs/browser';
+init("OiSIcGBF7wKl6TGur");
 
 // type Props = {}
 
@@ -12,7 +14,26 @@ export default function ContactForm() {
     const [message, setMessage] = useState('');
 
     const submitMessageHandler = () => {
-        // do something here to send an email
+
+        const templateParams = {
+            from_first_name: firstName,
+            from_last_name: lastName,
+            from_email: email,
+            reply_to: email,
+            message: message
+        }
+        const serviceId = 'service_hw6xm2o'; // ct.hang.gliding@gmail.com
+        const templateId = 'template_ob0hcvq'; // CHGA contact form
+
+        emailjs.send(serviceId, templateId, templateParams)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+
+
+
         setFirstName('');
         setLastName('');
         setEmail('');
