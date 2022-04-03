@@ -25,12 +25,6 @@ const Home: React.FC = () => {
                     <div>
                         {/* <p>Player:</p>
                         <YoutubePlayer videoId="FsyoOucwprI" className="my-video-player" /> */}
-                        <p className="text-normal">
-                            Humanity's oldest dream is to fly like a bird, and hang gliding is the closest human beings can ever get to experiencing it. There is no motor, no noise, and no complicated machinery. Just you, the simplest of equipment, and some skills will have you soaring with hawks and eagles. Contrary to common belief, hang gliders do not jump off cliffs and glide down to the bottom. We use rising air to climb thousands of feet into the sky and stay aloft, often for hours at a time. It's beautiful. It's peaceful. It's exhilarating. There really is nothing like it! And it’s safer than you think!
-                        </p>
-                        <p className="text-normal">
-                            If you love the outdoors and have a sense of adventure, you will LOVE hang gliding! If you want to learn how to fly, contact us and we will show you how. If you have questions and want to learn more, contact us and we will be happy to answer your questions. We are passionate about flying and we want to share this amazing experience with others!
-                        </p>
                         <div className="banner">
                             <h1 className="heading-2 anim_scale-fade">Our Mission</h1>
                         </div>
@@ -39,6 +33,12 @@ const Home: React.FC = () => {
 
                         </p>
 
+                        <p className="text-normal">
+                            Humanity's oldest dream is to fly like a bird, and hang gliding is the closest human beings can ever get to experiencing it. There is no motor, no noise, and no complicated machinery. Just you, the simplest of equipment, and some skills will have you soaring with hawks and eagles. Contrary to common belief, hang gliders do not jump off cliffs and glide down to the bottom. We use rising air to climb thousands of feet into the sky and stay aloft, often for hours at a time. It's beautiful. It's peaceful. It's exhilarating. There really is nothing like it! And it’s safer than you think!
+                        </p>
+                        <p className="text-normal">
+                            If you love the outdoors and have a sense of adventure, you will LOVE hang gliding! If you want to learn how to fly, contact us and we will show you how. If you have questions and want to learn more, contact us and we will be happy to answer your questions. We are passionate about flying and we want to share this amazing experience with others!
+                        </p>
                     </div>
                 </div>
 
