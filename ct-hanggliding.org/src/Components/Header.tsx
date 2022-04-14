@@ -36,10 +36,10 @@ const NavItems = (props: INavItemProps) => {
 
             <div>
                 <Menu menuButton={<MenuButton>Membership</MenuButton>} transition>
-                    <MenuItem><NavLink to="/join" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
+                    <MenuItem href='/join' onClick={props.onNavClick}><NavLink to="/join" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                         Join
                     </NavLink></MenuItem>
-                    <MenuItem><NavLink to="/officers" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
+                    <MenuItem href="/officers" onClick={props.onNavClick}><NavLink to="/officers" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                         Officers
                     </NavLink></MenuItem>
                 </Menu>
