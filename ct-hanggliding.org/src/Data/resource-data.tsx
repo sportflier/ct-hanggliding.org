@@ -24,9 +24,10 @@ const ResourceLinks = [
     { category: "other", name: "Foundation For Free Flight", description: "Dedicated to promoting and preserving free flight", url: "https://foundationforfreeflight.org", image: "" },
     { category: "other", name: "The Cloudbase Foundation", description: "Using free flight for charity work", url: "https://www.thecloudbasefoundation.org", image: "" },
     { category: "video", name: "Live The Dream", description: "Documentary of a young woman learning how to fly, very inspirational", url: "https://vimeo.com/46406544", image: "" },
-    { category: "video", name: "Free Flyers", description: "Documentary profiles hang gliding in Utah", url: "https://www.youtube.com/watch?v=dtFpURLUO0I", image: "" },
-    { category: "video", name: "Big Blue Sky", description: "Documentary of the history of hang gliding", url: "https://www.youtube.com/watch?v=-hRSUjJFmCc&t=686s", image: "" },
-    { category: "school", name: "Thermal Valley Hang Gliding", description: "Lenoir, NC", url: "https://www.thermalvalley.net/", image: "" }
+    { category: "video", name: "Free Flyers", description: "Documentary profiles hang gliding in Utah", url: "https://youtu.be/dtFpURLUO0I", image: "" },
+    { category: "video", name: "Big Blue Sky", description: "Documentary of the history of hang gliding", url: "https://youtu.be/-hRSUjJFmCc", image: "" },
+    { category: "video", name: "The Flyingest Flying", description: "Documentary of the history of hang gliding. The Flyingest Flying (2003, full movie)", url: "https://youtu.be/YOHLtRna5Zk", image: "" },
+    { category: "school", name: "Thermal Valley Hang Gliding", description: "Lenoir, NC", url: "https://www.thermalvalley.net/", image: "" },
 ]
 
 export const ResourceLinkGroups = [
