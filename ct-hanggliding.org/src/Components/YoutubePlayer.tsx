@@ -19,7 +19,8 @@ export default function YoutubePlayer({ className = '', videoId }: Props) {
             loop: 1,
             start: 0,
             rel: 0,
-            showinfo: 0
+            showinfo: 0,
+            modestbranding: 1,
         },
     };
 

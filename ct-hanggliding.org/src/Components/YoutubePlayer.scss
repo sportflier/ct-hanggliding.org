@@ -4,21 +4,23 @@
   background: #000;
   position: fixed;
   top: 0;
-  bottom: 0;
+  // bottom: 0;
+    height: 70vh; // taken from .hero
+    min-height: 400px; // taken from .hero
   right: 0;
   left: 0;
   z-index: -99;
-  &::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    // background: rgba(0, 0, 0, 0.75);
-  }
+  // &::after {
+  //   display: block;
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: 1;
+  //   background: rgba(0, 0, 0, 0.75);
+  // }
 }
 .video-foreground,
 .video-background iframe {
@@ -40,5 +42,12 @@
   .video-foreground {
     width: 300%;
     left: -100%;
+  }
+  .video-foreground,
+  .video-background iframe {
+    $vid-scale: scale(1.09);
+    -ms-transform: $vid-scale;
+    -webkit-transform: $vid-scale;
+    transform: $vid-scale;
   }
 }

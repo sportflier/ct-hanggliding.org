@@ -19,17 +19,17 @@
   /* gradients */
   --gradient-beach: linear-gradient(
     to right,
-    hsl(var(--clr-white), 0.95),
+    hsl(var(--clr-white)),
     hsl(var(--clr-beach))
   );
   --gradient-forest: linear-gradient(
     to right,
-    hsl(var(--clr-forest), 0.95),
+    hsl(var(--clr-forest)),
     hsl(var(--clr-dark-forest))
   );
   --gradient-forest-reverse: linear-gradient(
     to left,
-    hsl(var(--clr-forest), 0.95),
+    hsl(var(--clr-forest)),
     hsl(var(--clr-dark-forest))
   );
   --gradient-sky-light: linear-gradient(
