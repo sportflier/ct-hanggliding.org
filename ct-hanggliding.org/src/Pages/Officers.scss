@@ -1,0 +1,13 @@
+@use "./../Styles/global";
+
+#officers {
+    .officers-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: var(--size-content-2);
+        gap: var(--size-5) var(--size-8);
+        align-items: flex-start;
+        justify-content: center;
+        margin-block: 2em;
+    }
+}

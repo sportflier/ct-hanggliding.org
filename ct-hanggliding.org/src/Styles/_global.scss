@@ -177,6 +177,10 @@ a {
   align-items: center;
 }
 
+.fl-wrap {
+  flex-wrap: wrap;
+}
+
 .banner {
   box-shadow: var(--shadow-3);
   padding-inline: 0.5em;

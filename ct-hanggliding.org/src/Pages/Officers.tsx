@@ -1,4 +1,5 @@
 import React from 'react'
+import './Officers.scss'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
@@ -15,14 +16,14 @@ const Officers: React.FC = () => {
             <Header />
             <Hero heroes={["hero_talcott-flyby"]} heroText="Officers" />
 
-            <div id="membership" className="content-container home surface-light-gradient">
+            <div id="officers" className="content-container home surface-light-gradient">
 
 
                 <div>
                     <div className="banner">
                         <h1 className="heading-2 anim_scale-fade">CHGA Club Officers</h1>
                     </div>
-                    <div className="d-flex fl-col fl-center">
+                    <div className="officers-wrap">
                         <FormattedOfficerCard portrait={Greg} title='President &amp; Safety Officer ' name='Greg Saracino' email='gregs61160@yahoo.com' phone='203-615-2075' />
                         <FormattedOfficerCard portrait={Woz} className="officer-card_reverse" name='Steve Woznicki' title='Vice President' email='mrwoz@sbcglobal.net' />
                         <FormattedOfficerCard portrait={Carol} name='Carol Allard' title='Treasurer' email='carol.allard@yahoo.com' />
