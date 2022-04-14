@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
     return (
         <>
             <Header />
-            <Hero className="hero_birds-flock-india" heroText="Contact Us" />
+            <Hero heroes={["hero_tanner-hiller-dragonfly"]} heroText="Contact Us" />
 
             <div id="contact" className="content-container home surface-light-gradient">
 

@@ -13,7 +13,7 @@ const Officers: React.FC = () => {
     return (
         <>
             <Header />
-            <Hero className="hero_talcott-flyby" heroText="Officers" />
+            <Hero heroes={["hero_talcott-flyby"]} heroText="Officers" />
 
             <div id="membership" className="content-container home surface-light-gradient">
 

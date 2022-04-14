@@ -7,7 +7,7 @@ const Bylaws: React.FC = () => {
     return (
         <>
             <Header />
-            <Hero className="hero_talcott-setup-area" heroText="Bylaws" />
+            <Hero heroes={["hero_talcott-setup-area"]} heroText="Bylaws" />
 
             <div id="membership" className="content-container home surface-light-gradient">
 
