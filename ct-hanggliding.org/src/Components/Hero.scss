@@ -181,7 +181,7 @@
     height: 100%;
   }
   .hero-text {
-    opacity: 40%;
+    opacity: 70%;
     color: hsl(var(--clr-white));
     writing-mode: vertical-lr;
     transform: rotate(180deg);
@@ -199,13 +199,6 @@
     padding-inline: 0.5em;
     margin-block-start: 0.15em;
     border-radius: var(--radius-3);
-    // background: linear-gradient(hsl(var(--clr-sky)), hsl(var(--clr-deep-sky)));
-
-    @media (prefers-color-scheme: dark) {
-      opacity: 70%;
-      background: unset;
-      // background-color: hsl(var(--clr-dark-forest));
-    }
   }
 
   .hero-svg-wrap {
