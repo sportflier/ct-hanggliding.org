@@ -18,11 +18,10 @@ const Card: React.FC<IResourceCardProp> = ({ heroImage = '', name, description, 
     return (
         <a href={url} target="_blank" rel="noreferrer" key={key}>
             <div className='resource-card'>
-                <div className="resource-card_container">
-                    <strong>{name}</strong>
-                    {description.length > 0 ? <><br />{description}</> : <></>}
+                {heroImage.length > 0 ? <div className='card-hero'><img src={heroImage} alt='card hero' /></div> : <></>}
+                <h3>{name}</h3>
+                {description.length > 0 ? <p>{description}</p> : <></>}
 
-                </div>
             </div>
 
         </a>
@@ -41,7 +40,7 @@ const CardGroup: React.FC<IResourceGroupProp> = ({ category, title }: IResourceG
             <div key={key}>
                 <h2>{title}</h2>
                 <div className='resource-group'>
-                    {Links.filter((c) => c.category === category).map((c) => <Card name={c.name} description={c.description} url={c.url} key={c.name} />)}
+                    {Links.filter((c) => c.category === category).map((c) => <Card name={c.name} description={c.description} url={c.url} key={c.name} heroImage={c.image} />)}
 
                 </div>
 

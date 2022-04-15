@@ -7,9 +7,17 @@
   }
 
   .resource-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 1em;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  max-inline-size: calc(var(--size-content-1) * 4);
+  gap: var(--size-5);
+  padding: var(--size-5);
 
     a {
       text-decoration: none;
@@ -17,18 +25,47 @@
     }
 
     .resource-card {
-      //   background-image: var(--gradient-4);
       border: 1px solid hsl(var(--clr-earth), 0.5);
       box-shadow: var(--shadow-2);
       transition: 0.3s;
+
+
+      flex-basis: var(--size-content-1);
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-2);
+      // background: var(--surface-3);
+      // border: 1px solid var(--surface-1);
+      padding: var(--size-4);
+      // border-radius: var(--radius-3);
+      // box-shadow: var(--shadow-2);
+
+      width:35ch;
+
+      h3 {
+        line-height: var(--font-lineheight-2);
+      }
+
+      p {
+        margin: 0;
+      }
 
       &:hover {
         box-shadow: var(--shadow-4);
       }
 
-      .resource-card_container {
-        padding-inline: 1ch;
-        padding-block: 1em;
+      // .resource-card_container {
+      //   padding-inline: 1ch;
+      //   padding-block: 1em;
+      // }
+
+      .card-hero {
+        width:100%;
+        max-height: 9em;
+        overflow: hidden;
+        img {
+          width:100%;
+        }
       }
     }
   }
