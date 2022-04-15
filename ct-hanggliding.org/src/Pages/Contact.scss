@@ -1,4 +1,8 @@
 @use "./../Styles/global";
 
-// #contact {
-// }
+#contact {
+    .form-wrap {
+        display: flex;
+        justify-content: center;
+    }
+}

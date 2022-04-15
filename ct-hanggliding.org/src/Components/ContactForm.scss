@@ -6,7 +6,6 @@
     border: 2px solid hsl(var(--clr-earth));
     background-color: hsl(var(--clr-sky-light));
     font-size: var(--font-size-2);
-    // width:60ch;
     .input-group {
         label {
             width: 12ch;
@@ -15,11 +14,18 @@
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
-        // gap:2ch;
         margin-block-end:1em;
+        input, textarea {
+            width: var(--size-fluid-9);
+        }
+        label[data-required]:after {
+            content: '*';
+            color: red;
+        }
         @media (min-width:520px) {
             flex-direction: row;
         }
+
     }
     .submit-group {
         display:flex;

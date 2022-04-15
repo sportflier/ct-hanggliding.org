@@ -18,12 +18,17 @@ export default function ContactForm() {
 
     const [formIsValid, setFormIsValid] = useState(false);
 
+    const formValidates = (mail: string, fname: string, msg: string) => {
+        const mailformat = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,20}$/;
+        const mailIsValid = mail.match(mailformat) ? true : false;
+        console.log(`mailIsValid: ${mailIsValid}`)
+        return mailIsValid && fname.trim().length > 0 && msg.trim().length > 0;
+    }
 
     useEffect(() => {
         const identifier = setTimeout(() => {
-            // console.log("Checking form validity!");
             setFormIsValid(
-                email.includes("@") && firstName.trim().length > 0 && message.trim().length > 0
+                formValidates(email, firstName, message)
             );
         }, 500);
 
@@ -32,37 +37,36 @@ export default function ContactForm() {
             // console.log("CLEANUP");
             clearTimeout(identifier);
         };
-    }, [email, firstName, lastName, message]);
+    }, [email, firstName, message]);
+
 
 
     const submitMessageHandler = () => {
 
-        const templateParams = {
-            from_first_name: firstName,
-            from_last_name: lastName,
-            from_email: email,
-            reply_to: email,
-            message: message
+        if (formValidates(email, firstName, message)) {
+            const templateParams = {
+                from_first_name: firstName,
+                from_last_name: lastName,
+                from_email: email,
+                reply_to: email,
+                message: message
+            }
+            const serviceId = 'service_hw6xm2o'; // ct.hang.gliding@gmail.com
+            const templateId = 'template_ob0hcvq'; // CHGA contact form
+
+            emailjs.send(serviceId, templateId, templateParams)
+                .then((response) => {
+                    // console.log('SUCCESS!', response.status, response.text);
+                    setSendResult('Your message has been sent. Thank you!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                    setSendResult('Unfortunately, an error occurred and your message has not been sent. Please try again later, or contact one of the board members directly from the Officers page.')
+                });
+
         }
-        const serviceId = 'service_hw6xm2o'; // ct.hang.gliding@gmail.com
-        const templateId = 'template_ob0hcvq'; // CHGA contact form
-
-        emailjs.send(serviceId, templateId, templateParams)
-            .then((response) => {
-                // console.log('SUCCESS!', response.status, response.text);
-                setSendResult('Your message has been sent. Thank you!');
-            }, (error) => {
-                console.log('FAILED...', error);
-                setSendResult('Unfortunately, an error occurred and your message has not been sent. Please try again later, or contact one of the board members directly from the Officers page.')
-            });
-
-
-
-        // setFirstName('');
-        // setLastName('');
-        // setEmail('');
-        // setMessage('');
-        // console.log('submitted!');
+        else {
+            console.log('Form is not valid!');
+        }
     }
 
     const firstNameChangedHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -88,23 +92,23 @@ export default function ContactForm() {
                     e.preventDefault();
                 }}>
                     <div className="input-group">
-                        <label htmlFor='firstname'>First Name</label>
-                        <input id='firstname' value={firstName} onChange={firstNameChangedHandler} type="text" required />
+                        <label htmlFor='firstname' data-required>First Name</label>
+                        <input id='firstname' value={firstName} onChange={firstNameChangedHandler} type="text" required data-aria-required="true" spellCheck="false" />
 
                     </div>
                     <div className="input-group">
                         <label htmlFor='lastname'>Last Name</label>
-                        <input id='lastname' value={lastName} onChange={lastNameChangedHandler} type="text" />
+                        <input id='lastname' value={lastName} onChange={lastNameChangedHandler} type="text" spellCheck="false" />
 
                     </div>
                     <div className="input-group">
-                        <label htmlFor='email'>Email Address</label>
-                        <input id='email' value={email} onChange={emailChangedHandler} type="email" />
+                        <label htmlFor='email' data-required>Email Address</label>
+                        <input id='email' value={email} onChange={emailChangedHandler} type="email" required data-aria-required="true" spellCheck="false" />
 
                     </div>
                     <div className="input-group">
-                        <label htmlFor='message'>Message</label>
-                        <textarea id='message' value={message} onChange={messageChangedHandler} required cols={25} rows={5} />
+                        <label htmlFor='message' data-required>Message</label>
+                        <textarea id='message' value={message} onChange={messageChangedHandler} required data-aria-required="true" cols={25} rows={5} spellCheck="true" />
 
                     </div>
                     <div className="submit-group">
