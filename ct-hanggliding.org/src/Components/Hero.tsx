@@ -3,7 +3,7 @@ import './Hero.scss'
 import YoutubePlayer from './YoutubePlayer'
 // import HeroText from './HeroText'
 
-const defaultHeroes = ["hero_chga-4th", "hero_heublein-ideal-clouds", "hero_falcon-launch", "hero_talcott-flyby", "hero_tanner-hiller-dragonfly", "hero_talcott-setup-area", "hero_talcott-lz", "hero_talcott-flight-twilight"];
+const defaultHeroes = ["hero_chga-4th", "hero_heublein-ideal-clouds", "hero_falcon-launch", "hero_talcott-flyby", "hero_tanner-hiller-dragonfly", "hero_talcott-setup-area", "hero_talcott-lz", "hero_talcott-flight-twilight", "hero_dragonfly-glider"];
 
 type Props = {
     heroText?: string,

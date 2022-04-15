@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
     return (
         <>
             <Header />
-            <Hero heroes={["hero_tanner-hiller-dragonfly", "hero_talcott-flight-twilight"]} heroText="Contact Us" />
+            <Hero heroes={["hero_tanner-hiller-dragonfly", "hero_talcott-flight-twilight", "hero_dragonfly-glider"]} heroText="Contact Us" />
 
             <div id="contact" className="content-container home surface-light-gradient">
 

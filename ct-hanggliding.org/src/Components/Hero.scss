@@ -114,6 +114,18 @@
     }
   }
 
+  &.hero_dragonfly-glider {
+    background-image: url("./../Assets/Images/New-Heroes/dragonfly-glider-portrait.jpg");
+
+    @media (orientation: landscape) {
+      background-image: url("./../Assets/Images/New-Heroes/dragonfly-glider-droid.jpg");
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("./../Assets/Images/New-Heroes/dragonfly-glider-XL.jpg");
+    }
+  }
+
 &.hero_talcott-flight-twilight {
   background-image: url("./../Assets/Images/New-Heroes/talcott-flight-twilight-droid-portrait.jpg");
 
