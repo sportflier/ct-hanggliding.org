@@ -45,9 +45,10 @@
   }
   .video-foreground,
   .video-background iframe {
-    $vid-scale: scale(1.09);
+    $vid-scale: scale(1.2);
     -ms-transform: $vid-scale;
     -webkit-transform: $vid-scale;
     transform: $vid-scale;
   }
+
 }

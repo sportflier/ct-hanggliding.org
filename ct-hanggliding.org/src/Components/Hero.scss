@@ -6,6 +6,8 @@
   overflow: hidden;
   background-size: cover;
   background-position: center;
+
+  
   &.hero_chga-4th {
     background-image: url("./../Assets/Images/New-Heroes/u2-4th-droid-portrait.jpg");
 
@@ -212,4 +214,14 @@
       height: 80%;
     }
   }
+
+  // Debugging:
+  // @media (min-aspect-ratio: 16/9) {
+  //   outline: 3px solid orange;
+  // }
+
+  // @media (max-aspect-ratio: 16/9) {
+  //   outline: 3px solid limegreen;
+  // }
+
 }
