@@ -9,7 +9,7 @@ const Talcott: React.FC = () => {
     return (
         <>
             <Header />
-            <Hero heroes={["hero_heublein-ideal-clouds"]} heroText="Talcott" />
+            <Hero heroes={["hero_heublein-ideal-clouds", "hero_talcott-lz", "hero_talcott-flight-twilight", "hero_talcott-lz"]} heroText="Talcott" />
 
             <div id="talcott" className="content-container home surface-light-gradient">
 

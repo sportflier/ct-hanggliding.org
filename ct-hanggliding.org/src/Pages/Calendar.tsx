@@ -8,7 +8,7 @@ const Calendar: React.FC = () => {
     return (
         <>
             <Header />
-            <Hero heroes={["hero_talcott-lz"]} heroText="Calendar" />
+            <Hero heroes={["hero_talcott-lz", "hero_chga-4th", "hero_heublein-ideal-clouds"]} heroText="Calendar" />
 
             <div id="calendar" className="content-container home surface-light-gradient">
 
