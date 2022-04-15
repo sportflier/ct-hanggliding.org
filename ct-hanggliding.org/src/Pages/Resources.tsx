@@ -4,6 +4,7 @@ import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
 import Links, { ResourceLinkGroups } from './../Data/resource-data';
 import './Resources.scss';
+import Accordion from '../Components/Accordion';
 
 
 interface IResourceCardProp {
@@ -36,16 +37,11 @@ interface IResourceGroupProp {
 
 const CardGroup: React.FC<IResourceGroupProp> = ({ category, title }: IResourceGroupProp, key: string) => {
     return (
-        <>
-            <div key={key}>
-                <h2>{title}</h2>
-                <div className='resource-group'>
-                    {Links.filter((c) => c.category === category).map((c) => <Card name={c.name} description={c.description} url={c.url} key={c.name} heroImage={c.image} />)}
-
-                </div>
-
+        <Accordion title={title} key={key}>
+            <div className='resource-group'>
+                {Links.filter((c) => c.category === category).map((c) => <Card name={c.name} description={c.description} url={c.url} key={c.name} heroImage={c.image} />)}
             </div>
-        </>
+        </Accordion>
     );
 };
 
@@ -63,12 +59,10 @@ const Resources: React.FC = () => {
                         <h1 className="heading-2 anim_scale-fade">Resources</h1>
                     </div>
 
-                    <div className="text-normal">
+                    <div className="text-normal resource-groups">
                         {
                             ResourceLinkGroups.map((g) => <CardGroup key={g.category} category={g.category} title={g.name} />)
                         }
-
-
                     </div>
 
                 </div>
