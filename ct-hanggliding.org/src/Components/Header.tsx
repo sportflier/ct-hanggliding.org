@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from 'react'
+import React, { useState, ReactNode, useEffect } from 'react'
 import './Header.scss';
 import Glider from './../Assets/Images/glider.svg';
 import GliderWhite from './../Assets/Images/glider-white.svg';
@@ -63,6 +63,16 @@ const NavItems = (props: INavItemProps) => {
 export default function Header() {
 
     const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
+
+    useEffect(() => {
+        const _body = document.querySelector("body");
+        if (mobileNavIsOpen) {
+            _body?.classList.add("no-scrollbars");
+        }
+        else {
+            _body?.classList.remove("no-scrollbars");
+        }
+    }, [mobileNavIsOpen])
 
     const mobileNavClickHandler = () => {
         setMobileNavIsOpen(!mobileNavIsOpen);

@@ -285,6 +285,10 @@ p.text-normal {
   font-size: var(--fs-500);
 }
 
+.no-scrollbars {
+  overflow: hidden;
+}
+
 /* animations */
 
 .anim_scale-fade {
