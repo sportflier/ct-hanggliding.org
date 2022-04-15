@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <>
             <Header />
             <Hero heroText="CHGA" videoId="Uj7dBEKF-rg" />
-            <div id="home" className="content-container home surface-light-gradient">
+            <main id="home" className="content-container home surface-light-gradient">
 
                 <div className="chga-mission">
                     <div>
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
 
-            </div>
+            </main>
             <Footer />
         </>
     )

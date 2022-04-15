@@ -10,7 +10,7 @@ const Calendar: React.FC = () => {
             <Header />
             <Hero heroes={["hero_talcott-lz", "hero_chga-4th", "hero_heublein-ideal-clouds"]} heroText="Calendar" />
 
-            <div id="calendar" className="content-container home surface-light-gradient">
+            <main id="calendar" className="content-container home surface-light-gradient">
 
 
                 <div>
@@ -27,7 +27,7 @@ const Calendar: React.FC = () => {
 
                 <ChgaGCal />
 
-            </div>
+            </main>
             <Footer />
         </>
     )

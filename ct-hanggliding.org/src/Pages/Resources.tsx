@@ -56,7 +56,7 @@ const Resources: React.FC = () => {
             <Header />
             <Hero heroText="Resources" />
 
-            <div id="resources" className="content-container home surface-light-gradient">
+            <main id="resources" className="content-container home surface-light-gradient">
 
 
                 <div>
@@ -73,7 +73,7 @@ const Resources: React.FC = () => {
                 </div>
 
 
-            </div>
+            </main>
             <Footer />
         </>
     )

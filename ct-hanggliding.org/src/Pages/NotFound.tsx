@@ -10,7 +10,7 @@ export default function NotFound() {
             <Header />
             <Hero heroes={["hero_birds-flock-india", "hero_raptor"]} heroText="Not Found!" />
 
-            <div id="notfound" className="content-container home surface-light-gradient">
+            <main id="notfound" className="content-container home surface-light-gradient">
 
 
                 <div>
@@ -29,7 +29,7 @@ export default function NotFound() {
                 </div>
 
 
-            </div>
+            </main>
             <Footer />
 
         </>

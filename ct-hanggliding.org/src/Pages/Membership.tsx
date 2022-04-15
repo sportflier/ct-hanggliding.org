@@ -10,7 +10,7 @@ const Membership: React.FC = () => {
             <Header />
             <Hero heroes={["hero_falcon-launch", "hero_greylock-flyover", "hero_talcott-flight-twilight"]} heroText="Join" />
 
-            <div id="membership" className="content-container home surface-light-gradient">
+            <main id="membership" className="content-container home surface-light-gradient">
 
 
                 <div>
@@ -33,7 +33,7 @@ const Membership: React.FC = () => {
                 </div>
 
 
-            </div>
+            </main>
             <Footer />
         </>
     )

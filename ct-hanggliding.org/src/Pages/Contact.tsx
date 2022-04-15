@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
             <Header />
             <Hero heroes={["hero_tanner-hiller-dragonfly", "hero_talcott-flight-twilight", "hero_dragonfly-glider"]} heroText="Contact Us" />
 
-            <div id="contact" className="content-container home surface-light-gradient">
+            <main id="contact" className="content-container home surface-light-gradient">
 
 
                 <div className="banner">
@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
 
 
 
-            </div>
+            </main>
             <Footer />
         </>
     )
