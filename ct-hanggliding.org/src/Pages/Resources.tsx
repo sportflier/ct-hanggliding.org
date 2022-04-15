@@ -20,8 +20,10 @@ const Card: React.FC<IResourceCardProp> = ({ heroImage = '', name, description, 
         <a href={url} target="_blank" rel="noreferrer" key={key}>
             <div className='resource-card'>
                 {heroImage.length > 0 ? <div className='card-hero'><img src={heroImage} alt='card hero' /></div> : <></>}
-                <h3>{name}</h3>
-                {description.length > 0 ? <p>{description}</p> : <></>}
+                <div className="card-copy">
+                    <h3>{name}</h3>
+                    {description.length > 0 ? <p>{description}</p> : <></>}
+                </div>
 
             </div>
 
@@ -38,8 +40,11 @@ interface IResourceGroupProp {
 const CardGroup: React.FC<IResourceGroupProp> = ({ category, title }: IResourceGroupProp, key: string) => {
     return (
         <Accordion title={title} key={key}>
-            <div className='resource-group'>
-                {Links.filter((c) => c.category === category).map((c) => <Card name={c.name} description={c.description} url={c.url} key={c.name} heroImage={c.image} />)}
+            <div className="resource-group-wrap">
+                <div className='resource-group'>
+                    {Links.filter((c) => c.category === category).map((c) => <Card name={c.name} description={c.description} url={c.url} key={c.name} heroImage={c.image} />)}
+                </div>
+
             </div>
         </Accordion>
     );
