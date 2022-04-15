@@ -6,12 +6,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5vw;
+  gap: calc(5vw + 2rem);
   padding-block: 0.5rem;
   a {
     img {
       // width: 52px;
-      width: clamp(35px, calc(2.1875rem + ((1vw - 3.2px) * 1.0625)), 52px);
+      // width: clamp(25px, calc(2.1875rem + ((1vw - 3.2px) * 1.0625)), 52px);
+
+      // width:25px;
+      width: clamp(25px, 21px + 1vw, 45px);
       min-height: 0vw;
       opacity: 75%;
     }
