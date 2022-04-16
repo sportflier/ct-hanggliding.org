@@ -2,11 +2,13 @@ import React from 'react'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
+import MetaDecorator from '../Components/MetaDecorator';
 
 
 const Membership: React.FC = () => {
     return (
         <>
+            <MetaDecorator title="Join the CHGA" description='Information about how to become a CHGA member.' />
             <Header />
             <Hero heroes={["hero_falcon-launch", "hero_greylock-flyover", "hero_talcott-flight-twilight"]} heroText="Join" />
 

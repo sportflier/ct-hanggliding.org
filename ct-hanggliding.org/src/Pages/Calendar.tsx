@@ -3,10 +3,12 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
 import ChgaGCal from '../Components/ChgaGCal';
+import MetaDecorator from '../Components/MetaDecorator';
 
 const Calendar: React.FC = () => {
     return (
         <>
+            <MetaDecorator title="Calendar" description='Information about planned CHGA events.' />
             <Header />
             <Hero heroes={["hero_talcott-lz", "hero_chga-4th", "hero_heublein-ideal-clouds"]} heroText="Calendar" />
 

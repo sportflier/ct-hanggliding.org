@@ -8,11 +8,13 @@ import Greg from '../Assets/Images/Officers/Greg_Saracino.jpg';
 import Carol from '../Assets/Images/Officers/Carol.jpeg';
 import Lisa from '../Assets/Images/Officers/Lisa_Kozar.jpg';
 import Woz from '../Assets/Images/Officers/Woz.jpg';
+import MetaDecorator from '../Components/MetaDecorator';
 
 
 const Officers: React.FC = () => {
     return (
         <>
+            <MetaDecorator title="CHGA Club Officers" description='Information about the CHGA club officers.' />
             <Header />
             <Hero heroes={["hero_talcott-flyby", "hero_talcott-flight-twilight"]} heroText="Officers" />
 

@@ -4,6 +4,7 @@ import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
 import './Contact.scss';
 import ContactForm from '../Components/ContactForm';
+import MetaDecorator from '../Components/MetaDecorator';
 
 const Contact: React.FC = () => {
 
@@ -11,6 +12,7 @@ const Contact: React.FC = () => {
 
     return (
         <>
+            <MetaDecorator title="Contact Us" description='For questions and information about our club or about hang gliding in general, please use the form on this page.' />
             <Header />
             <Hero heroes={["hero_tanner-hiller-dragonfly", "hero_talcott-flight-twilight", "hero_dragonfly-glider"]} heroText="Contact Us" />
 

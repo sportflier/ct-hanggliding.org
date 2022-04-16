@@ -2,11 +2,13 @@ import React from 'react'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
+import MetaDecorator from '../Components/MetaDecorator';
 
 
 export default function NotFound() {
     return (
         <>
+            <MetaDecorator title="Not Found!" description='The requested resource could not be found.' />
             <Header />
             <Hero heroes={["hero_birds-flock-india", "hero_raptor"]} heroText="Not Found!" />
 

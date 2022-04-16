@@ -4,10 +4,12 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero';
 import Accordion from '../Components/Accordion';
+import MetaDecorator from '../Components/MetaDecorator';
 
 const Talcott: React.FC = () => {
     return (
         <>
+            <MetaDecorator title="Talcott Mountain Site Guide" description='Information about flying at Talcott Mountain.' />
             <Header />
             <Hero heroes={["hero_heublein-ideal-clouds", "hero_talcott-lz", "hero_talcott-flight-twilight", "hero_talcott-lz"]} heroText="Talcott" />
 

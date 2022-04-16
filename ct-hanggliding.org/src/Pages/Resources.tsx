@@ -5,6 +5,7 @@ import Hero from '../Components/Hero';
 import Links, { ResourceLinkGroups } from './../Data/resource-data';
 import './Resources.scss';
 import Accordion from '../Components/Accordion';
+import MetaDecorator from '../Components/MetaDecorator';
 
 
 interface IResourceCardProp {
@@ -53,6 +54,7 @@ const CardGroup: React.FC<IResourceGroupProp> = ({ category, title }: IResourceG
 const Resources: React.FC = () => {
     return (
         <>
+            <MetaDecorator title="Resources" description='A listing of hang-gliding related schools, clubs, documentaries, and more.' />
             <Header />
             <Hero heroText="Resources" />
 

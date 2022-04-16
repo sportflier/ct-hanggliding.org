@@ -5,10 +5,12 @@ import Footer from "../Components/Footer";
 import Logo from './../Assets/Images/CHGA-logo.svg';
 import LogoLight from './../Assets/Images/CHGA-logo-sky-light.svg';
 import Hero from "../Components/Hero";
+import MetaDecorator from "../Components/MetaDecorator";
 
 const Home: React.FC = () => {
     return (
         <>
+            <MetaDecorator title="" description="Established in 1974, the Connecticut Hang Gliding Association is an organization of men and women committed to the pursuit, promotion, and protection of hang gliding in New England." />
             <Header />
             <Hero heroText="CHGA" videoId="Uj7dBEKF-rg" />
             <main id="home" className="content-container home surface-light-gradient">
