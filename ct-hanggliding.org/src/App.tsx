@@ -10,12 +10,14 @@ import Calendar from './Pages/Calendar';
 import Resources from './Pages/Resources';
 import Contact from './Pages/Contact';
 import NotFound from './Pages/NotFound';
+import TalcottMap from './Pages/TalcottMap';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/talcott" element={<Talcott />} />
+      <Route path="/map" element={<TalcottMap />} />
       <Route path="/join" element={<Membership />} />
       <Route path="/officers" element={<Officers />} />
       <Route path="/calendar" element={<Calendar />} />
