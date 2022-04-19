@@ -2,8 +2,8 @@ import React from 'react'
 import './Talcott.scss';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Hero from '../Components/Hero';
-import Accordion from '../Components/Accordion';
+import Hero from '../Components/Hero/Hero';
+import Accordion from '../Components/UI/Accordion';
 import MetaDecorator from '../Components/MetaDecorator';
 
 const Talcott: React.FC = () => {

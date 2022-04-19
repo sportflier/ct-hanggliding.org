@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Hero from '../Components/Hero';
+import Hero from '../Components/Hero/Hero';
 import Links, { ResourceLinkGroups } from './../Data/resource-data';
 import './Resources.scss';
-import Accordion from '../Components/Accordion';
+import Accordion from '../Components/UI/Accordion';
 import MetaDecorator from '../Components/MetaDecorator';
 
 

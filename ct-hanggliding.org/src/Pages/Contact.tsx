@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Hero from '../Components/Hero';
+import Hero from '../Components/Hero/Hero';
 import './Contact.scss';
 import ContactForm from '../Components/ContactForm';
 import MetaDecorator from '../Components/MetaDecorator';

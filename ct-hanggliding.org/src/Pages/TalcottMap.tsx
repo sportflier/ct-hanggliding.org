@@ -2,7 +2,7 @@ import React from 'react'
 import './TalcottMap.scss';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Hero from '../Components/Hero';
+import Hero from '../Components/Hero/Hero';
 import MetaDecorator from '../Components/MetaDecorator';
 
 const TalcottMap: React.FC = () => {

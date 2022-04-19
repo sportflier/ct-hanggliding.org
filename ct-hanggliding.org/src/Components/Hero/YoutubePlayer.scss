@@ -1,12 +1,12 @@
-@use "./../Styles/global";
+@use "./../../Styles/global";
 
 .video-background {
   background: #000;
   position: fixed;
   top: 0;
   // bottom: 0;
-    height: 70vh; // taken from .hero
-    min-height: 400px; // taken from .hero
+  height: 70vh; // taken from .hero
+  min-height: 400px; // taken from .hero
   right: 0;
   left: 0;
   z-index: -99;
@@ -50,5 +50,4 @@
     -webkit-transform: $vid-scale;
     transform: $vid-scale;
   }
-
 }

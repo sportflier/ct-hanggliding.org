@@ -2,7 +2,7 @@ import React from 'react'
 import './Officers.scss'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Hero from '../Components/Hero';
+import Hero from '../Components/Hero/Hero';
 import FormattedOfficerCard from '../Components/OfficerCard';
 import Greg from '../Assets/Images/Officers/Greg_Saracino.jpg';
 import Carol from '../Assets/Images/Officers/Carol.jpeg';

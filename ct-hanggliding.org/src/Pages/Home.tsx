@@ -4,7 +4,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Logo from './../Assets/Images/CHGA-logo.svg';
 import LogoLight from './../Assets/Images/CHGA-logo-sky-light.svg';
-import Hero from "../Components/Hero";
+import Hero from "../Components/Hero/Hero";
 import MetaDecorator from "../Components/MetaDecorator";
 
 const Home: React.FC = () => {

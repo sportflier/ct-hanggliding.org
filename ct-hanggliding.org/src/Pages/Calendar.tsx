@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Hero from '../Components/Hero';
-import ChgaGCal from '../Components/ChgaGCal';
+import Hero from '../Components/Hero/Hero';
+import ChgaGCal from '../Components/Calendar/ChgaGCal';
 import MetaDecorator from '../Components/MetaDecorator';
 
 const Calendar: React.FC = () => {
