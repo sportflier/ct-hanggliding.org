@@ -1,50 +1,15 @@
 @use "./../../Styles/global";
-// .map_canvas {
-//   width: 100%;
-//   height: 600px;
-//   outline: 3px solid orange;
-// }
 
 .map_canvas {
-  //   outline: 3px solid orange;
-  //   position: fixed;
-  //   width: 100vw;
-  //   height: 100vh;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  //   overflow: hidden;
-
-  //   .header {
-  //     display: flex;
-  //     margin-block: 0.25em;
-  //     margin-inline: 0.25em;
-  //     padding-inline-start: 1em;
-  //     justify-content: space-between;
-  //     align-items: center;
-  //   }
 
   #map {
-    // width: 100vw;
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-
-    // .control-panels {
-    //   position: fixed;
-    //   z-index: 100;
-    //   left: 2em;
-    //   top: 4em;
-    //   display: flex;
-    //   gap: 1rem;
-    //   align-items: flex-start;
-    // }
-
     .leaflet-container {
-      outline: 3px solid limegreen;
       height: 100%;
-      min-height: 400px;
+      min-height: 600px;
       z-index: 1;
 
       .leaflet-control-zoom-in,

@@ -23,11 +23,10 @@ interface IMapCanvasProps {
 const MapCanvas = (props: IMapCanvasProps) => {
     return (
         <div className="map_canvas">
-            <MapTilerLogo />
-
             <div id="map">
                 <FlyingSiteMap site={props.site} />
             </div>
+            <MapTilerLogo />
         </div>
     )
 }
