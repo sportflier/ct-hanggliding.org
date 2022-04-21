@@ -42,6 +42,10 @@ export interface geoPosition {
     lng: number,
 }
 
+export interface placeMark extends geoPosition {
+    description: string,
+}
+
 export interface earthPosition extends geoPosition {
     name: string,
     description: string,
