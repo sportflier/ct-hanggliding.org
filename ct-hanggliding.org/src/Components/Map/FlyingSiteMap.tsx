@@ -8,22 +8,20 @@ import {
 } from 'react-leaflet';
 
 // import {  earthPosition, geoPosition, pointOfInterest } from "./GlideFunctions";
-import { IFlyingSite } from './../../Data/flying-sites';
+import { IFlyingSite, IDetailedPlacemark } from './../../Data/flying-sites';
 import ApiConnects from './../../Data/api-connect';
-import { placeMark } from './GlideFunctions';
 
 interface IFlyingSiteMap {
     site: IFlyingSite,
 }
 
-const mapMarker = (placemark: placeMark) => {
+const mapMarker = (placemark: IDetailedPlacemark) => {
     return (
         <Marker position={placemark}>
             {placemark.description.length > 0 ?
                 <Popup minWidth={90}>
-                    <span>
-                        {placemark.description}
-                    </span>
+                    <p><strong>{placemark.description}</strong></p>
+                    {placemark.descriptionNode}
                 </Popup>
 
                 : <></>}
@@ -31,11 +29,10 @@ const mapMarker = (placemark: placeMark) => {
     )
 }
 
-// const MapMarkers = (placemarks:[placeMark])
 
 const FlyingSiteMap = (props: IFlyingSiteMap) => {
     const map_zoom = 15;
-    const [mapCenter, setMapCenter] = useState(props.site.mapCenter);
+    const [mapCenter] = useState(props.site.mapCenter);
 
     const connect = ApiConnects.filter((a) => a.id === "MapTiler")
     const apiKey = connect?.length === 1 ? connect[0].key : ""
