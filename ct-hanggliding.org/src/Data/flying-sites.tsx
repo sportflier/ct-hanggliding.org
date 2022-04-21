@@ -3,6 +3,7 @@ import { geoPosition, placeMark } from "../Components/Map/GlideFunctions"
 
 export interface IDetailedPlacemark extends placeMark {
     descriptionNode: ReactNode,
+    layerName?: string,
 }
 
 // export interface IPlacemarks {
@@ -12,6 +13,7 @@ export interface IFlyingSite {
     id: string,
     name: string,
     mapCenter: geoPosition,
+    layerNames: Array<string>,
     placemarks: Array<IDetailedPlacemark>,
 }
 
@@ -22,6 +24,7 @@ const FlyingSites: [IFlyingSite] = [{
         lat: 41.83499996710632,
         lng: -72.79802914215554
     },
+    layerNames: ["Launches", "Landing Zones"],
     placemarks: [{
         description: "Launch",
         lat: 41.83499996710632,
@@ -34,7 +37,8 @@ const FlyingSites: [IFlyingSite] = [{
                 <li>Wind: Ideal wind is 270-310@10-12, soarable in 260-320.</li>
                 <li>Launching in winds more than 15mph or a gust factor of more than 8mph is not recommended.</li>
             </ul>
-        </>
+        </>,
+        layerName: "Launches",
     },
     {
         description: "LZ – Original",
@@ -47,7 +51,8 @@ const FlyingSites: [IFlyingSite] = [{
                 <li>Glide ratio from launch: 4.0</li>
             </ul>
 
-        </>
+        </>,
+        layerName: "Landing Zones",
     },
     {
         description: "LZ – Holcomb Field",
@@ -60,7 +65,8 @@ const FlyingSites: [IFlyingSite] = [{
                 <li>Glide ratio from launch: 4.3</li>
             </ul>
 
-        </>
+        </>,
+        layerName: "Landing Zones",
     }]
 }]
 
