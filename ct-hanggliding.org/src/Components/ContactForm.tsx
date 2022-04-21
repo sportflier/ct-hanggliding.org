@@ -1,8 +1,11 @@
 import React, { useState, ChangeEvent, useEffect } from 'react'
 import emailjs, { init } from '@emailjs/browser'
 import './ContactForm.scss'
+import GetApiKey from '../Data/api-connect'
 
-init("OiSIcGBF7wKl6TGur")
+const apiKey = GetApiKey("emailjs")
+
+init(apiKey)
 
 // type Props = {}
 

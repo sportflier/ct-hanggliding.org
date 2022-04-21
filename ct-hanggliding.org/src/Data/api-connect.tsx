@@ -3,9 +3,19 @@ export interface IApiConnect {
     key: string,
 }
 
-const ApiConnects: [IApiConnect] = [{
+const ApiConnects: Array<IApiConnect> = [{
     id: "MapTiler",
     key: "juxsSwQojvISRewbP8Ra",
+},
+{
+    id: "emailjs",
+    key: "OiSIcGBF7wKl6TGur",
 }]
 
-export default ApiConnects
+const GetApiKey = (id: string) => {
+    let keyMatches = ApiConnects.filter((c) => c.id === id)
+    let key = keyMatches.length === 1 ? keyMatches[0].key : ""
+    return key;
+}
+
+export default GetApiKey
