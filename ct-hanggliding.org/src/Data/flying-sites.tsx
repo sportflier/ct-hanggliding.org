@@ -14,6 +14,13 @@ export interface IAirspaceRing extends placeMark {
     airspaceType: string,
 }
 
+export interface IBoundary {
+    layerName?: string,
+    description: string,
+    color: string,
+    linearRingCoordinates: string, //https://developers.google.com/kml/documentation/kmlreference?hl=en#example_10
+}
+
 // export interface IPlacemarks {
 //     [index: number]: IDetailedPlacemark
 // }
@@ -24,6 +31,7 @@ export interface IFlyingSite {
     layerNames: Array<string>,
     placemarks: Array<IDetailedPlacemark>,
     airspaceRings: Array<IAirspaceRing>,
+    boundaries: Array<IBoundary>,
 }
 
 const FlyingSites: [IFlyingSite] = [{
@@ -33,7 +41,7 @@ const FlyingSites: [IFlyingSite] = [{
         lat: 41.83499996710632,
         lng: -72.79802914215554
     },
-    layerNames: ["Launches", "Landing Zones", "Nearby Airports"],
+    layerNames: ["Launch", "Landing Zones", "Nearby Airports", "Landing Forbidden"],
     placemarks: [{
         description: "Launch",
         lat: 41.83499996710632,
@@ -47,7 +55,7 @@ const FlyingSites: [IFlyingSite] = [{
                 <li>Launching in winds more than 15mph or a gust factor of more than 8mph is not recommended.</li>
             </ul>
         </>,
-        layerName: "Launches",
+        layerName: "Launch",
     },
     {
         description: "LZ – Original",
@@ -96,7 +104,16 @@ const FlyingSites: [IFlyingSite] = [{
         lng: -72.7769444,
         descriptionNode: <></>,
         layerName: "Nearby Airports",
-    }],
+    },
+    {
+        description: "Polo Field",
+        lat: 41.8401774,
+        lng: -72.8076024,
+        descriptionNode: <>
+            <strong>Landing on the polo field to the north of the original LZ is strictly prohibited. Do not land there under any circumstances unless there is a true emergency.</strong>
+        </>,
+        layerName: "Landing Forbidden",
+    },],
     airspaceRings: [
         {
             description: "Bradley International Airport",
@@ -118,7 +135,28 @@ const FlyingSites: [IFlyingSite] = [{
             floor: 21,
             ceiling: 42,
         },
-    ]
+    ],
+    boundaries: [{
+        description: "Primary LZ",
+        color: "green",
+        layerName: "Landing Zones",
+        linearRingCoordinates: "-72.80858358373342,41.83692456132265,46.37905287025112 -72.80744291810495,41.83667638391184,45.55427619335702 -72.80702569396755,41.83773436360102,44.93612342793057 -72.80693366657381,41.83804446574572,45.39960568286246 -72.80731466748631,41.838474864273,45.55294625976329 -72.80810765843648,41.83780617669551,45.55422914215129 -72.80830345759198,41.83735738255753,45.8827771047411 -72.80858358373342,41.83692456132265,46.37905287025112"
+
+    },
+    {
+        description: "Secondary LZ",
+        color: "green",
+        layerName: "Landing Zones",
+        linearRingCoordinates: "-72.80359826435271,41.84058192773008,46.52242045321415 -72.80227215255273,41.84007345665183,46.17304411722486 -72.80214928684532,41.8401703337487,46.55518853690197 -72.80310762506038,41.84250347526713,46.13131477632871 -72.80359826435271,41.84058192773008,46.52242045321415"
+
+    }, {
+        description: "Polo field",
+        color: "red",
+        layerName: "Landing Forbidden",
+        linearRingCoordinates: "-72.80720879029627,41.84276798722246,46.14759215368339 -72.80753986176268,41.84287216740832,46.27392221495063 -72.80889087806256,41.84026138420074,46.14783111326155 -72.80912875745224,41.83923637899552,47.38522079528077 -72.80746629157235,41.83869402276616,44.91281793445305 -72.80722397360265,41.83879855124808,44.91251131507128 -72.80534827866995,41.83839079876277,45.81630510783975 -72.80477478611249,41.83889403486467,45.67021546267242 -72.80624037496034,41.83987221164794,45.94874221331622 -72.80728516572965,41.84138178432265,46.14908806372976 -72.80720879029627,41.84276798722246,46.14759215368339"
+
+    },],
+
 }]
 
 export default FlyingSites

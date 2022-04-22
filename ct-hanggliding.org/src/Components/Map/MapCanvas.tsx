@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { position } from "./GlideFunctions";
+import React from "react";
 import FlyingSiteMap from "./FlyingSiteMap";
 
 import './MapCanvas.scss';

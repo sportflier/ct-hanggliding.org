@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import {
-    MapContainer, TileLayer, Popup, useMap, useMapEvent,
+    MapContainer, TileLayer, Popup,
     FeatureGroup,
     LayersControl,
     Polygon,
     Marker,
 } from 'react-leaflet';
 
-import { IFlyingSite, IDetailedPlacemark, IAirspaceRing } from './../../Data/flying-sites';
+import { IFlyingSite, IDetailedPlacemark, IAirspaceRing, IBoundary } from './../../Data/flying-sites';
 import GetApiKey from './../../Data/api-connect';
-import { SimplePerimeter } from './GlideFunctions'
+import { SimplePerimeter, geoPosition } from './GlideFunctions'
 
 interface IFlyingSiteMap {
     site: IFlyingSite,
@@ -36,12 +36,36 @@ const AirspacePolygon: React.FC<IAirspaceRing> = (props) => {
         let miles = props.radiusNm * 1.15077945
         let perimeter = SimplePerimeter(props.lat, props.lng, miles);
         if (perimeter.length > 0) {
-            let clr = props.airspaceType === "C" ? "purple" : "blue";
+            let clr = props.airspaceType === "C" ? "#872a58" : "#144888";
             return <Polygon positions={perimeter} pathOptions={{ color: clr }} />
         }
     }
 
     return <></>;
+}
+
+const KmlCoordinatesToPositions = (coords: string) => {
+    let points: geoPosition[] = [];
+    let coord = coords.trim().split(" ");
+    coord.forEach(c => {
+        let d = c.split(",")
+        let dest: geoPosition = { lat: + d[1], lng: + d[0] }
+        points = [...points, dest]
+    });
+    return points;
+}
+
+const BoundaryPolygon: React.FC<IBoundary> = (props) => {
+    if (props !== null) {
+
+        let perimeter = KmlCoordinatesToPositions(props.linearRingCoordinates);
+        if (perimeter.length > 0) {
+            return <Polygon positions={perimeter} pathOptions={{ color: props.color }} />
+        }
+    }
+
+    return <></>;
+
 }
 
 
@@ -73,6 +97,11 @@ const FlyingSiteMap = (props: IFlyingSiteMap) => {
                                 {
                                     props.site.airspaceRings.filter((r) => r.layerName === l).map((r) => {
                                         return AirspacePolygon(r);
+                                    })
+                                }
+                                {
+                                    props.site.boundaries.filter((b) => b.layerName === l).map((b) => {
+                                        return BoundaryPolygon(b);
                                     })
                                 }
 
