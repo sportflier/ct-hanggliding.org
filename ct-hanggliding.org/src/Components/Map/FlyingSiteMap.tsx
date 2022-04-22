@@ -7,9 +7,9 @@ import {
     Marker,
 } from 'react-leaflet';
 
-// import {  earthPosition, geoPosition, pointOfInterest } from "./GlideFunctions";
-import { IFlyingSite, IDetailedPlacemark } from './../../Data/flying-sites';
+import { IFlyingSite, IDetailedPlacemark, IAirspaceRing } from './../../Data/flying-sites';
 import GetApiKey from './../../Data/api-connect';
+import { SimplePerimeter } from './GlideFunctions'
 
 interface IFlyingSiteMap {
     site: IFlyingSite,
@@ -28,6 +28,22 @@ const mapMarker = (placemark: IDetailedPlacemark) => {
         </Marker>
     )
 }
+
+
+const AirspacePolygon: React.FC<IAirspaceRing> = (props) => {
+
+    if (props !== null) {
+        let miles = props.radiusNm * 1.15077945
+        let perimeter = SimplePerimeter(props.lat, props.lng, miles);
+        if (perimeter.length > 0) {
+            let clr = props.airspaceType === "C" ? "purple" : "blue";
+            return <Polygon positions={perimeter} pathOptions={{ color: clr }} />
+        }
+    }
+
+    return <></>;
+}
+
 
 
 const FlyingSiteMap = (props: IFlyingSiteMap) => {
@@ -51,6 +67,12 @@ const FlyingSiteMap = (props: IFlyingSiteMap) => {
 
                                     props.site.placemarks.filter((p) => p.layerName === l).map((p) => {
                                         return mapMarker(p);
+                                    })
+
+                                }
+                                {
+                                    props.site.airspaceRings.filter((r) => r.layerName === l).map((r) => {
+                                        return AirspacePolygon(r);
                                     })
                                 }
 

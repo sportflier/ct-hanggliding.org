@@ -6,6 +6,14 @@ export interface IDetailedPlacemark extends placeMark {
     layerName?: string,
 }
 
+export interface IAirspaceRing extends placeMark {
+    layerName?: string,
+    radiusNm: number, // nautical miles. Note 1nm = 1.15077945 miles
+    floor: number,
+    ceiling: number,
+    airspaceType: string,
+}
+
 // export interface IPlacemarks {
 //     [index: number]: IDetailedPlacemark
 // }
@@ -15,6 +23,7 @@ export interface IFlyingSite {
     mapCenter: geoPosition,
     layerNames: Array<string>,
     placemarks: Array<IDetailedPlacemark>,
+    airspaceRings: Array<IAirspaceRing>,
 }
 
 const FlyingSites: [IFlyingSite] = [{
@@ -24,7 +33,7 @@ const FlyingSites: [IFlyingSite] = [{
         lat: 41.83499996710632,
         lng: -72.79802914215554
     },
-    layerNames: ["Launches", "Landing Zones"],
+    layerNames: ["Launches", "Landing Zones", "Nearby Airports"],
     placemarks: [{
         description: "Launch",
         lat: 41.83499996710632,
@@ -67,7 +76,49 @@ const FlyingSites: [IFlyingSite] = [{
 
         </>,
         layerName: "Landing Zones",
-    }]
+    },
+    {
+        description: "Bradley International Airport",
+        lat: 41.939032222,
+        lng: -72.684315833,
+        descriptionNode: <>
+            <p><strong>Class C Airspace:</strong></p>
+            <ul>
+                <li>5nm SFC to 42</li>
+                <li>10nm 21 to 42</li>
+            </ul>
+        </>,
+        layerName: "Nearby Airports",
+    },
+    {
+        description: "Simsbury (4B9)",
+        lat: 41.9161944,
+        lng: -72.7769444,
+        descriptionNode: <></>,
+        layerName: "Nearby Airports",
+    }],
+    airspaceRings: [
+        {
+            description: "Bradley International Airport",
+            lat: 41.939032222,
+            lng: -72.684315833,
+            layerName: "Nearby Airports",
+            airspaceType: "C",
+            radiusNm: 5,
+            floor: 0,
+            ceiling: 42,
+        },
+        {
+            description: "Bradley International Airport",
+            lat: 41.939032222,
+            lng: -72.684315833,
+            layerName: "Nearby Airports",
+            airspaceType: "C",
+            radiusNm: 10,
+            floor: 21,
+            ceiling: 42,
+        },
+    ]
 }]
 
 export default FlyingSites

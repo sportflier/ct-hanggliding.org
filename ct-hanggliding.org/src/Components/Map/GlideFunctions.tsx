@@ -166,6 +166,22 @@ export const GlidePerimeter = (params: IGlideInputs, origin: geoPosition, segmen
 
 }
 
+export const SimplePerimeter = (lat: number, lng: number, distance: number, segments: number = 36) => {
+    let wedge = 360 / segments;
+    let points: geoPosition[] = [];
+    for (let angle = 0; angle < 360; angle += wedge) {
+
+        let coord = DestinationCoord(lat, lng, angle, distance);
+
+        let dest: geoPosition = { lat: coord[1], lng: coord[0] }
+        points = [...points, dest];
+    };
+    return points;
+
+}
+
+
+
 export const GlideSlope = (params: IGlideInputs, origin: position, segments: number, direction: number) => {
     // Return lat, lng & altitude along projected slope.
     // We'll use this later to compare against a terrain map.
