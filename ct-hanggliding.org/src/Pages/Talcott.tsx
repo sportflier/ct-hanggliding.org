@@ -77,7 +77,11 @@ const Talcott: React.FC = () => {
 
                         <Accordion title='LZ – Original'>
 
-                            {siteInfo.length === 1 ? siteInfoDetails(siteInfo[0], "LZ – Original") : <></>}
+                            <ul>
+                                <li>Located adjacent to the state police shooting range at 100 Nod Rd in Simsbury.</li>
+                                <li>Coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.83762123782369, -72.8075181422494</a>.</li>
+                                <li>Glide ratio from launch: 4.0</li>
+                            </ul>
 
                             <p>The LZ is obstructed by tall trees on the west, south, and east sides, as well as by power lines on the south side. Higher performance gliders are difficult to maneuver into this somewhat restricted LZ. If the wind is calm or from the south, it’s an easy approach from the north. If the wind is from any other direction, then the Holcomb Field LZ is probably the better option.</p>
                             <p>We share this LZ with an RC airplane club. They are good about staying out of our way when they see gliders approaching but be vigilant and try not to land on their runway. Also be careful of their pavilion and other structures along the west side of the field.</p>
@@ -90,7 +94,11 @@ const Talcott: React.FC = () => {
 
                         <Accordion title='LZ – Holcomb Field'>
 
-                            {siteInfo.length === 1 ? siteInfoDetails(siteInfo[0], "LZ – Holcomb Field") : <></>}
+                            <ul>
+                                <li>Located on Nod Rd ½ mile north of the original LZ</li>
+                                <li>Coordinates: <a href="https://goo.gl/maps/fczFDqFkwSyMFNfn9" target="_blank" rel="noreferrer">41.84187704857621, -72.80318127267603</a></li>
+                                <li>Glide ratio from launch: 4.3</li>
+                            </ul>
 
                             <p>Holcomb Field is aligned well with the prevailing winds of W and NW. The field is mostly soft and uneven dirt so be prepared to stick your landing. It can be difficult to run out a landing on this terrain and smaller wheels are ineffective.</p>
                             <p>

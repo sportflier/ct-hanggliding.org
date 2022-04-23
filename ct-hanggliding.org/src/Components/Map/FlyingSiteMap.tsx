@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import {
     MapContainer, TileLayer, Popup,
     FeatureGroup,
@@ -68,6 +68,10 @@ const BoundaryPolygon: React.FC<IBoundary> = (props) => {
 
 }
 
+const PopupContent = (content?: ReactNode) => {
+    return (content !== undefined ? <Popup>{content}</Popup> : <></>)
+}
+
 
 
 const FlyingSiteMap = (props: IFlyingSiteMap) => {
@@ -85,27 +89,37 @@ const FlyingSiteMap = (props: IFlyingSiteMap) => {
             <LayersControl position="bottomright">
                 {props.site.layerNames.map((l) => {
                     return (
-                        <LayersControl.Overlay name={l} checked>
+                        <LayersControl.Overlay name={l.name} checked={l.checked}>
                             <FeatureGroup>
                                 {
+                                    props.site.airspaceRings.filter((r) => r.layerName === l.name).map((r) => {
+                                        return <FeatureGroup>
+                                            {PopupContent(r.popupContent)}
+                                            {AirspacePolygon(r)}
+                                        </FeatureGroup>
+                                    })
+                                }
+                                {
 
-                                    props.site.placemarks.filter((p) => p.layerName === l).map((p) => {
+                                    props.site.placemarks.filter((p) => p.layerName === l.name).map((p) => {
                                         return mapMarker(p);
                                     })
 
                                 }
                                 {
-                                    props.site.airspaceRings.filter((r) => r.layerName === l).map((r) => {
-                                        return AirspacePolygon(r);
-                                    })
-                                }
-                                {
-                                    props.site.boundaries.filter((b) => b.layerName === l).map((b) => {
-                                        return BoundaryPolygon(b);
-                                    })
-                                }
+                                    props.site.boundaries.filter((b) => b.layerName === l.name).map((b) => {
+                                        return <FeatureGroup>
+                                            {PopupContent(b.popupContent)}
+                                            {BoundaryPolygon(b)}
+                                        </FeatureGroup>
 
+                                    })
+                                }
                             </FeatureGroup>
+
+
+
+
                         </LayersControl.Overlay>
 
                     )
