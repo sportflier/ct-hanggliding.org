@@ -5,7 +5,9 @@ import {
     LayersControl,
     Polygon,
     Marker,
+    // useMap, useMapEvents
 } from 'react-leaflet';
+
 
 import { IFlyingSite, IDetailedPlacemark, IAirspaceRing, IBoundary } from './../../Data/flying-sites';
 import GetApiKey from './../../Data/api-connect';
@@ -17,7 +19,7 @@ interface IFlyingSiteMap {
 
 const mapMarker = (placemark: IDetailedPlacemark) => {
     return (
-        <Marker position={placemark}>
+        <Marker position={placemark} key={placemark.description}>
             {placemark.description.length > 0 ?
                 <Popup minWidth={90}>
                     <p><strong>{placemark.description}</strong></p>
@@ -72,16 +74,35 @@ const PopupContent = (content?: ReactNode) => {
     return (content !== undefined ? <Popup>{content}</Popup> : <></>)
 }
 
+// function DisplayMapInfo() {
+//     const map = useMapEvents({
+//         click: () => {
+//             map.locate()
+//         },
+//         locationfound: (location) => {
+//             console.log('location found:', location)
+//         },
+//     })
+//     return null
+// }
 
+// function MapInfo() {
+//     const map = useMap();
+//     console.log('map center: ', map.getCenter());
+//     return null;
+// }
 
 const FlyingSiteMap = (props: IFlyingSiteMap) => {
     const map_zoom = 15;
     const [mapCenter] = useState(props.site.mapCenter);
-
     const apiKey = GetApiKey("MapTiler")
+
+
 
     return (<>
         <MapContainer center={[mapCenter.lat, mapCenter.lng]} zoom={map_zoom}>
+            {/* <MapInfo />
+            <DisplayMapInfo /> */}
             <TileLayer
                 attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
                 url={`https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=${apiKey}`}
@@ -89,26 +110,24 @@ const FlyingSiteMap = (props: IFlyingSiteMap) => {
             <LayersControl position="bottomright">
                 {props.site.layerNames.map((l) => {
                     return (
-                        <LayersControl.Overlay name={l.name} checked={l.checked}>
+                        <LayersControl.Overlay name={l.name} checked={l.checked} key={l.name}>
                             <FeatureGroup>
                                 {
                                     props.site.airspaceRings.filter((r) => r.layerName === l.name).map((r) => {
-                                        return <FeatureGroup>
+                                        return <FeatureGroup key={`airspaceRing-${r.description}`}>
                                             {PopupContent(r.popupContent)}
                                             {AirspacePolygon(r)}
                                         </FeatureGroup>
                                     })
                                 }
                                 {
-
                                     props.site.placemarks.filter((p) => p.layerName === l.name).map((p) => {
                                         return mapMarker(p);
                                     })
-
                                 }
                                 {
                                     props.site.boundaries.filter((b) => b.layerName === l.name).map((b) => {
-                                        return <FeatureGroup>
+                                        return <FeatureGroup key={`boundary-${b.description}`}>
                                             {PopupContent(b.popupContent)}
                                             {BoundaryPolygon(b)}
                                         </FeatureGroup>
@@ -116,21 +135,11 @@ const FlyingSiteMap = (props: IFlyingSiteMap) => {
                                     })
                                 }
                             </FeatureGroup>
-
-
-
-
                         </LayersControl.Overlay>
-
                     )
-
                 })}
             </LayersControl>
-
         </MapContainer>
-
-
-
     </>
 
     )

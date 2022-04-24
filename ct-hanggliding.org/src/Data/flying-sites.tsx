@@ -45,8 +45,8 @@ const FlyingSites: [IFlyingSite] = [{
     id: "Talcott",
     name: "Talcott Mountain",
     mapCenter: {
-        lat: 41.83499996710632,
-        lng: -72.79802914215554
+        lat: 41.8390084,
+        lng: -72.8040457
     },
     layerNames: [
         {
