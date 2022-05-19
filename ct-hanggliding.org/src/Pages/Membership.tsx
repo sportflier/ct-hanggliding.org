@@ -20,15 +20,19 @@ const Membership: React.FC = () => {
                         <h1 className="heading-2 anim_scale-fade">Join the CHGA</h1>
                     </div>
                     <div className="text-normal">
-                        <p>The <abbr title="Connecticut Hang Gliding Association">CHGA</abbr> was created in 1974 when the sport of hang gliding was new and wild. Since then we have grown and matured, along with the sport. Today we are Chapter 11 of the United States Hang Gliding Association. We currently have about 15 members.</p>
+                        <p>The <abbr title="Connecticut Hang Gliding Association">CHGA</abbr> is a group of about 20 really nice men and women who are passionate about flying, and equally as passionate about sharing it. If you want to join us, please send your name, email address, phone number, your USHPA number if you have one, and our $50 annual membership fee to our treasurer, <a href="https://www.paypal.me/carolcomrie">Carol Comrie via PayPal</a>. You can also send a check via snail mail to our president:</p>
+
+                        <p>Greg Saracino<br />321 Pheasant Glen<br />Shelton, CT 06484</p>
+
+                        <p>Make check payable to Greg Saracino or Carol Allard with “CHGA” in memo.</p>
 
 
-                        <h2>How To Join the CHGA</h2>
-                        <p>Send your name, address, USHGPA number, HG or PG rating, email address and $50 annual membersip fee to our treasurer, <a href="https://www.paypal.me/carolcomrie">Carol Comrie via PayPal</a>.</p>
+                        <p>You can join our email list by setting up a free account at <a href='https://groups.io/g/HangGlideConnecticut'>https://groups.io/g/HangGlideConnecticut</a>.</p>
 
-                        <p>If interested please also join our group forum at <a href='https://groups.io/g/HangGlideConnecticut'>HangGlideConnecticut.groups.io</a>, or chat with us on our Discord server <a href="https://discord.gg/MVzXN237FS">Northeast Hang Gliders</a>.</p>
 
-                        <p>Please see the <a href="/calendar">calendar</a> for club meeting schedule and other events. Members will receive monthly meeting notices by email.</p>
+                        <p>… or chat with us on our Discord server,  <a href="https://discord.gg/MVzXN237FS">Northeast Hang Glider Pilots</a>.</p>
+
+                        <p>See the <a href="/calendar">calendar</a> for our club meeting schedule and other events. Day-to-day flying activities are unpredictable and are usually planned via our Discord Server, and do not appear on the calendar.</p>
 
                     </div>
 

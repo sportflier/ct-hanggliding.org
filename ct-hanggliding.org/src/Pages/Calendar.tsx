@@ -20,9 +20,16 @@ const Calendar: React.FC = () => {
                         <h1 className="heading-2 anim_scale-fade">Calendar</h1>
                     </div>
                     <div className="text-normal">
-                        <p>Meetings are held on the first Tuesday of the month at <a href="https://goo.gl/maps/J9D51oK152iWCF837"><strong>George's Pizza &amp; Restaurant</strong> at 9 School Street, Unionville, Connecticut</a> at 8 PM. Come at 7 PM to eat dinner.</p>
 
-                        <p>Find more information about how to <a href='/join'>join us</a>.</p>
+                        <p>Club meetings are held on the first Tuesday of every month. Dinner at 7pm, meeting at 8pm. Location depends on the weather…</p>
+                        <p>Good weather: <a href="https://www.google.com/maps/@41.836627,-72.8096467,17z">Talcott Mountain LZ</a>. GPS to the state police shooting range at 100 Nod Rd, Simsbury, CT. Look for the large field adjacent to the shooting range. Bring a chair to sit around the fire, and bring some food to throw on the grill.</p>
+                        <p>Bad weather: <a href="https://goo.gl/maps/J9D51oK152iWCF837">George’s Pizza, 9 School St, Unionville, CT</a>.</p>
+                        <p>Meetings are also occasionally held at members’ homes.</p>
+                        <p>Meeting location and other meeting information will be posted on the calendar, emailed out to our email group, and posted on <a href='https://discord.gg/MVzXN237FS'>our Discord server</a> within a few days of the meeting.</p>
+
+
+
+
                     </div>
 
                 </div>
