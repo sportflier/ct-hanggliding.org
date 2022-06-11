@@ -75,7 +75,7 @@ const Talcott: React.FC = () => {
                         </Accordion>
 
 
-                        <Accordion title='LZ – Original'>
+                        <Accordion title='Landing Zone'>
 
                             <ul>
                                 <li>Located adjacent to the state police shooting range at 100 Nod Rd in Simsbury.</li>
@@ -83,7 +83,7 @@ const Talcott: React.FC = () => {
                                 <li>Glide ratio from launch: 4.0</li>
                             </ul>
 
-                            <p>The LZ is obstructed by tall trees on the west, south, and east sides, as well as by power lines on the south side. Higher performance gliders are difficult to maneuver into this somewhat restricted LZ. If the wind is calm or from the south, it’s an easy approach from the north. If the wind is from any other direction, then the Holcomb Field LZ is probably the better option.</p>
+                            <p>The LZ is obstructed by tall trees on the west, south, and east sides, as well as by power lines on the south side. Higher performance gliders are difficult to maneuver into this somewhat restricted LZ. If the wind is calm or from the south, it’s an easy approach from the north.</p>
                             <p>We share this LZ with an RC airplane club. They are good about staying out of our way when they see gliders approaching but be vigilant and try not to land on their runway. Also be careful of their pavilion and other structures along the west side of the field.</p>
 
                         </Accordion>
@@ -92,7 +92,7 @@ const Talcott: React.FC = () => {
 
 
 
-                        <Accordion title='LZ – Holcomb Field'>
+                        {/* <Accordion title='LZ – Holcomb Field'>
 
                             <ul>
                                 <li>Located on Nod Rd ½ mile north of the original LZ</li>
@@ -105,7 +105,7 @@ const Talcott: React.FC = () => {
                                 <strong>Over half this field is used by a farmer to plant crops. Do not land, walk, or break down gliders anywhere near crops, or near areas that appear to be freshly plowed in preparation for planting. Our permission to use this field is very delicate and we need to be respectful.</strong>
                             </p>
 
-                        </Accordion>
+                        </Accordion> */}
 
 
 
