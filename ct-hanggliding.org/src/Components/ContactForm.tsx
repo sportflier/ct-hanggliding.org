@@ -1,15 +1,6 @@
 import React, { useState, ChangeEvent, useEffect } from 'react'
-import emailjs, { init } from '@emailjs/browser'
 import './ContactForm.scss'
-import GetApiKey from '../Data/api-connect'
-
-const apiKey = GetApiKey("emailjs")
-
-init(apiKey)
-
-// type Props = {}
-
-// export default function ContactForm({ }: Props) {
+import axios from 'axios';
 
 export default function ContactForm() {
 
@@ -47,25 +38,10 @@ export default function ContactForm() {
     const submitMessageHandler = () => {
 
         if (formValidates(email, firstName, message)) {
-            const templateParams = {
-                from_first_name: firstName,
-                from_last_name: lastName,
-                from_email: email,
-                reply_to: email,
-                message: message
-            }
-            const serviceId = 'service_hw6xm2o'; // ct.hang.gliding@gmail.com
-            const templateId = 'template_ob0hcvq'; // CHGA contact form
-
-            emailjs.send(serviceId, templateId, templateParams)
-                .then((response) => {
-                    // console.log('SUCCESS!', response.status, response.text);
-                    setSendResult('Your message has been sent. Thank you!');
-                }, (error) => {
-                    console.log('FAILED...', error);
-                    setSendResult('Unfortunately, an error occurred and your message has not been sent. Please try again later, or contact one of the board members directly from the Officers page.')
-                });
-
+            axios.post(`/api/mailgun`, null, {params: {firstName, lastName, email, message}}).then((response) => {
+                const data = response.data;
+                setSendResult(data)
+            });
         }
         else {
             console.log('Form is not valid!');
