@@ -11,7 +11,6 @@ import axios from 'axios';
 
 
 import { IFlyingSite, IDetailedPlacemark, IAirspaceRing, IBoundary } from './../../Data/flying-sites';
-// import GetApiKey from './../../Data/api-connect';
 import { SimplePerimeter, geoPosition } from './GlideFunctions'
 
 interface IFlyingSiteMap {
