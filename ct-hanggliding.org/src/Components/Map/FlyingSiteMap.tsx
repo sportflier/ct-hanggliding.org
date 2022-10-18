@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
 import {
     MapContainer, TileLayer, Popup,
     FeatureGroup,
@@ -7,10 +7,11 @@ import {
     Marker,
     // useMap, useMapEvents
 } from 'react-leaflet';
+import axios from 'axios';
 
 
 import { IFlyingSite, IDetailedPlacemark, IAirspaceRing, IBoundary } from './../../Data/flying-sites';
-import GetApiKey from './../../Data/api-connect';
+// import GetApiKey from './../../Data/api-connect';
 import { SimplePerimeter, geoPosition } from './GlideFunctions'
 
 interface IFlyingSiteMap {
@@ -74,39 +75,30 @@ const PopupContent = (content?: ReactNode) => {
     return (content !== undefined ? <Popup>{content}</Popup> : <></>)
 }
 
-// function DisplayMapInfo() {
-//     const map = useMapEvents({
-//         click: () => {
-//             map.locate()
-//         },
-//         locationfound: (location) => {
-//             console.log('location found:', location)
-//         },
-//     })
-//     return null
-// }
-
-// function MapInfo() {
-//     const map = useMap();
-//     console.log('map center: ', map.getCenter());
-//     return null;
-// }
 
 const FlyingSiteMap = (props: IFlyingSiteMap) => {
     const map_zoom = 15;
     const [mapCenter] = useState(props.site.mapCenter);
-    const apiKey = GetApiKey("MapTiler")
+    const [tileLayer, setTileLayer] = useState(<></>)
+
+    useEffect(() => {
+        axios.get("/api/mapping").then((response) => {
+            const data = response.data;
+            const {key} = data;
+            setTileLayer(            <TileLayer
+                attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+                url={`https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=${key}`}
+            />)
+        })
+
+
+    }, []);
 
 
 
     return (<>
         <MapContainer center={[mapCenter.lat, mapCenter.lng]} zoom={map_zoom}>
-            {/* <MapInfo />
-            <DisplayMapInfo /> */}
-            <TileLayer
-                attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-                url={`https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=${apiKey}`}
-            />
+            ${tileLayer}
             <LayersControl position="bottomright">
                 {props.site.layerNames.map((l) => {
                     return (

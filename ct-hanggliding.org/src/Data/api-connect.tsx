@@ -3,10 +3,7 @@ export interface IApiConnect {
     key: string,
 }
 
-const ApiConnects: Array<IApiConnect> = [{
-    id: "MapTiler",
-    key: "juxsSwQojvISRewbP8Ra",
-},
+const ApiConnects: Array<IApiConnect> = [
 {
     id: "emailjs",
     key: "OiSIcGBF7wKl6TGur",
