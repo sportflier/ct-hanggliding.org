@@ -15,7 +15,7 @@ export default function ContactForm() {
     const formValidates = (mail: string, fname: string, msg: string) => {
         const mailformat = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,20}$/;
         const mailIsValid = mail.match(mailformat) ? true : false;
-        console.log(`mailIsValid: ${mailIsValid}`)
+        // console.log(`mailIsValid: ${mailIsValid}`)
         return mailIsValid && fname.trim().length > 0 && msg.trim().length > 0;
     }
 
