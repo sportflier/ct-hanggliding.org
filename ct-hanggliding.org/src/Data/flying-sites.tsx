@@ -76,11 +76,11 @@ const FlyingSites: [IFlyingSite] = [{
     ],
     placemarks: [{
         description: "Launch",
-        lat: 41.83499996710632,
-        lng: -72.79802914215554,
+        lat: 41.83500618941068,
+        lng: -72.79806566380861,
         descriptionNode: <>
             <ul>
-                <li>Coordinates: <a href="https://goo.gl/maps/VSg4LzqEr9SGETRz9" target="_blank" rel="noreferrer">41.83500618941068, -72.79806566380861</a></li>
+                <li>Coordinates: <a href="https://goo.gl/maps/VSg4LzqEr9SGETRz9" target="_blank" rel="noreferrer">41.835006, -72.798066</a></li>
                 <li>Elevation: 800’ MSL / 650’ AGL</li>
                 <li>Direction: 290°</li>
                 <li>Wind: Ideal wind is 270-310@10-12, soarable in 260-320.</li>
@@ -145,7 +145,8 @@ const FlyingSites: [IFlyingSite] = [{
             <p><strong>Landing Zone</strong></p>
             <ul>
                 <li>Located adjacent to the state police shooting range at 100 Nod Rd in Simsbury.</li>
-                <li>Coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.83762123782369, -72.8075181422494</a>.</li>
+                <li>Coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.837621, -72.807518</a>.</li>
+                
                 <li>Glide ratio from launch: 4.0</li>
             </ul>
         </>

@@ -51,7 +51,7 @@ const Talcott: React.FC = () => {
 
 
                         <Accordion title='Location &amp; Access'>
-                            <p>Talcott Mountain State Park is located along Rt 185 in Simsbury, CT. Meeting place is the original LZ located adjacent to the state police shooting range at 100 Nod Rd in Simsbury (coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.83762123782369, -72.8075181422494</a>). Leave a few vehicles then carpool to the state park entrance on Summit Ridge Drive 2.3 miles away. Park in the grass on the side of the road. (Coordinates <a href="https://goo.gl/maps/o1btrVUMx2mxV1wj7" target="_blank" rel="noreferrer">41.83933400305884, -72.7922315654148</a>).</p>
+                            <p>Talcott Mountain State Park is located along Rt 185 in Simsbury, CT. Meeting place is the original LZ located adjacent to the state police shooting range at 100 Nod Rd in Simsbury (coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.837621, -72.807518</a>). Leave a few vehicles then carpool to the state park entrance on Summit Ridge Drive 2.3 miles away. Park in the grass on the side of the road (coordinates: <a href="https://goo.gl/maps/o1btrVUMx2mxV1wj7" target="_blank" rel="noreferrer">41.839334, -72.792231</a>).</p>
                             <p>Hike to launch is a ¼ mile / 20-minute hike up the main hiking trail. The trail is often busy with hikers. Try not to clobber hikers with the ends of your glider. Be nice to the hikers – sometimes they offer to help carry your equipment.</p>
                             <p>Winter access is possible but the gate at the park entrance will be closed. You must park outside the gate which adds an additional ¼ mile to the hike… in the snow.</p>
 
@@ -79,7 +79,7 @@ const Talcott: React.FC = () => {
 
                             <ul>
                                 <li>Located adjacent to the state police shooting range at 100 Nod Rd in Simsbury.</li>
-                                <li>Coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.83762123782369, -72.8075181422494</a>.</li>
+                                <li>Coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.837621, -72.807518</a>.</li>
                                 <li>Glide ratio from launch: 4.0</li>
                             </ul>
 
