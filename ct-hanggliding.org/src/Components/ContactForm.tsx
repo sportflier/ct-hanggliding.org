@@ -91,7 +91,7 @@ export default function ContactForm() {
 
                     </div>
                     <div className="submit-group">
-                        <button type='submit' onClick={submitMessageHandler} disabled={!formIsValid}>Submit</button>
+                        <button type='submit' onClick={submitMessageHandler} disabled={!formIsValid} title='submit'>Submit</button>
 
                     </div>
                 </form>

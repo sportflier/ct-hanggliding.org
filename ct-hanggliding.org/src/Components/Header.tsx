@@ -96,7 +96,7 @@ export default function Header() {
     return (
 
         <>
-            <button className={`mobile-site-menu ${mobileNavIsOpen ? 'mobile-nav_visible' : ''}`} onClick={mobileNavClickHandler} type="button">
+            <button className={`mobile-site-menu ${mobileNavIsOpen ? 'mobile-nav_visible' : ''}`} onClick={mobileNavClickHandler} type="button" title='Site Menu'>
                 <Hamburger />
             </button>
 
