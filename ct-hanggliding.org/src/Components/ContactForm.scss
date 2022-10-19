@@ -35,6 +35,9 @@
             font-weight: var(--fw-sans-semibold);
             font-size: var(--font-size-3);
             cursor: pointer;
+            &:disabled{
+                cursor:auto;
+            }
         }
     }
 
@@ -47,6 +50,10 @@
             button {
                 background-color: var(--gray-8);
                 color:white;
+                &:disabled {
+                    background-color: var(--gray-9);
+                    color: var(--gray-6);
+                }
             }
         }
 }
