@@ -97,7 +97,7 @@ const FlyingSiteMap = (props: IFlyingSiteMap) => {
 
     return (<>
         <MapContainer center={[mapCenter.lat, mapCenter.lng]} zoom={map_zoom}>
-            ${tileLayer}
+            {tileLayer}
             <LayersControl position="bottomright">
                 {props.site.layerNames.map((l) => {
                     return (
