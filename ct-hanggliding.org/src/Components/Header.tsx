@@ -39,6 +39,9 @@ const NavItems = (props: INavItemProps) => {
                     <MenuItem href="/map" onClick={props.onNavClick}><NavLink to="/map" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                         Map
                     </NavLink></MenuItem>
+                    <MenuItem href="/weather" onClick={props.onNavClick}><NavLink to="/weather" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
+                        Weather
+                    </NavLink></MenuItem>
                 </Menu>
             </div>
 
