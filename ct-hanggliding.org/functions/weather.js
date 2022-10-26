@@ -282,39 +282,11 @@ const nwsForecastErrorExample = `{
     "instance": "https://api.weather.gov/requests/26a1c2cd"
 }`
 
-
-
-exports.handler = async (event,context) => {
+const getForecast = async(url, errMessage) => {
     try {
-        const url = 'https://api.weather.gov/gridpoints/BOX/17,56/forecast'
 
-        // do something here to query NWS for a response
-        // may need to retry x times with n delay
-        // axios.get('https://api.weather.gov/gridpoints/BOX/17,56/forecast').then((response) => {
-        //     return response
-        // })
 
         const response = await axios.get(url)
-        // return response
-
-
-        // const response = await http.get(url, res => {
-        //     let rawData = ''
-
-        //     res.on('data', chunk => {
-        //         rawData += chunk
-        //     })
-
-        //     res.on('end', () => {
-        //         // const parsedData = JSON.parse(rawData)
-        //         // return parsedData
-        //         console.log(rawData)
-        //         return rawData
-        //         // console.log(parsedData)
-        //     })
-        // })
-
-        // console.log(response);
 
         const data = response.data
 
@@ -327,26 +299,54 @@ exports.handler = async (event,context) => {
         }
 
 
-        if (true) {
-            return {
-                statusCode:200,
-                body:nwsForecastExample,
-                contentType:'application/json',
-            }
-        }
-        else{
-            return {
-                statusCode:500,
-                body:nwsForecastErrorExample,
-                contentType:'application/json',
-            }
-        }
         
     } catch (error) {
         console.log(error)
         return {
             statusCode:500,
-            body:"An error occurred getting the forecast.",
+            body:errMessage,
+        }
+        
+    }
+
+}
+
+function delay(milliseconds){
+    return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
+}
+
+async function callAndRetry(fn, maxAmountOfRetries, delayMilliseconds) {
+    let error;
+    for (let retries = 0; retries < maxAmountOfRetries; retries++) {
+        console.log(`Retry ${retries}`)
+        try {
+            if (delayMilliseconds > 0) {
+                delay(delayMilliseconds)
+            }
+            return await fn();
+        } catch (err) {
+            error = err;
+        }
+    }
+    throw error;
+}
+
+async function getNWSTalcottForecast()  {
+    let result = await getForecast('https://api.weather.gov/gridpoints/BOX/17,56/forecast','An error occurred getting the NWS forecast for Talcott.')
+    return result
+}
+
+
+exports.handler = async (event,context) => {
+    try {
+        let result = callAndRetry(getNWSTalcottForecast, 5, 1000)
+        return result
+    } catch (error) {
+        return {
+            statusCode:500,
+            body:'An error occurred getting the forecast.',
         }
         
     }

@@ -25,9 +25,35 @@ export default function Forecast() {
     const maxWind = 15;
     const maxGust = 8;
 
+    const requestForecastButton = () => <button onClick={requestForecastResult}>Get NWS Forecast</button>
+
     const [forecastResult, setForecastResult] = useState(
-        <div>Waiting to get forecast.</div>
+        <><div>Please reload this page to receive forecast data from NWS.</div></>
     )
+    const [forecastReceived, setForecastReceived] = useState(false);
+
+    
+
+    function toMonthName(monthNumber:number) {
+        const date = new Date();
+        date.setMonth(monthNumber - 1);
+      
+        return date.toLocaleString('en-US', {
+          month: 'long',
+        });
+      }
+
+    function removeLeadingZero(numStr:string) {
+        return numStr.startsWith('0') ? numStr.substring(1, numStr.length) : numStr
+    }
+
+
+
+    const formatTimeString = (time:string) => {
+        const dateString = time.substring(0,10).split('-')
+        const result = `${toMonthName(Number(dateString[1]))} ${removeLeadingZero(dateString[2])}, ${dateString[0]}`
+        return result
+    }
 
     const requestForecastResult = () => {
         try {
@@ -49,7 +75,7 @@ export default function Forecast() {
 
                         return(
                             <div className={idealStyle} key={p.number}>
-                            <h2>{p.name} {p.startTime.replace('T06:00:00-04:00','')}</h2>
+                            <h2>{p.name} &ndash; {formatTimeString(p.startTime)}</h2>
                             <img src={p.icon} alt='' />
                             <p>{p.detailedForecast}</p>
                             
@@ -59,10 +85,12 @@ export default function Forecast() {
                     })
                 
                 setForecastResult(<>{forecastInfo}</>)
+                setForecastReceived(true)
             })
             
         } catch (error) {
-            setForecastResult(<div>An error occurred retrieving the weather forecast from NWS. Refresh this page to try again.</div>)
+            setForecastResult(<><div>An error occurred retrieving the weather forecast from NWS.</div>{requestForecastButton}</>)
+            setForecastReceived(false)
         }
     }
 
