@@ -22,15 +22,15 @@ export default function Forecast() {
 
     // TODO: make these parameters for this control
     const launchableDirections = ['W','WNW', 'NW']
-    const maxWind = 15;
-    const maxGust = 8;
+    // const maxWind = 15;
+    // const maxGust = 8;
 
     const requestForecastButton = () => <button onClick={requestForecastResult}>Get NWS Forecast</button>
 
     const [forecastResult, setForecastResult] = useState(
         <><div>Please reload this page to receive forecast data from NWS.</div></>
     )
-    const [forecastReceived, setForecastReceived] = useState(false);
+    // const [forecastReceived, setForecastReceived] = useState(false);
 
     
 
@@ -83,12 +83,12 @@ export default function Forecast() {
                     })
                 
                 setForecastResult(<>{forecastInfo}</>)
-                setForecastReceived(true)
+                // setForecastReceived(true)
             })
             
         } catch (error) {
             setForecastResult(<><div>An error occurred retrieving the weather forecast from NWS.</div>{requestForecastButton}</>)
-            setForecastReceived(false)
+            // setForecastReceived(false)
         }
     }
 
