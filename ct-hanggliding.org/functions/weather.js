@@ -1,5 +1,6 @@
 require('dotenv').config()
-
+// const http = require("https")
+const axios = require('axios')
 
 // https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
 
@@ -285,8 +286,47 @@ const nwsForecastErrorExample = `{
 
 exports.handler = async (event,context) => {
     try {
+        const url = 'https://api.weather.gov/gridpoints/BOX/17,56/forecast'
+
         // do something here to query NWS for a response
         // may need to retry x times with n delay
+        // axios.get('https://api.weather.gov/gridpoints/BOX/17,56/forecast').then((response) => {
+        //     return response
+        // })
+
+        const response = await axios.get(url)
+        // return response
+
+
+        // const response = await http.get(url, res => {
+        //     let rawData = ''
+
+        //     res.on('data', chunk => {
+        //         rawData += chunk
+        //     })
+
+        //     res.on('end', () => {
+        //         // const parsedData = JSON.parse(rawData)
+        //         // return parsedData
+        //         console.log(rawData)
+        //         return rawData
+        //         // console.log(parsedData)
+        //     })
+        // })
+
+        // console.log(response);
+
+        const data = response.data
+
+        console.log(data);
+
+        return {
+            statusCode: 200,
+            body: JSON.stringify(data),
+            contentType: 'application/json',
+        }
+
+
         if (true) {
             return {
                 statusCode:200,
@@ -300,7 +340,6 @@ exports.handler = async (event,context) => {
                 body:nwsForecastErrorExample,
                 contentType:'application/json',
             }
-
         }
         
     } catch (error) {

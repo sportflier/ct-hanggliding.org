@@ -48,7 +48,7 @@ export default function Forecast() {
                         const idealStyle = hasGoodDirection && !hasBadSpeed ? 'ideal-wind' : ''
 
                         return(
-                            <div className={idealStyle}>
+                            <div className={idealStyle} key={p.number}>
                             <h2>{p.name} {p.startTime.replace('T06:00:00-04:00','')}</h2>
                             <img src={p.icon} alt='' />
                             <p>{p.detailedForecast}</p>
