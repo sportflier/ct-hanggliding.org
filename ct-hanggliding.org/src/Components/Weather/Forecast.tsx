@@ -60,24 +60,22 @@ export default function Forecast() {
             axios.get('/api/weather').then((response) => {
                 const data = response.data;
                 const {properties} = data;
-                // const periods: [IForecastPeriod] = data.map((p:IForecastPeriod) => {
-                //     detailedForecast: p.detailedForecast
-                // })
                 const {periods} = properties;
                 const daytimePeriods = periods.filter((p:IForecastPeriod) => p.isDaytime === true)
                 console.log(daytimePeriods)
                 const forecastInfo = 
                     daytimePeriods.map((p:IForecastPeriod) => {
                         const hasGoodDirection = launchableDirections.includes(p.windDirection)
-                        const speed = Number(p.windSpeed.split(' ')[0])
-                        const hasBadSpeed = speed > maxWind
-                        const idealStyle = hasGoodDirection && !hasBadSpeed ? 'ideal-wind' : ''
+                        const idealStyle = hasGoodDirection ? 'ideal-wind' : ''
 
                         return(
-                            <div className={idealStyle} key={p.number}>
+                            <div className={`forecast-card mb-1 ${idealStyle}`} key={p.number}>
                             <h2>{p.name} &ndash; {formatTimeString(p.startTime)}</h2>
-                            <img src={p.icon} alt='' />
-                            <p>{p.detailedForecast}</p>
+                            <div className="forecast-details">
+                                <img src={p.icon} alt={p.shortForecast} />
+                                <div>{p.detailedForecast}</div>
+
+                            </div>
                             
                             </div>
                         )

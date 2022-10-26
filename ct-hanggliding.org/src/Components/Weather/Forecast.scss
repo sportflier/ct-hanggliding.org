@@ -1,3 +1,88 @@
-.ideal-wind{
-    background-color: greenyellow;
+@use "./../../Styles/global";
+
+
+.forecast-card {
+  // margin-block: 2em;
+  --card-size: clamp(75px, calc(4.6875rem + ((1vw - 3.2px) * 10.9375)), 250px);
+
+  box-shadow: var(--shadow-5);
+
+
+//   display: flex;
+//   align-items: flex-start;
+//   flex-direction: column;
+//   align-items: center;
+//   gap: 1ch;
+
+  font-size: var(--font-size-fluid-00);
+
+//   padding-inline: 20ch;
+  padding-block-start: 0.5em;
+  padding-block-end: 1em;
+  padding-inline:1ch;
+
+//   text-align: center;
+
+  @media (--motionOK) {
+    animation: var(--animation-fade-in);
+  }
+
+  background: var(--gradient-sky-light);
+  @media (prefers-color-scheme: dark) {
+    color: hsl(var(--clr-white));
+    background: var(--gradient-forest);
+  }
+
+  &.ideal-wind{
+    outline:3px solid hsl(var(--clr-deep-sky));
+
+    // background: var(--gradient-beach);
+    // @media (prefers-color-scheme: dark) {
+    //     color: hsl(var(--clr-white));
+    //     background: var(--gradient-forest);
+    // }
+    
+  }
+
+//   .portrait {
+//     aspect-ratio: var(--ratio-square);
+//     width: var(--card-size);
+//     overflow: hidden;
+//     border: 3px solid hsl(var(--clr-earth));
+//     min-width: 200px;
+//     img {
+//       width: 100%;
+//     }
+//   }
+
+  @media (min-width: 768px) {
+    align-items: center;
+    flex-direction: row;
+    text-align: start;
+    // padding-inline-start: 0.5ch;
+    // padding-inline-end: 2.5ch;
+
+    // &.officer-card_reverse {
+    //   flex-direction: row-reverse;
+    //   text-align: end;
+    //   padding-inline-end: 0.5ch;
+    //   padding-inline-start: 2.5ch;
+    //   background: var(--gradient-sky-light-reverse);
+    //   @media (prefers-color-scheme: dark) {
+    //     background: var(--gradient-forest-reverse);
+    //   }
+    // }
+
+    // border-radius: var(--radius-round);
+    // .portrait {
+    //   border-radius: var(--radius-round);
+    //   min-width: 100px;
+    // }
+  }
+
+  .forecast-details {
+    display:flex;
+    align-items: flex-start;
+    gap:1ch;
+  }
 }

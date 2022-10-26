@@ -23,6 +23,7 @@ const TalcottWeather: React.FC = () => {
                     </div>
                     <Forecast></Forecast>
 
+                    <div className='text-normal text-normal-reference'>Days that are outlined have a wind direction which may be favorable for launching at Talcott. Please see the site guide for recommended ranges for velocity and gusts.</div>
                 </div>
 
 

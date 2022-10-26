@@ -258,6 +258,12 @@ p.text-normal {
   font-weight: var(--fw-sans-light);
 }
 
+.text-normal-reference {
+  margin-block-start:2em;
+  font-size: smaller;
+  // font-style: italic;
+}
+
 .heading {
   font-family: var(--ff-headings);
   font-weight: var(--fw-headings-semibold);
