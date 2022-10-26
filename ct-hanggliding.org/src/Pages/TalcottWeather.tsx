@@ -4,6 +4,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero/Hero';
 import MetaDecorator from '../Components/MetaDecorator';
+import Forecast from '../Components/Weather/Forecast';
 
 const TalcottWeather: React.FC = () => {
 
@@ -18,9 +19,9 @@ const TalcottWeather: React.FC = () => {
 
                 <div>
                     <div className="banner">
-                        <h1 className="heading anim_scale-fade mb-1">Talcott Mountain Weather Forecast</h1>
+                        <h1 className="heading anim_scale-fade mb-1">NWS Weather Forecast - Weatogue, Simsbury, CT</h1>
                     </div>
-
+                    <Forecast></Forecast>
 
                 </div>
 
