@@ -94,7 +94,7 @@ export default function Forecast() {
 
     useEffect(() => {
         requestForecastResult()
-    },[])
+    },[]) // eslint-disable-line
 
     return forecastResult
 
