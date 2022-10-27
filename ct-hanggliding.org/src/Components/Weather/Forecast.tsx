@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Forecast.scss'
 import axios from 'axios';
+import Spinner from './../Spinner'
 
 interface IForecastPeriod {
     detailedForecast:string,
@@ -27,8 +28,10 @@ export default function Forecast() {
 
     const requestForecastButton = () => <button onClick={requestForecastResult}>Get NWS Forecast</button>
 
+    const loadingMessage = <><div className='d-flex fl-col fl-center'><div>Forecast is being loaded, please wait...</div><Spinner></Spinner></div></>
+
     const [forecastResult, setForecastResult] = useState(
-        <><div>Please reload this page to receive forecast data from NWS.</div></>
+        loadingMessage
     )
     // const [forecastReceived, setForecastReceived] = useState(false);
 
@@ -56,6 +59,7 @@ export default function Forecast() {
     }
 
     const requestForecastResult = () => {
+        setForecastResult(loadingMessage)
         try {
             axios.get('/api/weather').then((response) => {
                 const data = response.data;
