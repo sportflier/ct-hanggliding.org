@@ -26,16 +26,11 @@ export default function Forecast() {
     // const maxWind = 15;
     // const maxGust = 8;
 
-    const requestForecastButton = () => <button onClick={requestForecastResult}>Get NWS Forecast</button>
-
     const loadingMessage = <><div className='d-flex fl-col fl-center'><div>Forecast is being loaded, please wait...</div><Spinner></Spinner></div></>
 
     const [forecastResult, setForecastResult] = useState(
         loadingMessage
     )
-    // const [forecastReceived, setForecastReceived] = useState(false);
-
-    
 
     function toMonthName(monthNumber:number) {
         const date = new Date();
@@ -50,18 +45,22 @@ export default function Forecast() {
         return numStr.startsWith('0') ? numStr.substring(1, numStr.length) : numStr
     }
 
-
-
     const formatTimeString = (time:string) => {
         const dateString = time.substring(0,10).split('-')
         const result = `${toMonthName(Number(dateString[1]))} ${removeLeadingZero(dateString[2])}, ${dateString[0]}`
         return result
     }
 
-    const requestForecastResult = () => {
+    const requestForecastResult = async () => {
         setForecastResult(loadingMessage)
         try {
-            axios.get('/api/weather').then((response) => {
+
+            const response = await axios.get('/api/weather')
+
+            // console.log(response.status)
+            // console.log("🚀 ~ file: Forecast.tsx ~ line 68 ~ requestForecastResult ~ status", response.status)
+
+            if(response.status === 200){
                 const data = response.data;
                 const {properties} = data;
                 const {periods} = properties;
@@ -87,12 +86,18 @@ export default function Forecast() {
                     })
                 
                 setForecastResult(<>{forecastInfo}</>)
-                // setForecastReceived(true)
-            })
+
+            }
+            else {
+                console.log('NWS returned error result...')
+                setForecastResult(<><div>The NWS weather service returned an error. Please click the button to try again.</div><button onClick={requestForecastResult}>Get NWS Forecast</button></>)
+    
+            }
+
             
         } catch (error) {
-            setForecastResult(<><div>An error occurred retrieving the weather forecast from NWS.</div>{requestForecastButton}</>)
-            // setForecastReceived(false)
+            setForecastResult(<><div>An error occurred while retrieving the weather forecast from NWS. Please click the button to try again.</div><button onClick={requestForecastResult}>Get NWS Forecast</button></>)
+
         }
     }
 
@@ -101,6 +106,5 @@ export default function Forecast() {
     },[]) // eslint-disable-line
 
     return forecastResult
-
 
 }

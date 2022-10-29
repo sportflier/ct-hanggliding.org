@@ -295,6 +295,7 @@ const getForecast = async(url, errMessage) => {
         return {
             statusCode: 200,
             body: JSON.stringify(data),
+            // body: JSON.stringify(nwsForecastErrorExample),
             contentType: 'application/json',
         }
 
@@ -303,7 +304,7 @@ const getForecast = async(url, errMessage) => {
     } catch (error) {
         console.log(error)
         return {
-            statusCode:500,
+            statusCode:205,
             body:errMessage,
         }
         
