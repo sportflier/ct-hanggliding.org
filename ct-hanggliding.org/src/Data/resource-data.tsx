@@ -13,7 +13,6 @@ const ResourceLinks = [
     { category: "other", name: "The Oz Report", description: "News, Articles, Classifieds, Forums", url: "http://ozreport.com", image: "http://ozreport.com/images/ozReportLogoHM1_left.64n.gif" },
     { category: "other", name: "Wills Wing Hang Gliding Equipment", description: "", url: "https://www.willswing.com", image: "https://www.willswing.com/wp-content/uploads/2021/03/monarch_falcon_voight.jpg" },
     { category: "school", name: "Blue Sky", description: "Manquin, VA", url: "https://www.blueskyhg.com", image: "https://www.blueskyhg.com/rotatorpictures/DSCN8715.jpg" },
-    { category: "school", name: "Eco-Flight Hang Gliding", description: "Central Massachusetts - Robert Stewart, (413) 253-5852", url: "mailto:ecoflighthg@gmail.com", image: "" },
     { category: "school", name: "Hang Glide New England", description: "New Braintree, MA", url: "http://www.hangglidenewengland.com", image: "https://hangglidenewengland.com/wp-content/uploads/2021/04/vlcsnap-2015-03-16-18h33m35s31.png" },
     { category: "school", name: "Kitty Hawk Kites", description: "Multiple locations along the East Coast", url: "https://www.kittyhawk.com/adventures/hang-gliding/", image: "https://374b8a2fe67x3k946j2kbrmh-wpengine.netdna-ssl.com/wp-content/uploads/2012/01/IMG_2280g-e1328210986171-1800x1200.jpg" },
     { category: "school", name: "Lookout Mountain Flight Park", description: "Rising Fawn, GA", url: "https://www.flylookout.com", image: "https://lirp.cdn-website.com/689dcbfc/dms3rep/multi/opt/DSC_1786-1920w.jpg" },
