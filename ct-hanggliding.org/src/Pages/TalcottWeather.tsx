@@ -5,8 +5,11 @@ import Footer from "../Components/Footer";
 import Hero from '../Components/Hero/Hero';
 import MetaDecorator from '../Components/MetaDecorator';
 import Forecast from '../Components/Weather/Forecast';
+import ReactGA from 'react-ga4'
 
 const TalcottWeather: React.FC = () => {
+
+    ReactGA.send({ hitType: "pageview", page: "/weather" });
 
     return (
         <>

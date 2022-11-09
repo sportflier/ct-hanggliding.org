@@ -6,8 +6,13 @@ import Hero from '../Components/Hero/Hero';
 import MetaDecorator from '../Components/MetaDecorator';
 import FlyingSites from '../Data/flying-sites';
 import MapCanvas from '../Components/Map/MapCanvas';
+import ReactGA from 'react-ga4'
 
 const TalcottMap: React.FC = () => {
+
+    ReactGA.send({ hitType: "pageview", page: "/map" });
+
+
     const data = FlyingSites.filter(site => site.id === "Talcott")
 
     return (

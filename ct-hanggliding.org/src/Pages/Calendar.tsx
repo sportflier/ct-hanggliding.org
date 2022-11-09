@@ -4,8 +4,10 @@ import Footer from "../Components/Footer";
 import Hero from '../Components/Hero/Hero';
 import ChgaGCal from '../Components/Calendar/ChgaGCal';
 import MetaDecorator from '../Components/MetaDecorator';
+import ReactGA from 'react-ga4'
 
 const Calendar: React.FC = () => {
+    ReactGA.send({ hitType: "pageview", page: "/calendar" });
     return (
         <>
             <MetaDecorator title="Calendar" description='Information about planned CHGA events.' />
