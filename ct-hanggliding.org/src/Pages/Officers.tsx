@@ -8,11 +8,8 @@ import Greg from '../Assets/Images/Officers/Greg_Saracino.jpg';
 import Carol from '../Assets/Images/Officers/Carol.jpeg';
 import Woz from '../Assets/Images/Officers/Woz.jpg';
 import MetaDecorator from '../Components/MetaDecorator';
-import ReactGA from 'react-ga4'
-
 
 const Officers: React.FC = () => {
-    ReactGA.send({ hitType: "pageview", page: "/officers" });
 
     return (
         <>

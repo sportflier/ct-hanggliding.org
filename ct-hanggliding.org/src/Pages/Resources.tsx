@@ -6,8 +6,6 @@ import Links, { ResourceLinkGroups } from './../Data/resource-data';
 import './Resources.scss';
 import Accordion from '../Components/UI/Accordion';
 import MetaDecorator from '../Components/MetaDecorator';
-import ReactGA from 'react-ga4'
-
 
 interface IResourceCardProp {
     heroImage?: string,
@@ -53,7 +51,6 @@ const CardGroup: React.FC<IResourceGroupProp> = ({ category, title }: IResourceG
 };
 
 const Resources: React.FC = () => {
-    ReactGA.send({ hitType: "pageview", page: "/resources" });
 
     return (
         <>

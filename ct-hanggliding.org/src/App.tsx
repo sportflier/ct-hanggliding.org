@@ -19,7 +19,7 @@ ReactGA.initialize("G-VPYRSKV9XB");
 
 
 function App() {
-  ReactGA.send("pageview");
+  ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   return (
     <Routes>
       <Route path="/" element={<Home />} />

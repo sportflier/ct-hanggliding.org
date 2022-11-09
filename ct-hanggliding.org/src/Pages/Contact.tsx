@@ -5,12 +5,8 @@ import Hero from '../Components/Hero/Hero';
 import './Contact.scss';
 import ContactForm from '../Components/ContactForm';
 import MetaDecorator from '../Components/MetaDecorator';
-import ReactGA from 'react-ga4'
 
 const Contact: React.FC = () => {
-
-    ReactGA.send({ hitType: "pageview", page: "/contact" });
-
 
     return (
         <>

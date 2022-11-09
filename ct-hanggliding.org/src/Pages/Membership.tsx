@@ -3,11 +3,8 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Hero from '../Components/Hero/Hero';
 import MetaDecorator from '../Components/MetaDecorator';
-import ReactGA from 'react-ga4'
-
 
 const Membership: React.FC = () => {
-    ReactGA.send({ hitType: "pageview", page: "/join" });
 
     return (
         <>

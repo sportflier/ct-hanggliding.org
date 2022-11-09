@@ -6,10 +6,8 @@ import Logo from './../Assets/Images/CHGA-logo.svg';
 import LogoLight from './../Assets/Images/CHGA-logo-sky-light.svg';
 import Hero from "../Components/Hero/Hero";
 import MetaDecorator from "../Components/MetaDecorator";
-import ReactGA from 'react-ga4'
 
 const Home: React.FC = () => {
-    ReactGA.send({ hitType: "pageview", page: "/home" });
 
     return (
         <>

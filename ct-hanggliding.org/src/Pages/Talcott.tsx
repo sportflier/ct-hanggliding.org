@@ -6,13 +6,8 @@ import Hero from '../Components/Hero/Hero';
 import Accordion from '../Components/UI/Accordion';
 import MetaDecorator from '../Components/MetaDecorator';
 import FlyingSites, { IFlyingSite } from '../Data/flying-sites';
-import ReactGA from 'react-ga4'
-
-
 
 const Talcott: React.FC = () => {
-
-    ReactGA.send({ hitType: "pageview", page: "/talcott" });
 
     const siteInfo = FlyingSites.filter((s) => s.id === "Talcott")
 
