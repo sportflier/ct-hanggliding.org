@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import ReactGA from 'react-ga4'
 
 ReactGA.initialize("G-VPYRSKV9XB");
-ReactGA.send("index pageview");
+ReactGA.send("pageview");
 
 ReactDOM.render(
   <React.StrictMode>
