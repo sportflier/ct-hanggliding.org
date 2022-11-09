@@ -15,7 +15,7 @@ exports.handler = async (event,context) => {
     const subject = `CHGA contact form message from ${firstName} ${lastName}`
 
     console.log('sending email...')
-    let data, outcomeCode = 200, outcomeMessage = 'Placing message in queue...'
+    let outcomeCode = 200, outcomeMessage = 'Placing message in queue...'
     try {
 
 
@@ -47,7 +47,7 @@ const bodyHtml = `<p>Hello!</p>
 
 
 
-        data = await mg.messages.create('sandbox32ff356d83194959811158af24e9cbfa.mailgun.org', {
+        await mg.messages.create('sandbox32ff356d83194959811158af24e9cbfa.mailgun.org', {
             from: "CHGA Emailer <postmaster@sandbox32ff356d83194959811158af24e9cbfa.mailgun.org>",
             to: ["GregS61160@yahoo.com"],
             subject: subject,
@@ -62,7 +62,7 @@ const bodyHtml = `<p>Hello!</p>
           } ) // logs response data
           .catch(err => {
             console.error(err)
-            outcomeCode = 500
+            outcomeCode = 200
             outcomeMessage = 'Unfortunately, an error occurred and your message has not been sent. Please try again later, or contact one of the board members directly from the Officers page.'
           } ); // logs any error
 
