@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent, useEffect } from 'react'
 import './ContactForm.scss'
 import axios from 'axios';
+import ReactGA from "react-ga4";
 
 export default function ContactForm() {
 
@@ -40,7 +41,15 @@ export default function ContactForm() {
         if (formValidates(email, firstName, message)) {
             axios.post(`/api/mailgun`, null, {params: {firstName, lastName, email, message}}).then((response) => {
                 const data = response.data;
-                setSendResult(data)
+                setSendResult(data);
+                ReactGA.event({
+                    category: "Contact Form",
+                    action: "Sent message",
+                    // label: "your label", // optional
+                    // value: 99, // optional, must be a number
+                    // nonInteraction: true, // optional, true/false
+                    // transport: "xhr", // optional, beacon/xhr/image
+                  });
             });
         }
         else {

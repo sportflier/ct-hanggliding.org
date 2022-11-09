@@ -49,7 +49,8 @@ const bodyHtml = `<p>Hello!</p>
 
         await mg.messages.create('sandbox32ff356d83194959811158af24e9cbfa.mailgun.org', {
             from: "CHGA Emailer <postmaster@sandbox32ff356d83194959811158af24e9cbfa.mailgun.org>",
-            to: ["GregS61160@yahoo.com"],
+            // to: ["GregS61160@yahoo.com"],
+            to: ["sportflier@live.com"],
             subject: subject,
             text: bodyText,
             html: bodyHtml
