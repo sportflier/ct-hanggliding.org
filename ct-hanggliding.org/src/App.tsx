@@ -13,7 +13,13 @@ import NotFound from './Pages/NotFound';
 import TalcottMap from './Pages/TalcottMap';
 import TalcottWeather from './Pages/TalcottWeather';
 
+import ReactGA from 'react-ga4'
+
+ReactGA.initialize("G-VPYRSKV9XB");
+
+
 function App() {
+  ReactGA.send("pageview");
   return (
     <Routes>
       <Route path="/" element={<Home />} />

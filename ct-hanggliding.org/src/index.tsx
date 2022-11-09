@@ -4,10 +4,6 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import ReactGA from 'react-ga4'
-
-ReactGA.initialize("G-VPYRSKV9XB");
-ReactGA.send("pageview");
 
 ReactDOM.render(
   <React.StrictMode>
