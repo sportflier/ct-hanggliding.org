@@ -11,7 +11,7 @@ const Home: React.FC = () => {
 
     return (
         <>
-            <MetaDecorator title="" description="Established in 1974, the Connecticut Hang Gliding Association is an organization of men and women committed to the pursuit, promotion, and protection of hang gliding in New England." />
+            <MetaDecorator />
             <Header />
             <Hero heroText="CHGA" videoId="Uj7dBEKF-rg" />
             <main id="home" className="content-container home surface-light-gradient">
