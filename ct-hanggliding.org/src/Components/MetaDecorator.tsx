@@ -12,7 +12,7 @@ const MetaDecorator = ({ title, description, ogimage }: IMetaDecorations) => {
 
     return (
         <Helmet>
-            <title>Connecticut Hang Glider Association (CHGA){`${title.length > 0 ? " - " + title : ""}`}</title>
+            <title>Connecticut Hang Gliding Association (CHGA){`${title.length > 0 ? " - " + title : ""}`}</title>
             <meta name="description" content={description} />
             {ogimage.length > 0 ? <meta property="og:image" content={ogimage}  /> : <></> }
             
