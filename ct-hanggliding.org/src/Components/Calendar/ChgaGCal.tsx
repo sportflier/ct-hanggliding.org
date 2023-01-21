@@ -9,7 +9,7 @@ const ChgaGCal: React.FC = () => {
 
     return (
         <>
-            <iframe id='gcal' src={`https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23e4d7c8&ctz=America%2FNew_York&src=${calSrc}&color=%23F4511E`} frameBorder="0" scrolling="no" title="CHGA Calendar"></iframe>
+            <iframe id='gcal' src={`https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23e4d7c8&ctz=America%2FNew_York&src=${calSrc}&color=%2398B8FF`} frameBorder="0" scrolling="no" title="CHGA Calendar"></iframe>
 
         </>
     );
