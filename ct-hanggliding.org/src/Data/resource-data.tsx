@@ -12,6 +12,10 @@ const ResourceLinks = [
     { category: "other", name: "The Cloudbase Foundation", description: "Using free flight for charity work", url: "https://www.thecloudbasefoundation.org", image: "https://images.squarespace-cdn.com/content/v1/5d1793f21653650001c2a908/1561826742462-77RDHEXXAJHPSSP6KFYZ/CBF1.jpg?format=500w" },
     { category: "other", name: "The Oz Report", description: "News, Articles, Classifieds, Forums", url: "http://ozreport.com", image: "http://ozreport.com/images/ozReportLogoHM1_left.64n.gif" },
     { category: "other", name: "Wills Wing Hang Gliding Equipment", description: "", url: "https://www.willswing.com", image: "https://www.willswing.com/wp-content/uploads/2021/03/monarch_falcon_voight.jpg" },
+
+    { category: "school", name: "Appalachian Airsports", description: "Lenoir, NC", url: "https://www.flyappair.com/", image: "http://static1.squarespace.com/static/615a1b318fae2d364b241140/t/61905109daeb7a731d63b735/1636847882004/classiclogo.png?format=1500w" },
+
+
     { category: "school", name: "Blue Sky", description: "Manquin, VA", url: "https://www.blueskyhg.com", image: "https://www.blueskyhg.com/rotatorpictures/DSCN8715.jpg" },
     { category: "school", name: "Hang Glide New England", description: "New Braintree, MA", url: "http://www.hangglidenewengland.com", image: "https://hangglidenewengland.com/wp-content/uploads/2021/04/vlcsnap-2015-03-16-18h33m35s31.png" },
     { category: "school", name: "Kitty Hawk Kites", description: "Multiple locations along the East Coast", url: "https://www.kittyhawk.com/adventures/hang-gliding/", image: "https://www.kittyhawk.com/wp-content/uploads/2017/07/20170818_khk_0454_web-350x265.jpg" },
