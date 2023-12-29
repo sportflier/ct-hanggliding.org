@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Build notes
+
+CHGA website was developed under Node 18.14.2.
+
 ## Available Scripts
 
 In the project directory, you can run:
