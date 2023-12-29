@@ -12,12 +12,10 @@ const ResourceLinks = [
     { category: "other", name: "The Cloudbase Foundation", description: "Using free flight for charity work", url: "https://www.thecloudbasefoundation.org", image: "https://images.squarespace-cdn.com/content/v1/5d1793f21653650001c2a908/1561826742462-77RDHEXXAJHPSSP6KFYZ/CBF1.jpg?format=500w" },
     { category: "other", name: "The Oz Report", description: "News, Articles, Classifieds, Forums", url: "http://ozreport.com", image: "http://ozreport.com/images/ozReportLogoHM1_left.64n.gif" },
     { category: "other", name: "Wills Wing Hang Gliding Equipment", description: "", url: "https://www.willswing.com", image: "https://www.willswing.com/wp-content/uploads/2021/03/monarch_falcon_voight.jpg" },
-
     { category: "school", name: "Appalachian Airsports", description: "Lenoir, NC", url: "https://www.flyappair.com/", image: "http://static1.squarespace.com/static/615a1b318fae2d364b241140/t/61905109daeb7a731d63b735/1636847882004/classiclogo.png?format=1500w" },
-
-
     { category: "school", name: "Blue Sky", description: "Manquin, VA", url: "https://www.blueskyhg.com", image: "https://www.blueskyhg.com/rotatorpictures/DSCN8715.jpg" },
     { category: "school", name: "Hang Glide New England", description: "New Braintree, MA", url: "http://www.hangglidenewengland.com", image: "https://hangglidenewengland.com/wp-content/uploads/2021/04/vlcsnap-2015-03-16-18h33m35s31.png" },
+    { category: "school", name: "Hang Gliding Flight School", description: "Directory of hang gliding schools and communities in the United States.", url: "http://hangglidingflightschool.com/", image:"http://hangglidingflightschool.com/images/united-states-c.jpg"},
     { category: "school", name: "Kitty Hawk Kites", description: "Multiple locations along the East Coast", url: "https://www.kittyhawk.com/adventures/hang-gliding/", image: "https://www.kittyhawk.com/wp-content/uploads/2017/07/20170818_khk_0454_web-350x265.jpg" },
     { category: "school", name: "Lookout Mountain Flight Park", description: "Rising Fawn, GA", url: "https://www.flylookout.com", image: "https://lirp.cdn-website.com/689dcbfc/dms3rep/multi/opt/DSC_1786-1920w.jpg" },
     { category: "school", name: "Morningside Flight Park", description: "Claremont, NH", url: "https://flymorningside.kittyhawk.com", image: "https://flymorningside.kittyhawk.com/wp-content/uploads/2015/06/Rob-at-Landing-at-Dusk-1800x1200.jpg" },
@@ -29,6 +27,7 @@ const ResourceLinks = [
     { category: "school", name: "Wilotree Park", description: "Wilotree Park is 150 acres located in Groveland, FL, about 40 minutes west of Orlando. We are a local private airstrip for many different kinds of aircrafts.", url: "https://www.wilotreepark.com", image: "https://static.wixstatic.com/media/c0c89d_9152e767c9be4d179ddd52ed36961497~mv2.jpeg/v1/fill/w_960,h_720,al_c,q_85,enc_auto/c0c89d_9152e767c9be4d179ddd52ed36961497~mv2.jpeg" },
     { category: "video", name: "Big Blue Sky", description: "Documentary of the history of hang gliding", url: "https://youtu.be/-hRSUjJFmCc", image: "https://i.ytimg.com/vi/-hRSUjJFmCc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBUMxZrMNITXiiDNlaETcCCishrvQ" },
     { category: "video", name: "Free Flyers", description: "Documentary profiles hang gliding in Utah", url: "https://youtu.be/dtFpURLUO0I", image: "https://i.ytimg.com/vi/dtFpURLUO0I/mqdefault.jpg" },
+    { category: "video", name: "How to start hang gliding? How to become a hang glider pilot?", description: "Learn how to start hang gliding and train to become a hang glider pilot. This video will teach everything from where to find a hang gliding school to how to purchase your first hang glider.", url:"https://youtu.be/bmteJ45ORAo?si=znHcFiU4R8grOW-d", image:"https://i.ytimg.com/vi/bmteJ45ORAo/mqdefault.jpg"},
     { category: "video", name: "Live The Dream", description: "Documentary of a young woman learning how to fly, very inspirational", url: "https://vimeo.com/46406544", image: "https://i.vimeocdn.com/video/441586533-ffbd03c1d0cdac7583e704b42b1962b832bd8942a1e4b1d9e226df3e51f34006-d?mw=1000&mh=563" },
     { category: "video", name: "The Flyingest Flying", description: "Documentary of the history of hang gliding. (2003, full movie)", url: "https://youtu.be/YOHLtRna5Zk", image: "https://i.ytimg.com/vi/YOHLtRna5Zk/mqdefault.jpg" },
 ]
