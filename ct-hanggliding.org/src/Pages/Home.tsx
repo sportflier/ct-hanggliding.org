@@ -2,7 +2,7 @@ import React from "react";
 import './Home.scss';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Logo from './../Assets/Images/CHGA-logo.svg';
+import Logo from './../Assets/Images/CHGA-logo-colorized.svg';
 import LogoLight from './../Assets/Images/CHGA-logo-sky-light.svg';
 import Hero from "../Components/Hero/Hero";
 import MetaDecorator from "../Components/MetaDecorator";
