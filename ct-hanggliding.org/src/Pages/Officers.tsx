@@ -7,6 +7,7 @@ import FormattedOfficerCard from '../Components/OfficerCard';
 import Greg from '../Assets/Images/Officers/Greg_Saracino.jpg';
 import Carol from '../Assets/Images/Officers/Carol.jpeg';
 import Woz from '../Assets/Images/Officers/Woz.jpg';
+import Donna from '../Assets/Images/Officers/Donna_Williams.jpg';
 import MetaDecorator from '../Components/MetaDecorator';
 
 const Officers: React.FC = () => {
@@ -28,6 +29,7 @@ const Officers: React.FC = () => {
                         <FormattedOfficerCard portrait={Greg} title='President &amp; Safety Officer ' name='Greg Saracino' email='gregs61160@yahoo.com' phone='203-615-2075' />
                         <FormattedOfficerCard portrait={Woz} className="officer-card_reverse" name='Steve Woznicki' title='Vice President' email='mrwoz@sbcglobal.net' />
                         <FormattedOfficerCard portrait={Carol} name='Carol Allard' title='Treasurer' email='carol.allard@yahoo.com' />
+                        <FormattedOfficerCard portrait={Donna} className="officer-card_reverse" name='Donna Williams' title='Secretary' />
 
                     </div>
 
