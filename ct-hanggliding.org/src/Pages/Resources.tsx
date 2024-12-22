@@ -66,6 +66,9 @@ const Resources: React.FC = () => {
                         <h1 className="heading-2 anim_scale-fade">Resources</h1>
                     </div>
 
+                    <h2>Disclaimer</h2>
+                    <p>The CHGA is not associated or affiliated with any of the following individuals or companies listed below, and this is not a recommendation or endorsement of their services. Individuals listed below may be or were club members at one time and are acting independently of the club.</p>
+
                     <div className="text-normal resource-groups">
                         {
                             ResourceLinkGroups.map((g) => <CardGroup key={g.category} category={g.category} title={g.name} />)
