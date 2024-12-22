@@ -6,6 +6,7 @@ import Hero from '../Components/Hero/Hero';
 import MetaDecorator from '../Components/MetaDecorator';
 import FlyingSites from '../Data/flying-sites';
 import MapCanvas from '../Components/Map/MapCanvas';
+import HazardsImage from '../Assets/Images/Map/Talcott_LZ_Hazards.jpg';
 
 const TalcottMap: React.FC = () => {
 
@@ -26,6 +27,12 @@ const TalcottMap: React.FC = () => {
                     </div>
 
                     {data?.length === 1 ? <MapCanvas site={data[0]} /> : <div>Site data error!</div>}
+
+                </div>
+
+                <div className='mt-3'>
+                    <h2>Talcott Landing Zone Hazards</h2>
+                    <img src={HazardsImage} alt="Talcott Landing Zone Hazards" />
 
                 </div>
 
