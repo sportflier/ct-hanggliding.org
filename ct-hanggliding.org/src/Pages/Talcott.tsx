@@ -30,7 +30,7 @@ const Talcott: React.FC = () => {
                         <h1 className="heading anim_scale-fade mb-1">Talcott Mountain Site Guide</h1>
                     </div>
                     <div className="text-normal">
-
+                        <p><strong>Revised 12/22/2024</strong></p>
 
                         <Accordion title='General Description' active={true}>
                             <p>Talcott Mountain is a three-mile-long ridge running north to south in central Connecticut’s Metacomet Range. Elevation is 950’ MSL / 700’ AGL at its highest point and offers beautiful views of rural Simsbury and Avon. Most of the mountain is a state park and has several hiking trails as well as the famous Heublein Tower on the south end of the ridge. The park attracts many hikers and site seers who are often curious about hang gliding and like to ask questions and watch us fly.</p>
