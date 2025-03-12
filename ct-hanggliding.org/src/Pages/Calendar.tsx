@@ -25,7 +25,7 @@ const Calendar: React.FC = () => {
                         <p>Good weather: <a href="https://www.google.com/maps/@41.836627,-72.8096467,17z">Talcott Mountain LZ</a>. GPS to the state police shooting range at 100 Nod Rd, Simsbury, CT. Look for the large field adjacent to the shooting range. Bring a chair to sit around the fire, and bring some food to throw on the grill.</p>
                         <p>Bad weather: <a href="https://goo.gl/maps/J9D51oK152iWCF837">George’s Pizza, 9 School St, Unionville, CT</a>.</p>
                         <p>Meetings are also occasionally held at members’ homes.</p>
-                        <p>Meeting location and other meeting information will be posted on the calendar, emailed out to our email group, and posted on <a href='https://discord.gg/MVzXN237FS'>our Discord server</a> within a few days of the meeting.</p>
+                        <p>Meeting location and other meeting information will be posted on the calendar, emailed out to our email group, and posted on <a href='https://chat.whatsapp.com/CNI43dAUEaw0aW4aMTDGFQ'>our WhatsApp channel</a> within a few days of the meeting.</p>
 
 
 

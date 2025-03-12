@@ -12,6 +12,7 @@ import Contact from './Pages/Contact';
 import NotFound from './Pages/NotFound';
 import TalcottMap from './Pages/TalcottMap';
 import TalcottWeather from './Pages/TalcottWeather';
+import Attributions from './Pages/Attributions';
 
 import ReactGA from 'react-ga4'
 
@@ -31,6 +32,7 @@ function App() {
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/attributions" element={<Attributions />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
 

@@ -30,9 +30,9 @@ const Membership: React.FC = () => {
                         <p>You can join our email list by setting up a free account at <a href='https://groups.io/g/HangGlideConnecticut'>https://groups.io/g/HangGlideConnecticut</a>.</p>
 
 
-                        <p>… or chat with us on our Discord server,  <a href="https://discord.gg/MVzXN237FS">Northeast Hang Glider Pilots</a>.</p>
+                        <p>… or chat with us on our WhatsApp channel,  <a href="https://chat.whatsapp.com/CNI43dAUEaw0aW4aMTDGFQ">Talcott</a>.</p>
 
-                        <p>See the <a href="/calendar">calendar</a> for our club meeting schedule and other events. Day-to-day flying activities are unpredictable and are usually planned via our Discord Server, and do not appear on the calendar.</p>
+                        <p>See the <a href="/calendar">calendar</a> for our club meeting schedule and other events. Day-to-day flying activities are unpredictable and are usually planned via our WhatsApp channel, and do not appear on the calendar.</p>
 
                     </div>
 

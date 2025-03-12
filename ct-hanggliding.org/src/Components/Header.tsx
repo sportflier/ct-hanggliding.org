@@ -2,6 +2,7 @@ import React, { useState, ReactNode, useEffect } from 'react'
 import './Header.scss';
 import Glider from './../Assets/Images/glider.svg';
 import GliderWhite from './../Assets/Images/glider-white.svg';
+import InfoCircle from './../Assets/Images/information-circle.svg';
 import Hamburger from './UI/Hamburger';
 import { NavLink } from "react-router-dom";
 import {
@@ -64,6 +65,9 @@ const NavItems = (props: INavItemProps) => {
             </NavLink>
             <NavLink to="/contact" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                 Contact
+            </NavLink>
+            <NavLink to="/attributions" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
+            <img src={InfoCircle} alt="" className='header-decoration' />
             </NavLink>
 
         </>
