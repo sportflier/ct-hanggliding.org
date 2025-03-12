@@ -65,6 +65,9 @@ const NavItems = (props: INavItemProps) => {
             <NavLink to="/contact" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
                 Contact
             </NavLink>
+            <NavLink to="/attributions" onClick={props.onNavClick} className={(navData) => navData.isActive ? activeClass : ''}>
+                Attributions
+            </NavLink>
 
         </>
     )
