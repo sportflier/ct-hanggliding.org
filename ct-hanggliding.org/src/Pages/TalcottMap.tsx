@@ -7,6 +7,8 @@ import MetaDecorator from '../Components/MetaDecorator';
 import FlyingSites from '../Data/flying-sites';
 import MapCanvas from '../Components/Map/MapCanvas';
 import HazardsImage from '../Assets/Images/Map/Talcott_LZ_Hazards.jpg';
+import HolcombImage from '../Assets/Images/Map/Holcomb_LZ_Zone_Map-md.jpg';
+import LaunchImage from '../Assets/Images/Map/Launch_Area_Zone_Map-md.jpg';
 
 const TalcottMap: React.FC = () => {
 
@@ -31,8 +33,15 @@ const TalcottMap: React.FC = () => {
                 </div>
 
                 <div className='mt-3'>
-                    <h2>Talcott Landing Zone Hazards</h2>
+                      <h2>Launch Area</h2>
+                    <img src={LaunchImage} alt="Launch Area" />
+                    <h2>Talcott LZ Original Landing Hazards</h2>
                     <img src={HazardsImage} alt="Talcott Landing Zone Hazards" />
+
+                    <h2>Holcomb LZ</h2>
+                    <img src={HolcombImage} alt="Holcomb LZ" />
+
+
 
                 </div>
 

@@ -80,11 +80,11 @@ const FlyingSites: [IFlyingSite] = [{
         lng: -72.79806566380861,
         descriptionNode: <>
             <ul>
-                <li>Coordinates: <a href="https://goo.gl/maps/VSg4LzqEr9SGETRz9" target="_blank" rel="noreferrer">41.835006, -72.798066</a></li>
-                <li>Elevation: 800’ MSL / 650’ AGL</li>
-                <li>Direction: 290°</li>
-                <li>Wind: Ideal wind is 270-310@10-12, soarable in 260-320.</li>
-                <li>Launching in winds more than 15mph or a gust factor of more than 8mph is not recommended.</li>
+                <li>Coordinates: <a href="https://maps.app.goo.gl/Yegirsgug2ewEyyJA" target="_blank" rel="noreferrer">41.83500618941068, -72.79806566380861</a></li>
+                <li>Elevation: 800' MSL / 650' AGL</li>
+                <li>Direction: 290&deg;</li>
+                <li>Wind: Ideal wind is 290&deg; at 10 to 12mph, soarable in 260&deg;&#8211;330&deg;.</li>
+                <li>Glide ratio to LZ: 4.0</li>
             </ul>
         </>,
         layerName: "Launch",
@@ -104,6 +104,19 @@ const FlyingSites: [IFlyingSite] = [{
         descriptionNode: <></>,
         layerName: "Nearby Airports",
     },
+ 
+    {
+        description: "LZ: Holcomb Field",
+        lat: 41.84187704857621, 
+        lng: -72.80318127267603,
+        descriptionNode: <ul>
+    <li>Located on Nod Rd &frac12; mile north of the original LZ</li>
+    <li>Coordinates: <a href="https://maps.app.goo.gl/8PxKKH6M8brQYesZ8" target="_blank" rel="noreferrer">41.84187704857621, -72.80318127267603</a></li>
+    <li>Glide ratio from launch: 4.3</li>
+</ul>,
+        layerName: "Landing Zone",
+    },
+            
     ],
     airspaceRings: [
         {
@@ -142,13 +155,12 @@ const FlyingSites: [IFlyingSite] = [{
         layerName: "Landing Zone",
         linearRingCoordinates: "-72.80852372981697,41.83692135332383,46.37905287025112 -72.80726247858762,41.83662789760826,45.55427619335702 -72.80702814355676,41.83704499967607,45.24519981064379 -72.80681656603468,41.83734938726409,45.16793071496549 -72.80679006540703,41.83750166451756,45.09066161928718 -72.80675617286724,41.83766520460711,44.93612342793057 -72.8065745231273,41.83786251982081,45.05199399166354 -72.80612077023574,41.83770443785979,45.16786455539651 -72.80584868856573,41.83786782910298,45.28373511912948 -72.80579000025998,41.83799213780195,45.39960568286246 -72.80574301903435,41.83815926992345,45.47627597131287 -72.80660314840792,41.83832298393772,45.55294625976329 -72.80692657116282,41.83833469242426,45.55298634983792 -72.80710885714736,41.83842757104704,45.55302643991254 -72.80736498789145,41.83848272573957,45.55310662006179 -72.80734478551281,41.83857693561287,45.55318680021104 -72.80764185203856,41.83864111548169,45.55326698036028 -72.80811699126487,41.8387691186572,45.55358770095729 -72.8082097364352,41.8381471267334,45.55422914215129 -72.8083743277556,41.83777348703866,45.7185031234462 -72.80842009665139,41.8374283115934,45.8827771047411 -72.80852372981697,41.83692135332383,46.37905287025112",
         popupContent: <>
-            <p><strong>Landing Zone</strong></p>
-            <ul>
-                <li>Located adjacent to the state police shooting range at 100 Nod Rd in Simsbury.</li>
-                <li>Coordinates: <a href="https://goo.gl/maps/6fXbz9tce6PgYSy49" target="_blank" rel="noreferrer">41.837621, -72.807518</a>.</li>
-                
-                <li>Glide ratio from launch: 4.0</li>
-            </ul>
+            <p><strong>LZ: Original</strong></p>
+<ul>
+    <li>Located adjacent to the state police shooting range at <a href="https://maps.app.goo.gl/PJJZpCYt5Ay9ZYG69" target="_blank" rel="noreferrer">100 Nod Rd in Simsbury</a>.</li>
+    <li>Coordinates: <a href="https://maps.app.goo.gl/TP7zetV1i8k7vWis8" target="_blank" rel="noreferrer">41.83762123782369, -72.8075181422494</a></li>
+    <li>Glide ratio from launch: 4.0</li>
+</ul>
         </>
 
     },
