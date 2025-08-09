@@ -6,7 +6,10 @@ import Hero from '../Components/Hero/Hero';
 import Accordion from '../Components/UI/Accordion';
 import MetaDecorator from '../Components/MetaDecorator';
 import FlyingSites, { IFlyingSite } from '../Data/flying-sites';
-
+import MapCanvas from '../Components/Map/MapCanvas';
+import HazardsImage from '../Assets/Images/Map/Talcott_LZ_Hazards.jpg';
+import HolcombImage from '../Assets/Images/Map/Holcomb_LZ_Zone_Map-md.jpg';
+import LaunchImage from '../Assets/Images/Map/Launch_Area_Zone_Map-md.jpg';
 
 const Talcott: React.FC = () => {
 
@@ -31,7 +34,7 @@ const Talcott: React.FC = () => {
                         <h1 className="heading anim_scale-fade mb-1">Talcott Mountain Site Guide</h1>
                     </div>
                     <div className="text-normal">
-                        <p><strong>Revised 7/31/2025</strong></p>
+                        <p><strong>Revised 8/9/2025</strong></p>
 
                         <Accordion title='General Description' active={true}>
                             <p>Talcott Mountain is a three-mile-long ridge running north to south in central Connecticut's Metacomet Range. Elevation is 950' MSL / 700' AGL at its highest point and offers beautiful views of rural Simsbury and Avon. Most of the mountain is a state park and has a number of hiking trails as well as the famous Hublein Tower on the south end of the ridge. The park attracts many hikers and site seers who are often curious about hang gliding and like to ask questions and watch us fly.</p>
@@ -70,6 +73,7 @@ const Talcott: React.FC = () => {
                             <p>Launches can be safely executed in winds ranging from 0 to 15mph, and with a gust factor of 0 to 8mph. Launching outside of these parameters is not recommended.</p>
                             <p>Launch is a sheer cliff and is unforgiving of poor technique and less-than-perfect launch windows. Proficient cliff launching skills are essential and a wire crew is required for all but light conditions. Cross wind launches are not recommended. Be patient and wait for a good launch window.</p>
                             <p>Crowds often form to watch and ask questions. We encourage interaction with the public but do not allow yourself to be distracted from conducting safe preflight procedures. Spectators are required to stay back at the tree line during launches.</p>
+                            <img src={LaunchImage} alt="Launch Area" className="mt-1" />
 
                         </Accordion>
 
@@ -82,6 +86,7 @@ const Talcott: React.FC = () => {
                             <p>The LZ is obstructed by tall trees on the west, south, and east sides, as well as by power lines on the south side. Higher performance gliders are difficult to maneuver into this somewhat restricted LZ. If the wind is calm or from the south, it's an easy approach from the north. If the wind is from any other direction, then Holcomb Field LZ is probably the better option.</p>
 
                             <p>We share this LZ with an RC airplane club. They are good about staying out of our way when they see gliders approaching, but be vigilant and try not to land on their runway. Also be careful of their pavilion and other structures along the west side of the field.</p>
+                            <img src={HazardsImage} alt="Talcott LZ Original Hazards" className="mt-1" />
 
                         </Accordion>
 
@@ -95,6 +100,7 @@ const Talcott: React.FC = () => {
                             <p>Holcomb Field is aligned well with the prevailing winds of W and NW. The field is mostly soft and uneven dirt so be prepared to stick your landing. It can be difficult to run out a landing on this terrain and smaller wheels are ineffective.</p>
 
                             <p>Over half this field is used by a farmer to plant crops. Do not land, walk, or break down gliders anywhere near crops, or near areas that appear to be freshly plowed in preparation for planting. Our permission to use this field is delicate and we need to be respectful.</p>
+                            <img src={HolcombImage} alt="Holcomb LZ" className="mt-1" />
                         </Accordion>
 
 
@@ -106,6 +112,14 @@ const Talcott: React.FC = () => {
                             <p>Simsbury Airport is a small Class G airport 6 miles north of Talcott. Be vigilant for low flying small aircraft.</p>
 
                         </Accordion>
+
+
+                        <Accordion title='Interactive Map' active={true}>
+                            <div className="mt-1">
+                              {siteInfo?.length === 1 ? <MapCanvas site={siteInfo[0]} /> : <div>Site data error!</div>}
+                            </div>
+                        </Accordion>
+
 
 
 
