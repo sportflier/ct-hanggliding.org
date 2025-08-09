@@ -10,7 +10,6 @@ import Calendar from './Pages/Calendar';
 import Resources from './Pages/Resources';
 import Contact from './Pages/Contact';
 import NotFound from './Pages/NotFound';
-import TalcottMap from './Pages/TalcottMap';
 import TalcottWeather from './Pages/TalcottWeather';
 import Attributions from './Pages/Attributions';
 
@@ -25,7 +24,6 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/talcott" element={<Talcott />} />
-      <Route path="/map" element={<TalcottMap />} />
       <Route path="/weather" element={<TalcottWeather />} />
       <Route path="/join" element={<Membership />} />  
       <Route path="/officers" element={<Officers />} />
