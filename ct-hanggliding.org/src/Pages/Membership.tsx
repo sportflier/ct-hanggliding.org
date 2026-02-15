@@ -20,7 +20,7 @@ const Membership: React.FC = () => {
                         <h1 className="heading-2 anim_scale-fade">Join the CHGA</h1>
                     </div>
                     <div className="text-normal">
-                        <p>The <abbr title="Connecticut Hang Gliding Association">CHGA</abbr> is a group of about 20 really nice men and women who are passionate about flying, and equally as passionate about sharing it. If you want to join us, please send your name, email address, phone number, your USHPA number if you have one, and our $50 annual membership fee <a href="https://www.paypal.com/ncp/payment/LXLGU9QB8XQKY">via PayPal</a>. You can also send a check via snail mail to our treasurer:</p>
+                        <p>The <abbr title="Connecticut Hang Gliding Association">CHGA</abbr> is a group of about 20 really nice men and women who are passionate about flying, and equally as passionate about sharing it. If you want to join us, please send your name, email address, phone number, your USHPA number if you have one, and our $50 annual membership fee <a href="https://www.paypal.com/ncp/payment/LXLGU9QB8XQKY" target='_blank' rel='noreferrer'>via PayPal</a>. You can also send a check via snail mail to our treasurer:</p>
 
                         <p>Steve Woznicki<br />67 Simsbury Manor Dr.<br />Weatogue, CT 06089</p>
 
