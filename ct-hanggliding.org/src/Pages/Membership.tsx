@@ -20,11 +20,11 @@ const Membership: React.FC = () => {
                         <h1 className="heading-2 anim_scale-fade">Join the CHGA</h1>
                     </div>
                     <div className="text-normal">
-                        <p>The <abbr title="Connecticut Hang Gliding Association">CHGA</abbr> is a group of about 20 really nice men and women who are passionate about flying, and equally as passionate about sharing it. If you want to join us, please send your name, email address, phone number, your USHPA number if you have one, and our $50 annual membership fee to our treasurer, <a href="https://www.paypal.me/carolcomrie">Carol Comrie via PayPal</a>. You can also send a check via snail mail to our president:</p>
+                        <p>The <abbr title="Connecticut Hang Gliding Association">CHGA</abbr> is a group of about 20 really nice men and women who are passionate about flying, and equally as passionate about sharing it. If you want to join us, please send your name, email address, phone number, your USHPA number if you have one, and our $50 annual membership fee <a href="https://www.paypal.com/qrcodes/managed/e7dcd9ef-1dd2-410f-99fe-e4e1b9b493b9?utm_source=consapp_download">via PayPal</a>. You can also send a check via snail mail to our treasurer:</p>
 
-                        <p>Greg Saracino<br />321 Pheasant Glen<br />Shelton, CT 06484</p>
+                        <p>Steve Woznicki<br />67 Simsbury Manor Dr.<br />Weatogue, CT 06089</p>
 
-                        <p>Make check payable to Greg Saracino or Carol Allard with “CHGA” in memo.</p>
+                        <p>Make check payable to "CHGA, Inc.".</p>
 
 
                         <p>You can join our email list by setting up a free account at <a href='https://groups.io/g/HangGlideConnecticut'>https://groups.io/g/HangGlideConnecticut</a>.</p>
